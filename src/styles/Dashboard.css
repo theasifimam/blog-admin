@@ -1,0 +1,157 @@
+.red {
+  background: #fa686b;
+}
+
+.red > span {
+  background: #b52f3166;
+}
+
+.green {
+  background: #5bc381;
+}
+
+.green > span {
+  background: #298c4d;
+}
+
+.yellow {
+  background: #ff891a;
+}
+
+.yellow > span {
+  background: #c55f00;
+}
+
+.purple {
+  background: #9583f4;
+}
+.purple > span {
+  background: #6456b6;
+}
+.dashboard {
+  width: 100%;
+  display: flex;
+  row-gap: 2rem;
+  flex-direction: column;
+}
+
+.dashboard > .top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+}
+
+.dashboard > .top > .card {
+  width: 357px;
+  height: 154.01px;
+  border-radius: 8px;
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.dashboard > .top > .card:hover {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 200ms ease-in-out;
+}
+
+.dashboard > .top > .card > span {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.238926px;
+  color: #ffffff;
+  padding-top: 2rem;
+  padding: 8px 11.9463px;
+  display: inline-block;
+  height: 40px;
+
+  /* background: rgba(83, 83, 83, 0.4); */
+  border-radius: 9.55705px;
+}
+
+.dashboard > .top > .card > .bottom {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard > .top > .card > .bottom span.left {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 61px;
+  letter-spacing: 0.408166px;
+  color: #ffffff;
+}
+
+.dashboard > .top > .card > .bottom .right {
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.dashboard > .top > .card > .bottom .right img {
+  height: 70%;
+  width: auto;
+}
+
+.dashboard .mid {
+  width: 100%;
+  background: #f9f9f9;
+  padding: 2rem 1rem 0 1rem;
+  border-radius: 8px;
+}
+
+.dashboard .mid h4,
+.dashboard .table h4 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.dashboard .mid .echarts-for-react {
+  width: 100%;
+}
+
+.dashboard .mid .echarts-for-react div {
+  width: 100% !important;
+}
+
+.dashboard .table table tr {
+  height: 60px;
+}
+
+.dashboard .table table th {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15.7222px;
+  line-height: 19px;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.dashboard .table table tr,
+.dashboard .table td {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15.7222px;
+  line-height: 19px;
+  text-transform: capitalize;
+  color: #000000;
+}

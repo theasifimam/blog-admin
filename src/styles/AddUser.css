@@ -1,0 +1,233 @@
+.addUserPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  animation: 0.8s rollout;
+}
+
+.roll-out {
+  animation: rollout 0.4s;
+}
+
+.addUserPage > .card {
+  width: 100%;
+  border: 1px solid #cdcfd2;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.addUserPage > .card > .top {
+  height: 48px;
+  background: linear-gradient(180deg, #59be44 0%, #3a9b26 100%);
+  border-radius: 8px 8px 0px 0px;
+}
+
+.addUserPage > .card > .bottom > form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 3rem;
+  row-gap: 1rem;
+}
+
+.addUserPage > .card > .bottom > h3 {
+  margin-top: 2rem;
+  margin-left: 3rem;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 23.8926px;
+  line-height: 29px;
+  letter-spacing: 0.238926px;
+  color: #000000;
+}
+
+.addUserPage > .card > .bottom > form > .inputField {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+.addUserPage > .card > .bottom > form > .fullInputField {
+  width: 100%;
+}
+
+.addUserPage > .card > .bottom > form > .fullInputField > label {
+  margin-bottom: 10px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15.7222px;
+  line-height: 19px;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.addUserPage > .card > .bottom > form > .editorBorder {
+  border: 1px solid #cdcfd2;
+  background: #fafafa;
+}
+
+.public-DraftStyleDefault-block {
+  padding: 0 10px;
+  height: 200px;
+}
+
+.addUserPage > .card > .bottom > form > .inputField > label {
+  margin-bottom: 10px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15.7222px;
+  line-height: 19px;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.addUserPage > .card > .bottom > form > .inputField > label > span,
+.addUserPage > .card > .bottom > form > .fullInputField > label > span {
+  color: #ff0000;
+}
+
+.addUserPage > .card > .bottom > form > .inputField > input,
+.addUserPage > .card > .bottom > form > .fullInputField > input,
+.addUserPage > .card > .bottom > form > .inputField > select,
+.addUserPage > .card > .bottom > form > .inputField > textarea {
+  width: 100%;
+  padding: 0 10px;
+  height: 36px;
+  border: 1px solid #cdcfd2;
+  outline: none;
+  cursor: pointer;
+}
+
+.addUserPage > .card > .bottom > form > .inputField > textarea {
+  height: auto;
+  padding-top: 5px;
+}
+
+.addUserPage > .card > .bottom > form > .inputField > .img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addUserPage > .card > .bottom > form > .inputField > .img > .imgPreview {
+  height: 122px;
+  width: 122px;
+  border-radius: 0px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.addUserPage
+  > .card
+  > .bottom
+  > form
+  > .inputField
+  .img
+  input::file-seletor-button {
+  background: #ebecf0;
+  border: 1px solid #dfdfdf;
+  border-radius: 10px;
+}
+
+.addUserPage > .card > .bottom > form > .inputField > .img > .imgPreview > img {
+  width: 100%;
+  height: 100%;
+}
+
+.addUserPage
+  > .card
+  > .bottom
+  > form
+  > .inputField
+  input[type="file"]::file-selector-button {
+  padding: 0 15px;
+  height: 35px;
+  width: 130px;
+  background: linear-gradient(180deg, #f4f5f7 0%, #ebecf0 100%);
+  border: 1px solid #dfdfdf;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.addUserPage > .card > .bottom > form > .inputField > select,
+.addUserPage > .card > .bottom > form > .inputField option option {
+  /* background: linear-gradient(180deg, #58bd43 0%, #3fa12a 100%); */
+  background: #58bd43;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15.7222px;
+  line-height: 19px;
+  text-transform: capitalize;
+  color: #ffffff;
+  border-right: 8px solid transparent;
+}
+
+.addUserPage > .card > .bottom > form > .inputField > input:hover,
+.addUserPage > .card > .bottom > form > .inputField > select:hover {
+  outline: 1.3px solid #399b2670;
+  /* transition: 200ms ease-in-out; */
+}
+
+.addUserPage > .card .bottom > form .btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.addUserPage > .card > .bottom > form > .btns > button {
+  padding: 10px 20px;
+  border: none;
+  background: transparent;
+}
+
+.addUserPage > .card > .bottom > form > .btns > button.submit {
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+  height: 39px;
+  background: linear-gradient(180deg, #ff8a00 0%, #ff8a00 100%);
+  border: 1px solid #dfdfdf;
+  border-radius: 10px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15.7222px;
+  line-height: 19px;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+
+.addUserPage > .card > .bottom > form > .btns > button.submit:hover {
+  background: linear-gradient(180deg, #e67a00 0%, #ff8800ad 100%);
+}
+
+.addUserPage > .card > .bottom > form > .btns > button.back {
+  display: flex;
+  align-items: center;
+  height: 39px;
+  background: linear-gradient(180deg, #f4f5f7 0%, #ecedf1 100%);
+  border: 2px solid #dfdfdf;
+
+  border-radius: 10px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15.7222px;
+  line-height: 19px;
+  text-transform: capitalize;
+  color: #5c5c5c;
+}
+
+.addUserPage > .card > .bottom > form > .btns > button.back:hover {
+  background: linear-gradient(180deg, #ffffff 0%, #dfdfdf 100%);
+}

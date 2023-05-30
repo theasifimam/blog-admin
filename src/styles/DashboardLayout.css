@@ -1,0 +1,332 @@
+.dashboardContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding-left: 277px;
+  transition: all ease-in-out 1s;
+}
+
+.dashboardContainer .leftSide {
+  width: 277px;
+  border-right: 2px solid #f1f1f1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: #ffff;
+  height: 100vh;
+  overflow: auto;
+  padding-top: 101px;
+  padding-bottom: 50px;
+  transition: all ease-in-out 0.8s;
+}
+
+.dashboardContainer .leftSide::-webkit-scrollbar {
+  display: none;
+}
+
+.dashboardContainer .leftSide .logo {
+  height: 101px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background: #fff;
+  width: 277px;
+}
+
+.dashboardContainer .leftSide .logo img {
+  width: 183.58px;
+  height: 63.24px;
+}
+
+.dashboardContainer .leftSide .navMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 277px;
+  overflow: hidden;
+  transition: all ease-in-out 0.3s;
+}
+
+.dashboardContainer .leftSide .navMenu svg {
+  filter: brightness(1);
+  color: white;
+}
+
+.dashboardContainer .leftSide .navMenu > a.menu {
+  width: 100%;
+  height: 64px;
+  margin-bottom: 2px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 1rem;
+  transition: all ease-in-out 0.9s;
+}
+
+.dashboardContainer .leftSide .navMenu > a.menu:hover {
+  background: linear-gradient(180deg, #5cc148 0%, #389925 100%);
+  transition: 200ms ease-in;
+}
+.dashboardContainer .leftSide .navMenu > a.menu:hover span {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+
+.dashboardContainer .leftSide .navMenu > a.menu:hover .menuIcon {
+  filter: brightness(100);
+}
+
+.dashboardContainer .leftSide .navMenu a.menu .menuIcon {
+  width: 25px;
+  margin-right: 1.5rem;
+}
+.dashboardContainer .leftSide .navMenu > a.menu > .menuIcon img {
+  width: 100%;
+}
+
+/* .dashboardContainer .leftSide .navMenu .multi-menu {
+  background: #5cc1483b;
+} */
+
+.dashboardContainer .leftSide .navMenu > a.active {
+  background: linear-gradient(180deg, #5cc148 0%, #389925 100%);
+}
+
+.dashboardContainer .leftSide .navMenu > a.active img {
+  filter: brightness(100);
+}
+
+.dashboardContainer .leftSide .navMenu > a.active span {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+
+.dashboardContainer .leftSide .navMenu a .menuIcon {
+  width: 15%;
+}
+
+.dashboardContainer .leftSide .navMenu a .menuIcon img {
+  width: 20%;
+}
+
+.dashboardContainer .leftSide .navMenu a span {
+  width: 70%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+
+  color: #9c9c9c;
+}
+
+.dashboardContainer .leftSide .navMenu a svg {
+  fill: white;
+}
+
+.dashboardContainer .leftSide .navMenu .subMenu {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  width: 100%;
+  transition: all ease-in-out 0.3s;
+}
+
+.dashboardContainer .leftSide .navMenu .multi-menu img.arrow {
+  filter: brightness(50%);
+}
+
+.dashboardContainer .leftSide .navMenu .active.multi-menu img.arrow,
+.dashboardContainer .leftSide .navMenu .multi-menu:hover img.arrow {
+  filter: none;
+}
+
+.dashboardContainer .leftSide .navMenu .subMenu a {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 64px;
+  margin-bottom: 2px;
+
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding-left: 2.5rem;
+}
+
+.dashboardContainer .leftSide .navMenu .subMenu a:hover,
+.dashboardContainer .leftSide .navMenu .subMenu a.active {
+  background: #ecf8e9;
+  cursor: pointer;
+  transition: 200ms ease-in;
+}
+
+.dashboardContainer .leftSide .navMenu .subMenu a:hover span,
+.dashboardContainer .leftSide .navMenu .subMenu a.active span {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #5cc148;
+}
+
+.dashboardContainer .leftSide .navMenu .subMenu a:hover img,
+.dashboardContainer .leftSide .navMenu .subMenu a.active img {
+  filter: invert(1) sepia(100) saturate(80) hue-rotate(125deg);
+  opacity: 0.5;
+}
+
+.dashboardContainer .leftSide .navMenu .subMenu a .menuIcon {
+  width: 20%;
+}
+
+.dashboardContainer .leftSide .navMenu .subMenu a .menuIcon img {
+  width: 50%;
+}
+
+/* DashHeader */
+
+.dashboardContainer .rightSide {
+  width: 100%;
+  padding-bottom: 100px;
+}
+.dashHeader {
+  width: 86%;
+  display: flex;
+  justify-content: space-between;
+  height: 101px;
+  align-items: center;
+  border-bottom: 2px solid #f1f1f1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background: #ffff;
+}
+
+.dashHeader > .left {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  align-content: center;
+  border-right: 2px solid #f1f1f1;
+  padding: 0 20px;
+}
+.dashHeader > .left > .left {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.dashHeader > .left > .left > span {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 33px;
+  color: #000000;
+}
+
+.dashHeader > .left > .left > .icon,
+.dashHeader > .left > .right > .icon {
+  margin-right: 10px;
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+}
+.dashHeader > .left > .left > .icon img,
+.dashHeader > .left > .right > .icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.dashHeader > .left > .right > span {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #24903c;
+  margin-right: 20px;
+}
+
+.dashHeader > .left > .right {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.dashHeader .left .icon.user {
+  border: 2px solid #5cc148;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dashHeader > .right {
+  display: flex;
+  width: 15%;
+  padding: 0 20px;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.dashHeader > .right .icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.dashHeader > .right .icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.dashboardContainer .rightSide .page-container {
+  padding: 3rem;
+  padding-top: 150px;
+  min-height: 94vh;
+  transition: all ease-in-out 0.6s;
+}
+
+footer {
+  padding: 1rem 3rem;
+}
+
+footer p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15.7222px;
+  color: #a8a8a8;
+  margin-bottom: 0px;
+}
+
+footer p a {
+  text-decoration: none;
+  color: #24903c !important;
+  font-weight: 600;
+  cursor: pointer;
+}

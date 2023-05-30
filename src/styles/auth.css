@@ -1,0 +1,160 @@
+.authContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/public/images/loginBG.png);
+}
+
+.authContainer .box {
+  width: 75%;
+  height: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.authContainer .backBtn {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #f29924 0%, #f29924 100%);
+  border: 1.07143px solid #ffffff;
+  box-shadow: 0px 4.28571px 4.28571px rgba(0, 0, 0, 0.1);
+}
+
+.authContainer .backBtn:hover {
+  background: linear-gradient(180deg, #ffba61 0%, #ff9100 100%);
+  transition: 200ms ease-in-out;
+}
+
+.authContainer .backBtn:hover img {
+  filter: brightness(0.2);
+}
+
+.authContainer .box .inputField {
+  display: flex;
+  flex-direction: column;
+  width: 533px;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.authContainer .box .inputField .showPasswordBtn {
+  border: none;
+  background: transparent;
+  position: absolute;
+  top: 43px;
+  right: 15px;
+}
+
+.authContainer .box .inputField .showPasswordBtn img {
+  width: 30px;
+  height: 30px;
+}
+
+.authContainer .box > h4 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 34px;
+  text-transform: capitalize;
+  color: #f29924;
+  margin-top: 1rem;
+}
+
+.authContainer .box span.heading-desc {
+  font-family: "Inter";
+  font-style: normal;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #000000;
+  margin-bottom: 2rem;
+}
+
+.authContainer .box .inputField label {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.authContainer .box .inputField input {
+  height: 56px;
+  border: 1px solid #24903c;
+  border-radius: 10px;
+  padding: 10px;
+  outline: none;
+  padding-right: 3rem;
+
+  /* Font Style */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: rgba(242, 153, 36, 0.4);
+}
+
+.authContainer .box .inputField input[type="submit"] {
+  background: #f29924;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  height: 56px;
+  cursor: pointer;
+  /* font style  */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: capitalize;
+  color: #ffffff;
+  border: none;
+}
+
+.authContainer .box .inputField input[type="submit"]:hover {
+  background: #ffa227;
+  transition: 200ms ease-in;
+}
+
+.authContainer .box .forgotPasswordLink {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 1rem;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.authContainer .box .forgotPasswordLink a {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #f29924;
+}
