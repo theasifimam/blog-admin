@@ -144,31 +144,16 @@ const editorConfig = {
   minHeight: 350,
 };
 
-const initialContent = `
-<p>TRY COPY CONTENT FROM A WORD AND PASTE HERE.</p><hr>
-</p><p><br></p><p>Subject: May 23 2019 Compliance Inspection for&nbsp;{{FacilityName}}</p><p> 
-(ie. {{InspectionCompleteDate}} {{InspectionEventType}} “Inspection”)
-</p><p><br></p><p>An inspection of Carl's Jr (FSE-0004) located at 65 Rogers Road Patterson, CA 95363 was completed on May 23 2019.
-</p><p><br></p><p>A copy of the inspection report is available here:&nbsp;<a href="www.open.linkoonline.com/asdfajjhafjasdfajsjfdjhafd">www.open.linkoonline.com/asdfajjhafjasdfajsjfdjhafd</a></p><p><br></p><p>
-If you have any questions or concerns, please contact us.
-</p><p><br></p><p>Sincerely,
-</p><p>Mark Gentry
-</p><p>Lead FOG Inspector
-</p><p>City of Patterson Environmental Compliance Department
-</p><p><a href="mailto:mgentry@ci.paterson.ca.us">mgentry@ci.paterson.ca.us</a></p><p>(209) 895-8060</p>
-`;
-export default function MyEditor() {
-  const [data, setData] = useState(initialContent);
-
+export default function MyEditor({ setFieldValue, name, value }) {
   return (
     // <div
     //   className="App"
     //   style={{ maxWidth: editorConfig.width, margin: "0 auto" }}
     // >
     <JoditEditor
-      value={data}
+      value={value && value}
       config={editorConfig}
-      onChange={(value) => setData(value)}
+      onChange={(value) => setFieldValue && setFieldValue(name, value)}
     />
     // </div>
   );

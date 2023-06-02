@@ -1,10 +1,9 @@
 import React from "react";
 import Pagination from "../../components/common/UI/Pagination";
-import { productTableData } from "../../utils/utils";
 import { Link } from "react-router-dom";
 import Switch from "../../components/common/UI/Switch";
 
-const ViewCoupon = () => {
+const AllKYCs = () => {
   const names = [
     "asif",
     "imam",
@@ -32,12 +31,11 @@ const ViewCoupon = () => {
         fullName: `${names[Math.floor(Math.random() * 16)]} ${
           names[Math.floor(Math.random() * 16)]
         }`,
-        email:
-          `${names[Math.floor(Math.random() * 11)]}${
-            names[Math.floor(Math.random() * 11)]
-          }` + "@gmail.com",
-        mNumber: Math.floor(Math.random() * 10000000000),
-        role: Math.floor(Math.random() * 10) % 2 == 0 ? "Seller" : "Buyer",
+        email: `${names[Math.floor(Math.random() * 11)]}${
+          names[Math.floor(Math.random() * 11)]
+        }@gmail.com`,
+        mNumber: "+91" + (1000000000 + Math.floor(Math.random() * 10000000000)),
+        role: Math.floor(Math.random() * 10) % 2 === 0 ? "Seller" : "Buyer",
       });
     }
     return dummyArray;
@@ -45,8 +43,8 @@ const ViewCoupon = () => {
   return (
     <div className="adminUserPage">
       <div className="top">
-        <Link to="/coupons/add-coupon">
-          All Coupons
+        <Link to="/users/add-user">
+          KYC
           <span>
             <img src="/icons/users/Addadminicon.svg" alt="plus icon" />
           </span>
@@ -72,16 +70,25 @@ const ViewCoupon = () => {
                 Sr. No.
               </th>
               <th scope="col" className="align-middle">
-                Coupon Name
+                Full Name
               </th>
               <th scope="col" className="align-middle">
-                Coupon Code
+                Aadhaar No.
               </th>
               <th scope="col" className="align-middle">
-                Start Date
+                Aadhaar Front
+              </th>
+              {/* <th scope="col" className="align-middle">
+                Aadhaar Back
+              </th> */}
+              <th scope="col" className="align-middle">
+                PAN no.
               </th>
               <th scope="col" className="align-middle">
-                End Date
+                Pan Card
+              </th>
+              <th scope="col" className="align-middle">
+                GST No.
               </th>
               <th scope="col" className="align-middle">
                 Status
@@ -99,8 +106,38 @@ const ViewCoupon = () => {
                     {data.srNo}
                   </th>
                   <td className="align-middle">{data.fullName}</td>
-                  <td className="align-middle">{data.email}</td>
                   <td className="align-middle">{data.mNumber}</td>
+                  <td className="align-middle">
+                    {" "}
+                    <div className="image">
+                      <img
+                        src="https://images.unsplash.com/photo-1627152749924-a85f39aa6f37?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
+                        alt="product"
+                        width={70}
+                      />
+                    </div>
+                  </td>
+                  {/* <td className="align-middle">
+                    {" "}
+                    <div className="image">
+                      <img
+                        src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        alt="product"
+                        width={70}
+                      />
+                    </div>
+                  </td> */}
+                  <td className="align-middle">{data.mNumber}</td>
+                  <td className="align-middle">
+                    {" "}
+                    <div className="image">
+                      <img
+                        src="https://images.unsplash.com/photo-1546015720-b8b30df5aa27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        alt="product"
+                        width={70}
+                      />
+                    </div>
+                  </td>
                   <td className="align-middle">{data.mNumber}</td>
                   <td className="align-middle">
                     <Switch />
@@ -108,14 +145,14 @@ const ViewCoupon = () => {
                   <td className="align-middle">
                     <div className="controls">
                       <Link
-                        to={`/coupons/view/${data.srNo} `}
+                        to={`/users/view-kyc/${data.srNo} `}
                         className="center add"
                       >
                         <img src="/icons/users/view.svg" alt="plus" />
                       </Link>
 
                       <Link
-                        to={`/coupons/update-coupon/${data.srNo}`}
+                        to={`/users/update-kyc/${data.srNo}`}
                         className="center edit"
                       >
                         <img src="/icons/users/editicon.svg" alt="edit" />
@@ -136,5 +173,4 @@ const ViewCoupon = () => {
     </div>
   );
 };
-
-export default ViewCoupon;
+export default AllKYCs;

@@ -3,6 +3,7 @@ import Switch from "../../components/common/UI/Switch";
 import "../../styles/AddUser.css";
 import { useFormik } from "formik";
 import { userSchema } from "../../utils/schema";
+import { Link } from "react-router-dom";
 
 const UpdateUser = () => {
   const [imagePreview, setImagePreview] = useState(
@@ -198,9 +199,11 @@ const UpdateUser = () => {
               <button type="submit" className="submit">
                 Submit
               </button>
-              <button type="button" className="back">
-                Back
-              </button>
+              <Link to="/users">
+                <button type="button" className="back">
+                  Back
+                </button>
+              </Link>
             </div>
           </form>
         </div>

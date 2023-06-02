@@ -52,13 +52,13 @@
   display: flex;
   width: 100%;
   justify-content: flex-end;
-  height: 45px;
+  flex-wrap: wrap;
 }
 
 .pagination > button {
   border: none;
   background: transparent;
-  height: 100%;
+  height: 45px;
 }
 
 .pagination > button.pageBtn {
@@ -112,6 +112,7 @@
   background: linear-gradient(180deg, #f4f5f7 0%, #eaebef 100%);
   border: 1px solid #dfdfdf;
   border-radius: 10px 0px 0px 10px;
+  height: 45px;
 }
 
 .pagination > button.next {
@@ -120,8 +121,32 @@
   padding: 12px 30px;
   gap: 10px;
 
-  height: 100%;
+  height: 45px;
   background: linear-gradient(180deg, #f4f5f7 0%, #eaebef 100%);
   border: 1px solid #dfdfdf;
   border-radius: 0px 10px 10px 0px;
+}
+
+/* MenuControls */
+.menuControls {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menuControls > li {
+  padding: 15px 15px;
+  overflow: hidden;
+  color: grey;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Inter";
+  border-bottom: 1px solid rgba(128, 128, 128, 0.082);
+}
+
+.menuControls > li:hover {
+  background: whitesmoke;
+  cursor: pointer;
+  color: #58bd43;
+  transition: 200ms ease-in;
 }

@@ -29,3 +29,39 @@ export const productTableData = (amount) => {
   }
   return dummyArray;
 };
+
+export function getFormattedDate(dateString) {
+  const options = {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  };
+  const date = new Date(dateString);
+  const formattedDate = date.toLocaleDateString("en-US", options);
+
+  const dayNumber = date.getDate();
+  const suffix = getNumberSuffix(dayNumber);
+
+  const [dayName, month, , year] = formattedDate.split(" ");
+
+  return `${dayName} ${dayNumber}${suffix} ${month}, ${year}`;
+}
+
+function getNumberSuffix(day) {
+  if (day >= 11 && day <= 13) {
+    return "th";
+  }
+
+  const lastDigit = day % 10;
+  switch (lastDigit) {
+    case 1:
+      return "st";
+    case 2:
+      return "nd";
+    case 3:
+      return "rd";
+    default:
+      return "th";
+  }
+}

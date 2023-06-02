@@ -3,7 +3,7 @@ import React from "react";
 const Pagination = ({ pageNumber, setPageNumber, totalPages }) => {
   const buttonData = [1, 2, 3, 4, 5];
   return totalPages > 1 ? (
-    <div className="pagination">
+    <div className="pagination ">
       {/* Previous Button */}
       <button
         disabled={pageNumber <= 0}

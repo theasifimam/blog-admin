@@ -1,8 +1,43 @@
 .adminUserPage {
   width: 100%;
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
 .adminUserPage > .top {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.adminUserPage > .top > .filter {
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.filter > label {
+  text-decoration: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  color: #000000;
+}
+
+.adminUserPage > .top > .filter > select {
+  color: white;
+  border: none;
+  border-right: 8px solid transparent;
+  padding: 10px 15px;
+  border-radius: 5px;
+  outline: none;
+  background: #5cc149;
 }
 
 .adminUserPage > .top > a {

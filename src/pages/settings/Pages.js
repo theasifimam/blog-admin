@@ -1,10 +1,10 @@
 import React from "react";
-import Pagination from "../../components/common/UI/Pagination";
-import { productTableData } from "../../utils/utils";
 import { Link } from "react-router-dom";
 import Switch from "../../components/common/UI/Switch";
+import Pagination from "../../components/common/UI/Pagination";
+import { productTableData } from "../../utils/utils";
 
-const ViewCoupon = () => {
+const Pages = () => {
   const names = [
     "asif",
     "imam",
@@ -45,14 +45,15 @@ const ViewCoupon = () => {
   return (
     <div className="adminUserPage">
       <div className="top">
-        <Link to="/coupons/add-coupon">
-          All Coupons
+        <Link to="/settings/add-page">
+          All Pages
           <span>
             <img src="/icons/users/Addadminicon.svg" alt="plus icon" />
           </span>
         </Link>
 
-        <div className="filter">
+        {/* filter */}
+        {/* <div className="filter">
           <label htmlFor="users">Filter Users</label>
           <select name="users" id="users">
             <option>Select User Type</option>
@@ -61,10 +62,10 @@ const ViewCoupon = () => {
             <option value="seller">Seller</option>
             <option value="support">Support</option>
           </select>
-        </div>
+        </div> */}
       </div>
 
-      <div className="table responsiveTable">
+      <div className="table">
         <table className="table ">
           <thead>
             <tr>
@@ -72,16 +73,16 @@ const ViewCoupon = () => {
                 Sr. No.
               </th>
               <th scope="col" className="align-middle">
-                Coupon Name
+                Page Title
               </th>
               <th scope="col" className="align-middle">
-                Coupon Code
+                Short Description
               </th>
               <th scope="col" className="align-middle">
-                Start Date
+                Description
               </th>
               <th scope="col" className="align-middle">
-                End Date
+                Banner
               </th>
               <th scope="col" className="align-middle">
                 Status
@@ -92,30 +93,39 @@ const ViewCoupon = () => {
             </tr>
           </thead>
           <tbody>
-            {tableData(10).map((data, index) => {
+            {productTableData(10).map((data, index) => {
               return (
                 <tr className="rowHeight3" key={index}>
                   <th scope="row" className="align-middle">
                     {data.srNo}
                   </th>
-                  <td className="align-middle">{data.fullName}</td>
-                  <td className="align-middle">{data.email}</td>
-                  <td className="align-middle">{data.mNumber}</td>
-                  <td className="align-middle">{data.mNumber}</td>
+                  <td className="align-middle">{data.productName}</td>
                   <td className="align-middle">
-                    <Switch />
+                    {data.productName} {data.productName} {data.productName}{" "}
+                    {data.productName}
+                  </td>
+                  <td className="align-middle">Rs {data.productCode}</td>
+                  <td className="align-middle">
+                    <div className="image">
+                      <img src={data.productImages} alt="product" width={70} />
+                    </div>
+                  </td>
+                  <td className="align-middle">
+                    <Switch
+                      switchValue={Math.round(Math.random() * 10) % 2 === 0}
+                    />
                   </td>
                   <td className="align-middle">
                     <div className="controls">
                       <Link
-                        to={`/coupons/view/${data.srNo} `}
+                        to={`/products/view/${data.srNo} `}
                         className="center add"
                       >
                         <img src="/icons/users/view.svg" alt="plus" />
                       </Link>
 
                       <Link
-                        to={`/coupons/update-coupon/${data.srNo}`}
+                        to={`/products/update-product/${data.srNo}`}
                         className="center edit"
                       >
                         <img src="/icons/users/editicon.svg" alt="edit" />
@@ -137,4 +147,4 @@ const ViewCoupon = () => {
   );
 };
 
-export default ViewCoupon;
+export default Pages;

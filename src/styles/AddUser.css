@@ -31,6 +31,11 @@
   row-gap: 1rem;
 }
 
+.addUserPage > .card > .bottom.monthlySale > form > .inputField {
+  width: 30%;
+  margin-bottom: 1rem;
+}
+
 .addUserPage > .card > .bottom > h3 {
   margin-top: 2rem;
   margin-left: 3rem;
@@ -76,6 +81,18 @@
   height: 200px;
 }
 
+.addUserPage > .card > .bottom > form > .inputField > div > div {
+  border: 1px solid #cdcfd2;
+}
+
+.addUserPage > .card > .bottom > form > .inputField > div > div:focus,
+.addUserPage > .card > .bottom > form > .inputField > div > div:active,
+.addUserPage > .card > .bottom > form > .inputField > div > div:hover {
+  outline: 2.3px solid #399b2670 !important;
+  box-shadow: none !important;
+  border-color: transparent;
+}
+
 .addUserPage > .card > .bottom > form > .inputField > label {
   margin-bottom: 10px;
   font-family: "Inter";
@@ -94,6 +111,7 @@
 
 .addUserPage > .card > .bottom > form > .inputField > input,
 .addUserPage > .card > .bottom > form > .fullInputField > input,
+.addUserPage > .card > .bottom > form > .fullInputField > textarea,
 .addUserPage > .card > .bottom > form > .inputField > select,
 .addUserPage > .card > .bottom > form > .inputField > textarea {
   width: 100%;
@@ -114,7 +132,24 @@
   justify-content: space-between;
   align-items: center;
 }
+.addUserPage > .card > .bottom > form > .inputField > .img .imgPreviewRect {
+  min-height: 200px;
+  max-height: 500px;
+  max-width: 50%;
+  border: none;
+}
 
+.addUserPage
+  > .card
+  > .bottom
+  > form
+  > .inputField
+  > .img
+  .imgPreviewRect
+  > img {
+  height: 100%;
+  width: 100%;
+}
 .addUserPage > .card > .bottom > form > .inputField > .img > .imgPreview {
   height: 122px;
   width: 122px;
@@ -183,10 +218,14 @@
   margin: 1.5rem 0;
 }
 
-.addUserPage > .card > .bottom > form > .btns > button {
+.addUserPage > .card > .bottom > form > .btns button {
   padding: 10px 20px;
   border: none;
   background: transparent;
+}
+
+.addUserPage > .card > .bottom > form > .btns a {
+  text-decoration: none;
 }
 
 .addUserPage > .card > .bottom > form > .btns > button.submit {
@@ -207,11 +246,11 @@
   color: #ffffff;
 }
 
-.addUserPage > .card > .bottom > form > .btns > button.submit:hover {
+.addUserPage > .card > .bottom > form > .btns button.submit:hover {
   background: linear-gradient(180deg, #e67a00 0%, #ff8800ad 100%);
 }
 
-.addUserPage > .card > .bottom > form > .btns > button.back {
+.addUserPage > .card > .bottom > form > .btns button.back {
   display: flex;
   align-items: center;
   height: 39px;

@@ -3,12 +3,11 @@ import React from "react";
 import Switch from "../../components/common/UI/Switch";
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
-import { couponSchema } from "../../utils/schema";
 import { Link } from "react-router-dom";
 
 const animatedComponents = makeAnimated();
 
-const AddCoupon = () => {
+const UpdateCoupon = () => {
   const {
     values,
     handleBlur,
@@ -26,9 +25,9 @@ const AddCoupon = () => {
       couponStartDate: "",
       couponEndDate: "",
       couponType: "",
-      status: "1",
+      status: "",
     },
-    validationSchema: couponSchema,
+    // validationSchema: userSchema,
     onSubmit: (values, action) => {
       console.log(values);
     },
@@ -53,7 +52,7 @@ const AddCoupon = () => {
       <div className="card">
         <div className="top"></div>
         <div className="bottom">
-          <h3>Add Coupon</h3>
+          <h3>Update Coupon</h3>
           <form onSubmit={handleSubmit}>
             {/* CouponName */}
             <div className="inputField">
@@ -114,26 +113,19 @@ const AddCoupon = () => {
               ) : null}
             </div>
 
-            {/* Select User emails */}
             <div className="inputField">
-              <label htmlFor="userEmailId">Select Users</label>
+              <label htmlFor="userEmailId">
+                Select Users<span>*</span>
+              </label>
 
               <Select
                 closeMenuOnSelect={false}
                 components={animatedComponents}
                 isMulti
                 options={options}
-                onChange={(selectedOptions) => {
-                  const valuesInArray = selectedOptions.map((option, index) => {
-                    return option.value;
-                  });
-                  setFieldValue("userEmailId", valuesInArray);
-                }}
-                onBlur={handleBlur}
-                // value={values.userEmailId}
               />
-              {errors.userEmailId && touched.userEmailId ? (
-                <div className="error-msg">{errors.userEmailId}</div>
+              {errors.password && touched.password ? (
+                <div className="error-msg">{errors.password}</div>
               ) : null}
             </div>
             {/* couponStartDate */}
@@ -209,7 +201,7 @@ const AddCoupon = () => {
               <button type="submit" className="submit">
                 Submit
               </button>
-              <Link to="/coupons">
+              <Link to="/coupons/view">
                 <button type="button" className="back">
                   Back
                 </button>
@@ -222,4 +214,4 @@ const AddCoupon = () => {
   );
 };
 
-export default AddCoupon;
+export default UpdateCoupon;

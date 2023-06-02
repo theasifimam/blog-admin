@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Switch from "../../components/common/UI/Switch";
 import MyEditor from "../../components/common/UI/MyEditor";
 import { useFormik } from "formik";
+import { Link } from "react-router-dom";
 
 const AddProduct = () => {
   const [imagePreview, setImagePreview] = useState(
@@ -284,7 +285,11 @@ const AddProduct = () => {
 
             <div className="btns">
               <button className="submit">Submit</button>
-              <button className="back">Back</button>
+              <Link to="/products">
+                <button type="button" className="back">
+                  Back
+                </button>
+              </Link>
             </div>
           </form>
         </div>

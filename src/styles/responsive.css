@@ -1,0 +1,89 @@
+.responsiveTable {
+  overflow: auto !important;
+  min-width: 100%;
+}
+
+.responsiveTable .table {
+  overflow: auto !important;
+  min-width: 1150px;
+}
+
+@media screen and (min-width: 1200px) {
+  .dashHeader.collapsed {
+    padding-left: 65px !important;
+  }
+  .dashHeader.Uncollapsed {
+    padding-left: 277px !important;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 768px) {
+  .dashHeader {
+    padding-left: 65px !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .dNone {
+    display: none;
+  }
+
+  footer p {
+    text-align: center;
+  }
+  .inputField {
+    width: 100% !important;
+    min-width: 200px;
+  }
+
+  .addUserPage > .card > .bottom > h3 {
+    margin-top: 2rem;
+    margin-left: 1.5rem !important;
+  }
+
+  .addUserPage > .card > .bottom > form {
+    padding: 0 1.5rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .leftSide.collapsed {
+    width: 0 !important;
+  }
+
+  .dbClose {
+    padding-left: 0 !important;
+  }
+
+  .dbOpen {
+    padding-left: 0 !important;
+  }
+  .dashboardContainer .rightSide .page-container {
+    padding: 120px 10px 10px 10px !important;
+  }
+
+  .adminUserPage {
+    padding: 1rem !important;
+  }
+
+  .adminUserPage > .top > a {
+    font-size: 18px;
+  }
+
+  .adminUserPage > .top > a > span {
+    width: 30px;
+    height: 30px;
+  }
+  .filter > select {
+    width: 150px;
+  }
+
+  .adminUserPage > .top {
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  .adminUserPage > .top label {
+    display: none;
+  }
+}

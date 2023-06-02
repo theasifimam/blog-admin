@@ -1,6 +1,7 @@
 import React from "react";
 import Switch from "../../components/common/UI/Switch";
 import MyEditor from "../../components/common/UI/MyEditor";
+import { Link } from "react-router-dom";
 
 const UpdateProduct = () => {
   return (
@@ -199,7 +200,11 @@ const UpdateProduct = () => {
 
             <div className="btns">
               <button className="submit">Submit</button>
-              <button className="back">Back</button>
+              <Link to="/products">
+                <button type="button" className="back">
+                  Back
+                </button>
+              </Link>
             </div>
           </form>
         </div>

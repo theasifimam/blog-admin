@@ -3,6 +3,7 @@ import Pagination from "../../components/common/UI/Pagination";
 import { Link } from "react-router-dom";
 import Switch from "../../components/common/UI/Switch";
 import { productTableData } from "../../utils/utils";
+import "../../styles/responsive.css";
 
 const ViewAllProducts = () => {
   return (
@@ -16,13 +17,13 @@ const ViewAllProducts = () => {
         </Link>
       </div>
 
-      <div className="table">
+      <div className="table responsiveTable">
         <table className="table ">
           <thead>
             <tr className="align-middle">
               <th scope="col">Sr. No.</th>
               <th scope="col">Product Name</th>
-              <th scope="col">Product Code</th>
+              <th scope="col">Price </th>
               <th scope="col">Image</th>
               <th scope="col">Status</th>
               <th scope="col">Action</th>
@@ -36,7 +37,7 @@ const ViewAllProducts = () => {
                     {data.srNo}
                   </th>
                   <td className="align-middle">{data.productName}</td>
-                  <td className="align-middle">{data.productCode}</td>
+                  <td className="align-middle">Rs {data.productCode}</td>
                   <td className="align-middle">
                     <div className="image">
                       <img src={data.productImages} alt="product" width={70} />

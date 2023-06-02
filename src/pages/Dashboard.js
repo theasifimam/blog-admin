@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Dashboard.css";
 import EChartsReact from "echarts-for-react";
 
@@ -74,7 +74,7 @@ const Dashboard = () => {
         <div className="card green">
           <span>Today's Order</span>
           <div className="bottom">
-            <span className="left">109</span>
+            <span className="left">1,309</span>
             <div className="right">
               <img src="/icons/dashboard/whiteMenu.svg" alt="menu" />
             </div>
@@ -106,22 +106,32 @@ const Dashboard = () => {
         <EChartsReact option={option} />
       </div>
 
-      <div className="table">
+      <div className="table responsiveTable">
         <h4>User Listing</h4>
-        <table class="table table-striped">
+        <table className="table table-striped">
           <thead className="rowHeight3">
             <tr>
-              <th scope="col">Sr. No.</th>
-              <th scope="col">Full Name</th>
-              <th scope="col">Email</th>
-              <th scope="col">Mobile No.</th>
-              <th scope="col">User Type</th>
+              <th scope="col" className="align-middle">
+                Sr. No.
+              </th>
+              <th scope="col" className="align-middle">
+                Full Name
+              </th>
+              <th scope="col" className="align-middle">
+                Email
+              </th>
+              <th scope="col" className="align-middle">
+                Mobile No.
+              </th>
+              <th scope="col" className="align-middle">
+                User Type
+              </th>
             </tr>
           </thead>
           <tbody>
             {tableData(10).map((data, index) => {
               return (
-                <tr className="rowHeight3">
+                <tr className="rowHeight3" key={index}>
                   <th scope="row" className="align-middle">
                     {data.srNo}
                   </th>

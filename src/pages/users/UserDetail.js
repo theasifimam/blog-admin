@@ -1,5 +1,6 @@
 import React from "react";
 import Switch from "../../components/common/UI/Switch";
+import { Link } from "react-router-dom";
 
 const UserDetail = () => {
   return (
@@ -108,8 +109,12 @@ const UserDetail = () => {
             </div>
 
             <div className="btns">
-              <button className="submit">Submit</button>
-              <button className="back">Back</button>
+              {/* <button className="submit">Submit</button> */}
+              <Link to="/users">
+                <button type="button" className="back">
+                  Back
+                </button>
+              </Link>
             </div>
           </form>
         </div>

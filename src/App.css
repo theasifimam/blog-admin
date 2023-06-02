@@ -13,11 +13,32 @@
   font-size: 14px;
 }
 
+.table > table {
+  background-color: #ffff;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.table > table th {
+  border: none !important;
+}
+
 @keyframes rollout {
   0% {
     transform: translateY(30px);
   }
   100% {
     transform: none;
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

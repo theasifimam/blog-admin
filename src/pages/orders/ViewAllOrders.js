@@ -45,21 +45,23 @@ const ViewAllOrders = () => {
     <div className="adminUserPage">
       <div className="top">
         <Link to="/products/add-product">
-          Add Product{" "}
+          All Orders{" "}
           <span>
             <img src="/icons/users/Addadminicon.svg" alt="plus icon" />
           </span>
         </Link>
       </div>
 
-      <div className="table">
+      <div className="table responsiveTable">
         <table className="table ">
           <thead>
             <tr className="align-middle">
               <th scope="col">Sr. No.</th>
-              <th scope="col">Product Name</th>
-              <th scope="col">Email</th>
-              <th scope="col">Mobile No.</th>
+              <th scope="col">Order ID</th>
+              <th scope="col">Order Date</th>
+              <th scope="col">Total Paid Amount</th>
+              <th scope="col">Shipping Address</th>
+              <th scope="col">Order Status</th>
               <th scope="col">Status</th>
               <th scope="col">Action</th>
             </tr>
@@ -74,6 +76,9 @@ const ViewAllOrders = () => {
                   <td className="align-middle">{data.fullName}</td>
                   <td className="align-middle">{data.email}</td>
                   <td className="align-middle">{data.mNumber}</td>
+                  <td className="align-middle">{data.mNumber}</td>
+                  <td className="align-middle">{data.mNumber}</td>
+
                   <td className="align-middle">
                     <Switch />
                   </td>

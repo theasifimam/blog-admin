@@ -50,3 +50,33 @@ export const userSchema = Yup.object({
     .oneOf([Yup.ref("password"), null], "Passwords must match"),
   role: Yup.string().required("Please select role."),
 });
+
+export const couponSchema = Yup.object({
+  couponName: Yup.string().required("Please enter coupon name."),
+  couponCode: Yup.string().required("Please enter coupon code"),
+  price: Yup.string().required("Please enter price."),
+  // userEmailId: Yup.array("There must be atleast one email selected.")
+  //   .min(1, "There must be atleast one email.")
+  //   .of(
+  //     Yup.string("There must be atleast one email.").required(
+  //       "There must be atleast one email."
+  //     )
+  //   )
+  //   .required("There must be atleast one email."),
+  couponStartDate: Yup.date().required("Coupon start date is required field."),
+  couponEndDate: Yup.date().required("Coupon end date is required field."),
+  couponType: Yup.string().required("Please select coupon type"),
+}).shape({
+  couponStartDate: Yup.date().required("Please enter start date."),
+  couponEndDate: Yup.date()
+    .min(Yup.ref("couponStartDate"), "End date can't be before start date")
+    .required("Please enter end date."),
+});
+
+export const pageSchema = Yup.object({
+  title: Yup.string().required("Please enter page title."),
+  // shortDescription: Yup.string().min(16, "short description is too short."),
+  description: Yup.string()
+    .min(255, "Page description is too short.")
+    .required("Description is required."),
+});
