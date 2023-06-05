@@ -14,7 +14,7 @@
 
 .adminUserPage > .top > .filter {
   display: flex;
-  width: 50%;
+  width: 60%;
   justify-content: flex-end;
   column-gap: 10px;
   align-items: center;
@@ -40,6 +40,9 @@
   background: #5cc149;
 }
 
+.adminUserPage > .top {
+  margin-bottom: 1rem;
+}
 .adminUserPage > .top > a {
   display: flex;
   align-items: center;
@@ -51,8 +54,7 @@
   font-size: 23px;
   line-height: 29px;
   color: #000000;
-  padding-bottom: 1rem;
-  width: 100%;
+  width: 40%;
 }
 
 .adminUserPage > .top > a > span {

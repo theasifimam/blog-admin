@@ -24,24 +24,6 @@ const Pages = () => {
     "golu",
   ];
 
-  const tableData = (amount) => {
-    let dummyArray = [];
-    for (let i = 0; i < amount; i++) {
-      dummyArray.push({
-        srNo: i < 9 ? "0" + (i + 1) : `${i + 1}`,
-        fullName: `${names[Math.floor(Math.random() * 16)]} ${
-          names[Math.floor(Math.random() * 16)]
-        }`,
-        email:
-          `${names[Math.floor(Math.random() * 11)]}${
-            names[Math.floor(Math.random() * 11)]
-          }` + "@gmail.com",
-        mNumber: Math.floor(Math.random() * 10000000000),
-        role: Math.floor(Math.random() * 10) % 2 == 0 ? "Seller" : "Buyer",
-      });
-    }
-    return dummyArray;
-  };
   return (
     <div className="adminUserPage">
       <div className="top">

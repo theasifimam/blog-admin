@@ -1,5 +1,4 @@
 import React from "react";
-import Switch from "../../components/common/UI/Switch";
 import { Link } from "react-router-dom";
 import { useFormik } from "formik";
 

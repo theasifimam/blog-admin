@@ -28,11 +28,21 @@ const MonthlySale = () => {
           <form>
             <div className="inputField">
               <label htmlFor="startDate">Start Date</label>
-              <input type="date" name="startDate" id="startDate" />
+              <input
+                autoComplete="true"
+                type="date"
+                name="startDate"
+                id="startDate"
+              />
             </div>
             <div className="inputField">
               <label htmlFor="endDate">End Date</label>
-              <input type="date" name="endDate" id="endDate" />
+              <input
+                autoComplete="true"
+                type="date"
+                name="endDate"
+                id="endDate"
+              />
             </div>
 
             <div

@@ -43,26 +43,26 @@ const SideBar = ({ setMenuHover }) => {
           {
             title: "Users",
             link: "/users/admin",
-            img: "/icons/dashboard/dashboardGrey.svg",
+            img: "/icons/sidebar/userlist.svg",
             alt: "Admin icon",
           },
           {
             title: "Add ",
             link: "/users/add-user",
-            img: "/icons/dashboard/supportGrey.svg",
+            img: "/icons/sidebar/adduser.svg",
             alt: "support icon",
           },
 
           {
             title: "KYC",
             link: "/users/kyc",
-            img: "/icons/dashboard/supportGrey.svg",
+            img: "/icons/sidebar/kyc.svg",
             alt: "support icon",
           },
           {
             title: "Add KYC",
             link: "/users/add-kyc",
-            img: "/icons/dashboard/buyerGrey.svg",
+            img: "/icons/sidebar/addkyc.svg",
             alt: "buyer icon",
           },
           // {
@@ -140,36 +140,36 @@ const SideBar = ({ setMenuHover }) => {
       <Menu
         menu="Settings"
         menuLink="/settings"
-        menuIcon="/icons/dashboard/settingsGrey.svg"
+        menuIcon="/icons/sidebar/settingpages.svg"
         submenu={[
           {
             title: "SMTP",
             link: "/settings/smtp",
-            img: "/icons/dashboard/viewAllOrders.svg",
+            img: "/icons/sidebar/smtp.svg",
             alt: "Admin icon",
           },
           {
-            title: "Pages",
+            title: "CMS",
             link: "/settings/pages",
-            img: "/icons/dashboard/viewAllOrders.svg",
+            img: "/icons/sidebar/CMS.svg",
             alt: "Admin icon",
           },
           {
             title: "Add Page",
             link: "/settings/add-page",
-            img: "/icons/dashboard/addCoupon.svg",
+            img: "/icons/sidebar/addcms.svg",
             alt: "Admin icon",
           },
           {
             title: "Bulk Users",
             link: "/settings/bulk-users",
-            img: "/icons/dashboard/addCoupon.svg",
+            img: "/icons/sidebar/Bulkusers.svg",
             alt: "Admin icon",
           },
           {
             title: "Bulk Products",
             link: "/settings/bulk-products",
-            img: "/icons/dashboard/addCoupon.svg",
+            img: "/icons/sidebar/bulkprodutcs.svg",
             alt: "Admin icon",
           },
         ]}

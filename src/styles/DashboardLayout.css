@@ -59,6 +59,35 @@
   height: 63.24px;
 }
 
+.closeSideBarBtn {
+  position: fixed;
+  left: 235px;
+  z-index: 10;
+  top: 7px;
+
+  border: none;
+  height: 30px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 50%;
+  color: grey;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 200ms ease-in-out;
+}
+
+.closeSideBarBtn:hover {
+  background: #24903c;
+  color: white;
+  transition: 200ms ease-in-out;
+}
+
+.collapsed > .closeSideBarBtn {
+  display: none !important;
+}
+
 .dashboardContainer .leftSide .navMenu {
   display: flex;
   flex-direction: column;

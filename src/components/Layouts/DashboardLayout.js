@@ -37,6 +37,14 @@ const DashboardLayout = () => {
             : "leftSide Uncollapsed"
         }
       >
+        <button
+          className="closeSideBarBtn"
+          onClick={() => {
+            setToggleMenu(true);
+          }}
+        >
+          X
+        </button>
         <div className="logo" style={{ display: toggleMenu ? "none" : "flex" }}>
           <Link to="/">
             <img src="/icons/logo.png" alt="logo-sabkimandi" width="150" />
@@ -48,7 +56,7 @@ const DashboardLayout = () => {
         <DashHeader {...dashHeaderProps} />
         <div
           className="page-container"
-          onClick={() => {
+          onDoubleClick={() => {
             setToggleMenu(true);
           }}
         >
@@ -56,11 +64,11 @@ const DashboardLayout = () => {
         </div>
         <footer>
           <p>
-            Copyright &#169; 2023-2027{" "}
-            <a href="https://sabkimandi.com/" target="_blank">
+            Copyright &#169; 2023-2027 |{" "}
+            <a href="https://sabkimandi.com/" target="_blank" rel="noreferrer">
               SabkiMandi.com
             </a>{" "}
-            All rights reserved.
+            | All rights reserved.
           </p>
         </footer>
       </div>

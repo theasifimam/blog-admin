@@ -24,6 +24,21 @@ function isValidFileType(fileName, fileType) {
   );
 }
 
+// Login Schema
+export const signinSchema = Yup.object({
+  email: Yup.string()
+    .trim("The email number cannot include space(s) at start and end.")
+    .strict(true)
+    .required("Please enter email Number.")
+    .matches(emailRegex, "Please enter your valid email"),
+
+  password: Yup.string()
+    .trim("Password cannot include start and end spaces")
+    .strict(true)
+    .required("Please enter password.")
+    .min(6, "Password must be atleast 6 characters long."),
+});
+
 export const userSchema = Yup.object({
   fullName: Yup.string().required("Please enter full name."),
   email: Yup.string()

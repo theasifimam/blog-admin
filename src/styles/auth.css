@@ -63,7 +63,7 @@
   height: 30px;
 }
 
-.authContainer .box > h4 {
+.authContainer .box h4 {
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;

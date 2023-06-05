@@ -79,11 +79,46 @@
   }
 
   .adminUserPage > .top {
-    flex-wrap: wrap;
+    flex-wrap: wrap !important;
     margin-bottom: 10px;
   }
 
   .adminUserPage > .top label {
     display: none;
+  }
+
+  .adminUserPage > .top > .filter {
+    justify-content: flex-end !important;
+  }
+
+  .pagination > button.activeBtn {
+    display: block;
+  }
+
+  .pagination > button.pageBtn {
+    display: none !important;
+  }
+
+  .pagination {
+    justify-content: center !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .adminUserPage > .top > a {
+    font-size: 16px !important;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .adminUserPage > .top > .filter {
+    display: none !important;
+  }
+
+  .adminUserPage > .top > a {
+    width: 100% !important;
+  }
+
+  .addUserPage > .card > .bottom > form > .inputField {
+    min-width: 0 !important;
   }
 }

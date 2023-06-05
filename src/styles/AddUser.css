@@ -81,17 +81,17 @@
   height: 200px;
 }
 
-.addUserPage > .card > .bottom > form > .inputField > div > div {
+/* .addUserPage > .card > .bottom > form > .inputField > div > div {
   border: 1px solid #cdcfd2;
-}
+} */
 
-.addUserPage > .card > .bottom > form > .inputField > div > div:focus,
+/* .addUserPage > .card > .bottom > form > .inputField > div > div:focus,
 .addUserPage > .card > .bottom > form > .inputField > div > div:active,
 .addUserPage > .card > .bottom > form > .inputField > div > div:hover {
   outline: 2.3px solid #399b2670 !important;
   box-shadow: none !important;
   border-color: transparent;
-}
+} */
 
 .addUserPage > .card > .bottom > form > .inputField > label {
   margin-bottom: 10px;
