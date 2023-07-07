@@ -12,7 +12,7 @@ const ViewAllProducts = () => {
         <Link to="/products/add-product">
           Add Product{" "}
           <span>
-            <img src="/icons/users/Addadminicon.svg" alt="plus icon" />
+            <img src="/icons-images/users/Addadminicon.svg" alt="plus icon" />
           </span>
         </Link>
       </div>
@@ -52,18 +52,24 @@ const ViewAllProducts = () => {
                         to={`/products/view/${data.srNo} `}
                         className="center add"
                       >
-                        <img src="/icons/users/view.svg" alt="plus" />
+                        <img src="/icons-images/users/view.svg" alt="plus" />
                       </Link>
 
                       <Link
                         to={`/products/update-product/${data.srNo}`}
                         className="center edit"
                       >
-                        <img src="/icons/users/editicon.svg" alt="edit" />
+                        <img
+                          src="/icons-images/users/editicon.svg"
+                          alt="edit"
+                        />
                       </Link>
 
                       <Link className="center delete">
-                        <img src="/icons/users/delete.svg" alt="delete" />
+                        <img
+                          src="/icons-images/users/delete.svg"
+                          alt="delete"
+                        />
                       </Link>
                     </div>
                   </td>

@@ -5,10 +5,10 @@ const ForgotPassword = () => {
   return (
     <Fragment>
       <div className="logo">
-        <img src="./icons/logo.png" alt="logo" />
+        <img src="/icons-images/logo.png" alt="logo" />
       </div>
       <Link to="/signin" className="backBtn">
-        <img src="./icons/back.svg" alt="back icon" />
+        <img src="/icons-images/back.svg" alt="back icon" />
       </Link>
       <h4>Forgot Your Password?</h4>
       <span className="heading-desc">

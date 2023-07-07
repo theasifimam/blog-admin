@@ -69,7 +69,7 @@ const ViewProductDetail = () => {
                 />
                 <div className="imgPreview">
                   <img
-                    src="/icons/users/profilepic.svg"
+                    src="/icons-images/users/profilepic.svg"
                     alt="profile"
                     width="100"
                   />

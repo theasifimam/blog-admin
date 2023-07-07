@@ -1,35 +1,3 @@
-/* .red {
-  background: #fa686b;
-}
-
-.red>span {
-  background: #b52f3166;
-}
-
-.green {
-  background: #5bc381;
-}
-
-.green>span {
-  background: #298c4d;
-}
-
-.yellow {
-  background: #ff891a;
-}
-
-.yellow>span {
-  background: #c55f00;
-}
-
-.purple {
-  background: #9583f4;
-}
-
-.purple>span {
-  background: #6456b6;
-} */
-
 .dashboard {
   width: 100%;
   display: flex;
@@ -47,13 +15,14 @@
 }
 
 .dashboard>.top>.card {
-  width: 357px;
-  height: 154.01px;
-  border-radius: 20px;
+  width: 24%;
+  min-width: 250px;
+  max-width: 600px;
+  height: 200px;
+  border-radius: 30px;
   background-color: white;
-  border: 2px solid var(--primary-color);
   color: black;
-  padding: 1rem 1rem;
+  padding: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -120,9 +89,8 @@
 .dashboard .mid {
   width: 100%;
   background: #ffff;
-  padding: 2rem 1rem 0 1rem;
-  border-radius: 20px;
-  border: 2px solid black;
+  padding: 2rem;
+  border-radius: 30px;
 }
 
 .dashboard .mid h4,

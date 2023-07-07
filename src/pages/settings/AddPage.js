@@ -7,7 +7,7 @@ import MyEditor from "../../components/common/UI/MyEditor";
 
 const AddPage = () => {
   const [imagePreview, setImagePreview] = useState(
-    "/icons/users/profilepic.svg"
+    "/icons-images/users/profilepic.svg"
   );
   const {
     values,

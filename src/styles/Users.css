@@ -1,18 +1,18 @@
 .adminUserPage {
   width: 100%;
-  background: white;
   padding: 2rem;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
-.adminUserPage > .top {
+
+.adminUserPage>.top {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.adminUserPage > .top > .filter {
+.adminUserPage>.top>.filter {
   display: flex;
   width: 60%;
   justify-content: flex-end;
@@ -20,7 +20,7 @@
   align-items: center;
 }
 
-.filter > label {
+.filter>label {
   text-decoration: none;
   font-family: "Inter";
   font-style: normal;
@@ -30,7 +30,7 @@
   color: #000000;
 }
 
-.adminUserPage > .top > .filter > select {
+.adminUserPage>.top>.filter>select {
   color: white;
   border: none;
   border-right: 8px solid transparent;
@@ -40,10 +40,11 @@
   background: #5cc149;
 }
 
-.adminUserPage > .top {
+.adminUserPage>.top {
   margin-bottom: 1rem;
 }
-.adminUserPage > .top > a {
+
+.adminUserPage>.top>a {
   display: flex;
   align-items: center;
   column-gap: 10px;
@@ -57,7 +58,7 @@
   width: 40%;
 }
 
-.adminUserPage > .top > a > span {
+.adminUserPage>.top>a>span {
   width: 38px;
   height: 38px;
   background: #f39220;
@@ -69,12 +70,12 @@
   align-items: center;
 }
 
-.adminUserPage > .top > a > span:hover {
+.adminUserPage>.top>a>span:hover {
   transition: 200ms ease-in-out;
   background: #ffb45f;
 }
 
-.adminUserPage > .top > a > span > img {
+.adminUserPage>.top>a>span>img {
   height: 19px;
   width: 19px;
   border-radius: 0px;
@@ -113,13 +114,13 @@
   margin: 0 2px;
 }
 
-.adminUserPage .controls a > img {
+.adminUserPage .controls a>img {
   height: 20px;
   width: 20px;
   border-radius: 0px;
 }
 
-.adminUserPage .controls a.delete > img {
+.adminUserPage .controls a.delete>img {
   height: 15px;
   width: 15px;
   border-radius: 0px;

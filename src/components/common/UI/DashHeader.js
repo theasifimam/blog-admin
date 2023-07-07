@@ -18,22 +18,27 @@ const DashHeader = ({
         <div className="left">
           <div className="icon" onClick={() => setToggleMenu(!toggleMenu)}>
             <img
-              src="/icons/dashboard/dashboardGreen.svg"
+              src="/icons-images/dashboard/dashboardGreen.svg"
               alt="dashboard icon"
+              className="black"
             />
           </div>
-          <span className="dNone">Dashboard Work</span>
+          <span className="dNone">Dashboard</span>
         </div>
         <div className="right">
           <div className="icon dNone">
-            <img src="/icons/dashboard/CalenderGreen.svg" alt="calendar" />
+            <img
+              src="/icons-images/dashboard/CalenderGreen.svg"
+              alt="calendar"
+              className="black"
+            />
           </div>
           <span className="date dNone">{getFormattedDate(new Date())}</span>
           <div className="icon user">
             <img src="/images/user.png" alt="user" width="100" />
           </div>
           <div className="icon" onClick={() => setShowModal(true)}>
-            <img src="/icons/dashboard/menu.svg" alt="bell" />
+            <img src="/icons-images/dashboard/menu.svg" alt="bell" />
           </div>
           {showModal && (
             <MenuControls

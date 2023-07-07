@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const AddProduct = () => {
   const [imagePreview, setImagePreview] = useState(
-    "/icons/users/profilepic.svg"
+    "/icons-images/users/profilepic.svg"
   );
 
   const initialValues = {
@@ -127,7 +127,7 @@ const AddProduct = () => {
                 />
                 <div className="imgPreview">
                   <img
-                    src={imagePreview || "/icons/users/profilepic.svg"}
+                    src={imagePreview || "/icons-images/users/profilepic.svg"}
                     alt="profile"
                     width="100"
                   />

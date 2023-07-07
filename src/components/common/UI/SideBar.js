@@ -16,7 +16,7 @@ const SideBar = ({ setMenuHover }) => {
       <NavLink to="/" className="menu">
         <div className="menuIcon">
           <img
-            src="/icons/dashboard/dashboardGrey.svg"
+            src="/icons-images/dashboard/dashboardGrey.svg"
             alt="dashboard icon"
             className="menuIcon"
           />
@@ -27,7 +27,7 @@ const SideBar = ({ setMenuHover }) => {
       <NavLink to="/monthly-sale" className="menu">
         <div className="menuIcon">
           <img
-            src="/icons/dashboard/calendarGrey.svg"
+            src="/icons-images/dashboard/calendarGrey.svg"
             alt="Calendar"
             className="menuIcon"
           />
@@ -38,37 +38,37 @@ const SideBar = ({ setMenuHover }) => {
       <Menu
         menu="Users List"
         menuLink="/users"
-        menuIcon="/icons/dashboard/usersGrey.svg"
+        menuIcon="/icons-images/dashboard/usersGrey.svg"
         submenu={[
           {
             title: "Users",
             link: "/users/admin",
-            img: "/icons/sidebar/userlist.svg",
+            img: "/icons-images/sidebar/userlist.svg",
             alt: "Admin icon",
           },
           {
             title: "Add ",
             link: "/users/add-user",
-            img: "/icons/sidebar/adduser.svg",
+            img: "/icons-images/sidebar/adduser.svg",
             alt: "support icon",
           },
 
           {
             title: "KYC",
             link: "/users/kyc",
-            img: "/icons/sidebar/kyc.svg",
+            img: "/icons-images/sidebar/kyc.svg",
             alt: "support icon",
           },
           {
             title: "Add KYC",
             link: "/users/add-kyc",
-            img: "/icons/sidebar/addkyc.svg",
+            img: "/icons-images/sidebar/addkyc.svg",
             alt: "buyer icon",
           },
           // {
           //   title: "Seller",
           //   link: "/users/seller",
-          //   img: "/icons/dashboard/sellerGrey.svg",
+          //   img: "/icons-images/dashboard/sellerGrey.svg",
           //   alt: "seller icon",
           // },
         ]}
@@ -76,18 +76,18 @@ const SideBar = ({ setMenuHover }) => {
       <Menu
         menu="Products"
         menuLink="/products"
-        menuIcon="/icons/dashboard/productsGrey.svg"
+        menuIcon="/icons-images/dashboard/productsGrey.svg"
         submenu={[
           {
             title: "View Products",
             link: "/products/view",
-            img: "/icons/dashboard/viewProducts.svg",
+            img: "/icons-images/dashboard/viewProducts.svg",
             alt: "support icon",
           },
           {
             title: "Add",
             link: "/products/add-product",
-            img: "/icons/dashboard/addProduct.svg",
+            img: "/icons-images/dashboard/addProduct.svg",
             alt: "Admin icon",
           },
         ]}
@@ -95,18 +95,18 @@ const SideBar = ({ setMenuHover }) => {
       <Menu
         menu="Coupons"
         menuLink="/coupons"
-        menuIcon="/icons/dashboard/couponGrey.svg"
+        menuIcon="/icons-images/dashboard/couponGrey.svg"
         submenu={[
           {
             title: "View Coupon",
             link: "/coupons/view",
-            img: "/icons/dashboard/viewCoupon.svg",
+            img: "/icons-images/dashboard/viewCoupon.svg",
             alt: "support icon",
           },
           {
             title: "Add Coupon",
             link: "/coupons/add-coupon",
-            img: "/icons/dashboard/addCoupon.svg",
+            img: "/icons-images/dashboard/addCoupon.svg",
             alt: "Admin icon",
           },
         ]}
@@ -115,12 +115,12 @@ const SideBar = ({ setMenuHover }) => {
       <Menu
         menu="Orders"
         menuLink="/orders"
-        menuIcon="/icons/dashboard/ordersGrey.svg"
+        menuIcon="/icons-images/dashboard/ordersGrey.svg"
         submenu={[
           {
             title: "View All",
             link: "/orders/view",
-            img: "/icons/dashboard/viewAllOrders.svg",
+            img: "/icons-images/dashboard/viewAllOrders.svg",
             alt: "Admin icon",
           },
         ]}
@@ -129,7 +129,7 @@ const SideBar = ({ setMenuHover }) => {
       {/* <NavLink to="/settings" className="menu">
     <div className="menuIcon">
       <img
-        src="/icons/dashboard/settingsGrey.svg"
+        src="/icons-images/dashboard/settingsGrey.svg"
         alt="dashboard icon"
         className="menuIcon"
       />
@@ -140,36 +140,36 @@ const SideBar = ({ setMenuHover }) => {
       <Menu
         menu="Settings"
         menuLink="/settings"
-        menuIcon="/icons/sidebar/settingpages.svg"
+        menuIcon="/icons-images/sidebar/settingpages.svg"
         submenu={[
           {
             title: "SMTP",
             link: "/settings/smtp",
-            img: "/icons/sidebar/smtp.svg",
+            img: "/icons-images/sidebar/smtp.svg",
             alt: "Admin icon",
           },
           {
             title: "CMS",
             link: "/settings/pages",
-            img: "/icons/sidebar/CMS.svg",
+            img: "/icons-images/sidebar/CMS.svg",
             alt: "Admin icon",
           },
           {
             title: "Add Page",
             link: "/settings/add-page",
-            img: "/icons/sidebar/addcms.svg",
+            img: "/icons-images/sidebar/addcms.svg",
             alt: "Admin icon",
           },
           {
             title: "Bulk Users",
             link: "/settings/bulk-users",
-            img: "/icons/sidebar/Bulkusers.svg",
+            img: "/icons-images/sidebar/Bulkusers.svg",
             alt: "Admin icon",
           },
           {
             title: "Bulk Products",
             link: "/settings/bulk-products",
-            img: "/icons/sidebar/bulkprodutcs.svg",
+            img: "/icons-images/sidebar/bulkprodutcs.svg",
             alt: "Admin icon",
           },
         ]}

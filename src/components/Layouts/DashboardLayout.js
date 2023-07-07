@@ -47,7 +47,11 @@ const DashboardLayout = () => {
         </button>
         <div className="logo" style={{ display: toggleMenu ? "none" : "flex" }}>
           <Link to="/">
-            <img src="/icons/logo.png" alt="logo-sabkimandi" width="150" />
+            <img
+              src="/icons-images/logo.png"
+              alt="logo-sabkimandi"
+              width="150"
+            />
           </Link>
         </div>
         <SideBar setMenuHover={setMenuHover} />

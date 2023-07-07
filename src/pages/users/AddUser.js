@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const AddUser = () => {
   const [imagePreview, setImagePreview] = useState(
-    "/icons/users/profilepic.svg"
+    "/icons-images/users/profilepic.svg"
   );
   const {
     values,

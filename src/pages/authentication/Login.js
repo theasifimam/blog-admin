@@ -46,7 +46,7 @@ const Login = () => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="logo">
-        <img src="./icons/logo.png" alt="logo" />
+        <img src="/icons-images/logo.png" alt="logo" />
       </div>
 
       <h4>Welcome Back</h4>

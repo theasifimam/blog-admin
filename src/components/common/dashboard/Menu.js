@@ -19,8 +19,8 @@ const Menu = ({ menu, submenu, menuIcon, menuLink }) => {
         <img
           src={
             !showSubmenu
-              ? "/icons/dashboard/whiteRight.svg"
-              : "/icons/dashboard/whiteDown.svg"
+              ? "/icons-images/dashboard/whiteRight.svg"
+              : "/icons-images/dashboard/whiteDown.svg"
           }
           className="arrow"
           alt="downward arrow"

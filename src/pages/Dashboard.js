@@ -66,7 +66,7 @@ const Dashboard = () => {
           <div className="bottom">
             <span className="left">04</span>
             <div className="right">
-              <img src="/icons/dashboard/whiteMenu.svg" alt="menu" />
+              <img src="/icons-images/dashboard/whiteMenu.svg" alt="menu" />
             </div>
           </div>
         </div>
@@ -76,7 +76,7 @@ const Dashboard = () => {
           <div className="bottom">
             <span className="left">1,309</span>
             <div className="right">
-              <img src="/icons/dashboard/whiteMenu.svg" alt="menu" />
+              <img src="/icons-images/dashboard/whiteMenu.svg" alt="menu" />
             </div>
           </div>
         </div>
@@ -86,7 +86,7 @@ const Dashboard = () => {
           <div className="bottom">
             <span className="left">80</span>
             <div className="right">
-              <img src="/icons/dashboard/whiteMenu.svg" alt="menu" />
+              <img src="/icons-images/dashboard/whiteMenu.svg" alt="menu" />
             </div>
           </div>
         </div>
@@ -96,7 +96,7 @@ const Dashboard = () => {
           <div className="bottom">
             <span className="left">103</span>
             <div className="right">
-              <img src="/icons/dashboard/whiteMenu.svg" alt="menu" />
+              <img src="/icons-images/dashboard/whiteMenu.svg" alt="menu" />
             </div>
           </div>
         </div>

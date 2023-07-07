@@ -2,6 +2,10 @@
   height: 3.5rem;
 }
 
+.black {
+  filter: invert(100%) brightness(0%);
+}
+
 .center {
   display: flex;
   justify-content: center;
@@ -13,7 +17,14 @@
   font-size: 14px;
 }
 
-.table > table {
+.table {
+  animation: 0.5s rollout;
+  padding: 2rem;
+  background: #ffff;
+  border-radius: 30px;
+}
+
+.table>table {
   background-color: #ffff;
   border-radius: 6px;
   overflow: hidden;
@@ -21,7 +32,7 @@
   width: 100%;
 }
 
-.table > table th {
+.table>table th {
   border: none !important;
 }
 
@@ -29,6 +40,7 @@
   0% {
     transform: translateY(30px);
   }
+
   100% {
     transform: none;
   }
@@ -38,6 +50,7 @@
   0% {
     transform: translateY(-10px);
   }
+
   100% {
     transform: translateY(0);
   }
