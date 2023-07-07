@@ -12,6 +12,10 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+#primary {
+  --primary-color: rgb(21, 21, 21);
+}
+
 #root {
   width: 100%;
   height: 100vh;

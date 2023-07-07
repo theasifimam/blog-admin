@@ -1,8 +1,8 @@
-.red {
+/* .red {
   background: #fa686b;
 }
 
-.red > span {
+.red>span {
   background: #b52f3166;
 }
 
@@ -10,7 +10,7 @@
   background: #5bc381;
 }
 
-.green > span {
+.green>span {
   background: #298c4d;
 }
 
@@ -18,16 +18,18 @@
   background: #ff891a;
 }
 
-.yellow > span {
+.yellow>span {
   background: #c55f00;
 }
 
 .purple {
   background: #9583f4;
 }
-.purple > span {
+
+.purple>span {
   background: #6456b6;
-}
+} */
+
 .dashboard {
   width: 100%;
   display: flex;
@@ -35,7 +37,7 @@
   flex-direction: column;
 }
 
-.dashboard > .top {
+.dashboard>.top {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -44,10 +46,13 @@
   row-gap: 1rem;
 }
 
-.dashboard > .top > .card {
+.dashboard>.top>.card {
   width: 357px;
   height: 154.01px;
-  border-radius: 8px;
+  border-radius: 20px;
+  background-color: white;
+  border: 2px solid var(--primary-color);
+  color: black;
   padding: 1rem 1rem;
   display: flex;
   justify-content: space-between;
@@ -55,53 +60,59 @@
   flex-direction: column;
 }
 
-.dashboard > .top > .card:hover {
+
+.dashboard>.top>.card span {
+  color: var(--primary-color);
+}
+
+.dashboard>.top>.card:hover {
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transition: 200ms ease-in-out;
 }
 
-.dashboard > .top > .card > span {
+.dashboard>.top>.card>span {
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.238926px;
-  color: #ffffff;
+
   padding-top: 2rem;
   padding: 8px 11.9463px;
   display: inline-block;
   height: 40px;
 
-  /* background: rgba(83, 83, 83, 0.4); */
+  background: rgba(83, 83, 83, 0.155);
   border-radius: 9.55705px;
 }
 
-.dashboard > .top > .card > .bottom {
+.dashboard>.top>.card>.bottom {
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
 }
 
-.dashboard > .top > .card > .bottom span.left {
+.dashboard>.top>.card>.bottom span.left {
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 50px;
   line-height: 61px;
   letter-spacing: 0.408166px;
-  color: #ffffff;
+  color: black;
 }
 
-.dashboard > .top > .card > .bottom .right {
+.dashboard>.top>.card>.bottom .right {
   height: 60px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-.dashboard > .top > .card > .bottom .right img {
+
+.dashboard>.top>.card>.bottom .right img {
   height: 70%;
   width: auto;
 }
@@ -110,7 +121,8 @@
   width: 100%;
   background: #ffff;
   padding: 2rem 1rem 0 1rem;
-  border-radius: 8px;
+  border-radius: 20px;
+  border: 2px solid black;
 }
 
 .dashboard .mid h4,
