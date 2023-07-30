@@ -105,24 +105,27 @@ const AdminUsers = () => {
                         to={`/users/view/${data.srNo} `}
                         className="center add"
                       >
-                        <img src="/icons-images/users/view.svg" alt="plus" />
+                        {/* <img src="/icons-images/users/view.svg" alt="plus" /> */}
+                        <i className="fa-regular fa-eye"></i>
                       </Link>
 
                       <Link
                         to={`/users/update-user/${data.srNo}`}
                         className="center edit"
                       >
-                        <img
+                        {/* <img
                           src="/icons-images/users/editicon.svg"
                           alt="edit"
-                        />
+                        /> */}
+                        <i class="fa-regular fa-pen-to-square"></i>
                       </Link>
 
                       <Link className="center delete">
-                        <img
+                        {/* <img
                           src="/icons-images/users/delete.svg"
                           alt="delete"
-                        />
+                        /> */}
+                        <i class="fa-regular fa-trash-can"></i>
                       </Link>
                     </div>
                   </td>

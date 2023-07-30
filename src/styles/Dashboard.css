@@ -20,13 +20,13 @@
   max-width: 600px;
   height: 200px;
   border-radius: 30px;
-  background-color: white;
-  color: black;
-  padding: 2rem;
+  background-color: var(--primary-color);
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
+  backdrop-filter: blur(10px);
 }
 
 
@@ -41,20 +41,17 @@
 }
 
 .dashboard>.top>.card>span {
-  font-family: "Inter";
-  font-style: normal;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
+  width: 100%;
   font-size: 20px;
   line-height: 24px;
-  letter-spacing: 0.238926px;
-
-  padding-top: 2rem;
-  padding: 8px 11.9463px;
+  letter-spacing: 0.3px;
+  padding: 18px;
+  border-radius: 40px;
   display: inline-block;
-  height: 40px;
-
-  background: rgba(83, 83, 83, 0.155);
-  border-radius: 9.55705px;
+  background: rgb(195 195 195 / 16%);
+  color: #ababab;
 }
 
 .dashboard>.top>.card>.bottom {
@@ -65,13 +62,12 @@
 }
 
 .dashboard>.top>.card>.bottom span.left {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
   font-size: 50px;
   line-height: 61px;
-  letter-spacing: 0.408166px;
-  color: black;
+  letter-spacing: 0.4px;
+  color: rgb(244, 244, 244);
 }
 
 .dashboard>.top>.card>.bottom .right {
@@ -95,7 +91,7 @@
 
 .dashboard .mid h4,
 .dashboard .table h4 {
-  font-family: "Inter";
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -116,7 +112,7 @@
 }
 
 .dashboard .table table th {
-  font-family: "Inter";
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 15.7222px;
@@ -127,7 +123,7 @@
 
 .dashboard .table table tr,
 .dashboard .table td {
-  font-family: "Inter";
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15.7222px;

@@ -55,13 +55,13 @@
   flex-wrap: wrap;
 }
 
-.pagination > button {
+.pagination>button {
   border: none;
   background: transparent;
   height: 45px;
 }
 
-.pagination > button.pageBtn {
+.pagination>button.pageBtn {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -70,33 +70,33 @@
   border: 1px solid #dfdfdf;
   border-radius: 0px;
 
-  font-family: "Inter";
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15.7222px;
   line-height: 19px;
-  color: #f49c1c;
+  color: var(--primary-color);
 }
 
-.pagination > button.pageBtn:hover,
-.pagination > button.prev:hover,
-.pagination > button.next:hover {
-  background: #f49c1c;
+.pagination>button.pageBtn:hover,
+.pagination>button.prev:hover,
+.pagination>button.next:hover {
+  background: var(--primary-color);
   border: 1px solid #dfdfdf;
   transition: 200ms ease-in-out;
   color: #ffffff;
 }
 
-.pagination > button.activeBtn {
+.pagination>button.activeBtn {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   padding: 12px 20px;
-  background: #f49c1c;
+  background: var(--primary-color);
   border: 1px solid #dfdfdf;
   border-radius: 0px;
 
-  font-family: "Inter";
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15.7222px;
@@ -104,27 +104,27 @@
   color: #ffffff;
 }
 
-.pagination > button.prev {
+.pagination>button.prev {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   padding: 12px 30px;
-  background: linear-gradient(180deg, #f4f5f7 0%, #eaebef 100%);
+  background: whitesmoke;
   border: 1px solid #dfdfdf;
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 30px 0px 0px 30px;
   height: 45px;
 }
 
-.pagination > button.next {
+.pagination>button.next {
   display: flex;
   align-items: center;
   padding: 12px 30px;
   gap: 10px;
 
   height: 45px;
-  background: linear-gradient(180deg, #f4f5f7 0%, #eaebef 100%);
+  background: whitesmoke;
   border: 1px solid #dfdfdf;
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 0px 30px 30px 0px;
 }
 
 /* MenuControls */
@@ -134,17 +134,17 @@
   padding: 0;
 }
 
-.menuControls > li {
+.menuControls>li {
   padding: 15px 15px;
   overflow: hidden;
   color: grey;
   font-weight: 500;
   font-size: 16px;
-  font-family: "Inter";
+  font-family: 'Poppins', sans-serif;
   border-bottom: 1px solid rgba(128, 128, 128, 0.082);
 }
 
-.menuControls > li:hover {
+.menuControls>li:hover {
   background: whitesmoke;
   cursor: pointer;
   color: #58bd43;

@@ -16,13 +16,12 @@
 
 .dashboardContainer .leftSide {
   width: 277px;
-  /* border-right: 2px solid #f1f1f1; */
   position: fixed;
   margin-top: 3px;
   top: 0;
   left: 0;
   z-index: 2;
-  background: #111;
+  background: var(--primary-color);
   height: 99vh;
   overflow: auto;
   padding-top: 101px;
@@ -30,11 +29,11 @@
   transition: all ease-in-out 0.8s;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-
 }
 
 .leftSide.collapsed {
   width: 65px;
+  border-radius: 0 40px 40px 0;
 }
 
 .leftSide.Uncollapsed {
@@ -128,7 +127,7 @@
 }
 
 .dashboardContainer .leftSide .navMenu>a.menu:hover span {
-  font-family: "Inter";
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -163,7 +162,7 @@
 
 
 .dashboardContainer .leftSide .navMenu>a.active span {
-  font-family: "Inter";
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -182,7 +181,7 @@
 
 .dashboardContainer .leftSide .navMenu a span {
   width: 70%;
-  font-family: "Inter";
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -204,6 +203,7 @@
   background: #5858588c;
   box-shadow: rgb(11, 11, 11) 3px 3px 6px 0px inset,
     rgba(53, 53, 53, 0.5) -3px -3px 6px 1px inset;
+
 }
 
 .dashboardContainer .leftSide .navMenu .multi-menu img.arrow {
@@ -212,7 +212,7 @@
 
 .dashboardContainer .leftSide .navMenu .active.multi-menu img.arrow,
 .dashboardContainer .leftSide .navMenu .multi-menu:hover img.arrow {
-  filter: brightness(0%) invert(100%);
+  filter: brightness(0%) invert(80%);
 }
 
 .dashboardContainer .leftSide .navMenu .subMenu a {
@@ -226,6 +226,7 @@
   display: flex;
   align-items: center;
   padding-left: 2.5rem;
+  border-radius: 0 50px 50px 0;
 }
 
 .dashboardContainer .leftSide.collapsed .navMenu .subMenu a {
@@ -238,11 +239,12 @@
   background: rgb(81 81 81);
   cursor: pointer;
   transition: 200ms ease-in;
+  border-radius: 0 50px 50px 0;
 }
 
 .dashboardContainer .leftSide .navMenu .subMenu a:hover span,
 .dashboardContainer .leftSide .navMenu .subMenu a.active span {
-  font-family: "Inter";
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -307,7 +309,7 @@
 }
 
 .dashHeader>.left>.left>span {
-  font-family: "Inter";
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 27px;
@@ -330,7 +332,7 @@
 }
 
 .dashHeader>.left>.right>span {
-  font-family: "Inter";
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -376,7 +378,9 @@
   padding-top: 150px;
   min-height: 94vh;
   transition: all ease-in-out 0.6s;
-  background: #f5f5f5;
+  background: url("https://images.unsplash.com/photo-1469050624972-f03b8678e363?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 footer {
@@ -384,7 +388,7 @@ footer {
 }
 
 footer p {
-  font-family: "Inter";
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15.7222px;

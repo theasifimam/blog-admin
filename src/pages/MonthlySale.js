@@ -1,5 +1,6 @@
 import EChartsReact from "echarts-for-react";
 import React from "react";
+import "../styles/Users.css";
 
 const MonthlySale = () => {
   const option = {

@@ -69,9 +69,9 @@ const DashboardLayout = () => {
         <footer>
           <p>
             Copyright &#169; 2023-2027 |{" "}
-            <a href="https://sabkimandi.com/" target="_blank" rel="noreferrer">
-              SabkiMandi.com
-            </a>{" "}
+            <a href="https://asifimam.com/" target="_blank" rel="noreferrer">
+              asifimam.com
+            </a>
             | All rights reserved.
           </p>
         </footer>

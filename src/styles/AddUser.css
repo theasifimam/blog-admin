@@ -40,7 +40,7 @@
   margin-top: 2rem;
   margin-left: 3rem;
 
-  font-family: "Inter";
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 23.8926px;
@@ -62,7 +62,7 @@
 
 .addUserPage>.card>.bottom>form>.fullInputField>label {
   margin-bottom: 10px;
-  font-family: "Inter";
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15.7222px;
@@ -95,7 +95,7 @@
 
 .addUserPage>.card>.bottom>form>.inputField>label {
   margin-bottom: 10px;
-  font-family: "Inter";
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15.7222px;
@@ -116,10 +116,13 @@
 .addUserPage>.card>.bottom>form>.inputField>textarea {
   width: 100%;
   padding: 0 10px;
-  height: 36px;
-  border: 1px solid #cdcfd2;
+  height: 45px;
+  border: 0 solid #cdcfd2;
   outline: none;
   cursor: pointer;
+  border-radius: 25px;
+  padding-left: 15px;
+  background: rgb(244, 244, 244);
 }
 
 .addUserPage>.card>.bottom>form>.inputField>textarea {
@@ -178,10 +181,10 @@
 .addUserPage>.card>.bottom>form>.inputField option option {
   /* background: linear-gradient(180deg, #58bd43 0%, #3fa12a 100%); */
   background: #58bd43;
-  font-family: "Inter";
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 15.7222px;
+  font-size: 16px;
   line-height: 19px;
   text-transform: capitalize;
   color: #ffffff;
@@ -219,9 +222,9 @@
   height: 39px;
   background: linear-gradient(180deg, #ff8a00 0%, #ff8a00 100%);
   border: 1px solid #dfdfdf;
-  border-radius: 10px;
+  border-radius: 20px;
 
-  font-family: "Inter";
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15.7222px;
@@ -237,12 +240,13 @@
 .addUserPage>.card>.bottom>form>.btns button.back {
   display: flex;
   align-items: center;
-  height: 39px;
+  height: 45px;
   background: linear-gradient(180deg, #f4f5f7 0%, #ecedf1 100%);
   border: 2px solid #dfdfdf;
-
-  border-radius: 10px;
-  font-family: "Inter";
+  border-radius: 25px;
+  min-width: 150px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15.7222px;

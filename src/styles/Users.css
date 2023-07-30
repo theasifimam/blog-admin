@@ -1,9 +1,10 @@
 .adminUserPage {
   width: 100%;
   padding: 2rem;
-  border-radius: 15px;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  border-radius: 50px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
+
 
 .adminUserPage>.top {
   width: 100%;
@@ -22,7 +23,7 @@
 
 .filter>label {
   text-decoration: none;
-  font-family: "Inter";
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -35,9 +36,9 @@
   border: none;
   border-right: 8px solid transparent;
   padding: 10px 15px;
-  border-radius: 5px;
+  border-radius: 20px;
   outline: none;
-  background: #5cc149;
+  background: var(--primary-color);
 }
 
 .adminUserPage>.top {
@@ -49,7 +50,7 @@
   align-items: center;
   column-gap: 10px;
   text-decoration: none;
-  font-family: "Inter";
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 23px;
@@ -108,51 +109,42 @@
 }
 
 .adminUserPage .controls a {
-  width: 34px;
-  height: 34px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  margin: 0 2px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.adminUserPage .controls a>img {
-  height: 20px;
-  width: 20px;
+.adminUserPage .controls a>img,
+.adminUserPage .controls a>i {
+  /* height: 20px;
+  width: 20px; */
   border-radius: 0px;
+  color: grey;
 }
 
-.adminUserPage .controls a.delete>img {
-  height: 15px;
-  width: 15px;
-  border-radius: 0px;
+.adminUserPage .controls a:hover {
+  background: var(--primary-color);
+  border: var(--primary-color);
+  transition: 200ms ease-in-out;
 }
 
-.adminUserPage .controls .add {
-  background: linear-gradient(180deg, #6eda58 0%, #3fa12a 100%);
-  border: 1px solid linear-gradient(180deg, #6eda58 0%, #3fa12a 100%);
+.adminUserPage .controls a:hover i {
+  color: white;
 }
 
-.adminUserPage .controls .add:hover {
-  background: linear-gradient(180deg, #91f87c 0%, #2beb00 100%);
-}
-
-.adminUserPage .controls .edit {
-  background-color: transparent;
-}
-
-.adminUserPage .controls .edit,
-.adminUserPage .controls .edit img {
-  width: 30px;
-  height: 30px;
-}
-
-.adminUserPage .controls .delete {
-  background: linear-gradient(180deg, #f44336 0%, #c52e23 100%);
-  border: 1px solid linear-gradient(180deg, #ff1100 0%, #c52e23 100%);
-}
 
 .adminUserPage .controls .delete:hover {
-  background: linear-gradient(180deg, #ff6257 0%, #ff261b 100%);
+  background: linear-gradient(180deg, #f44336 0%, #c52e23 100%);
+  border: 1px solid linear-gradient(180deg, #ff1100 0%, #c52e23 100%);
+  transition: 200ms ease-in-out;
 }
+
+
 
 .adminUserPage .table .image {
   width: 100px;

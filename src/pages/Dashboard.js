@@ -62,7 +62,7 @@ const Dashboard = () => {
       <div className="top">
         {/* Card */}
         <div className="card red">
-          <span>Cancel Order</span>
+          <span>New User</span>
           <div className="bottom">
             <span className="left">04</span>
             <div className="right">
@@ -72,7 +72,7 @@ const Dashboard = () => {
         </div>
         {/* Card */}
         <div className="card green">
-          <span>Today's Order</span>
+          <span>Active Today</span>
           <div className="bottom">
             <span className="left">1,309</span>
             <div className="right">
@@ -82,7 +82,7 @@ const Dashboard = () => {
         </div>
         {/* Card */}
         <div className="card yellow">
-          <span>Total Buyers</span>
+          <span>Deleted Accounts</span>
           <div className="bottom">
             <span className="left">80</span>
             <div className="right">
@@ -92,7 +92,7 @@ const Dashboard = () => {
         </div>
         {/* Card */}
         <div className="card purple">
-          <span>Total Sellers</span>
+          <span>Engagements</span>
           <div className="bottom">
             <span className="left">103</span>
             <div className="right">
@@ -101,49 +101,56 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      <div className="mid">
+      <div className="mid card">
         <h4>Monthly Sales</h4>
         <EChartsReact option={option} />
       </div>
-
-      <div className="table responsiveTable">
-        <h4>User Listing</h4>
-        <table className="table table-striped">
-          <thead className="rowHeight3">
-            <tr>
-              <th scope="col" className="align-middle">
-                Sr. No.
-              </th>
-              <th scope="col" className="align-middle">
-                Full Name
-              </th>
-              <th scope="col" className="align-middle">
-                Email
-              </th>
-              <th scope="col" className="align-middle">
-                Mobile No.
-              </th>
-              <th scope="col" className="align-middle">
-                User Type
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {tableData(10).map((data, index) => {
-              return (
-                <tr className="rowHeight3" key={index}>
-                  <th scope="row" className="align-middle">
-                    {data.srNo}
-                  </th>
-                  <td className="align-middle">{data.fullName}</td>
-                  <td className="align-middle">{data.email}</td>
-                  <td className="align-middle">{data.mNumber}</td>
-                  <td className="align-middle">{data.role}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+      <div className="card">
+        <div className="table  responsiveTable">
+          <h4>User Listing</h4>
+          <table className="table table-borderless mb-0">
+            <thead className="rowHeight3">
+              <tr>
+                <th scope="col" className="align-middle">
+                  <input type="checkbox" name="all" id="all" />
+                </th>
+                <th scope="col" className="align-middle">
+                  Sr. No.
+                </th>
+                <th scope="col" className="align-middle">
+                  Full Name
+                </th>
+                <th scope="col" className="align-middle">
+                  Email
+                </th>
+                <th scope="col" className="align-middle">
+                  Mobile No.
+                </th>
+                <th scope="col" className="align-middle">
+                  User Type
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {tableData(10).map((data, index) => {
+                return (
+                  <tr className="rowHeight3" key={index}>
+                    <td scope="col" className="align-middle">
+                      <input type="checkbox" name={data.ic} id={data.id} />
+                    </td>
+                    <th scope="row" className="align-middle">
+                      {data.srNo}
+                    </th>
+                    <td className="align-middle">{data.fullName}</td>
+                    <td className="align-middle">{data.email}</td>
+                    <td className="align-middle">{data.mNumber}</td>
+                    <td className="align-middle">{data.role}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
