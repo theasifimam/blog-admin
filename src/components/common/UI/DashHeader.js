@@ -17,21 +17,19 @@ const DashHeader = ({
       <div className="left">
         <div className="left">
           <div className="icon" onClick={() => setToggleMenu(!toggleMenu)}>
-            <img
+            {/* <img
+
               src="/icons-images/dashboard/dashboardGreen.svg"
               alt="dashboard icon"
               className="black"
-            />
+            /> */}
+            <i class="fa-solid fa-grip"></i>
           </div>
           <span className="dNone">Dashboard</span>
         </div>
         <div className="right">
           <div className="icon dNone">
-            <img
-              src="/icons-images/dashboard/CalenderGreen.svg"
-              alt="calendar"
-              className="black"
-            />
+            <i class="fa-solid fa-calendar-days"></i>
           </div>
           <span className="date dNone">{getFormattedDate(new Date())}</span>
           <div className="icon user">

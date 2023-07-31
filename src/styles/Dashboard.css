@@ -5,7 +5,7 @@
   flex-direction: column;
 }
 
-.dashboard>.top {
+.dashboard > .top {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -14,7 +14,7 @@
   row-gap: 1rem;
 }
 
-.dashboard>.top>.card {
+.dashboard > .top > .card {
   width: 24%;
   min-width: 250px;
   max-width: 600px;
@@ -29,19 +29,18 @@
   backdrop-filter: blur(10px);
 }
 
-
-.dashboard>.top>.card span {
+.dashboard > .top > .card span {
   color: var(--primary-color);
 }
 
-.dashboard>.top>.card:hover {
+.dashboard > .top > .card:hover {
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transition: 200ms ease-in-out;
 }
 
-.dashboard>.top>.card>span {
-  font-family: 'Poppins', sans-serif;
+.dashboard > .top > .card > span {
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   width: 100%;
   font-size: 20px;
@@ -50,19 +49,19 @@
   padding: 18px;
   border-radius: 40px;
   display: inline-block;
-  background: rgb(195 195 195 / 16%);
-  color: #ababab;
+  background: rgba(255, 255, 255, 0.16);
+  color: #252525;
 }
 
-.dashboard>.top>.card>.bottom {
+.dashboard > .top > .card > .bottom {
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
 }
 
-.dashboard>.top>.card>.bottom span.left {
-  font-family: 'Poppins', sans-serif;
+.dashboard > .top > .card > .bottom span.left {
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 50px;
   line-height: 61px;
@@ -70,14 +69,14 @@
   color: rgb(244, 244, 244);
 }
 
-.dashboard>.top>.card>.bottom .right {
+.dashboard > .top > .card > .bottom .right {
   height: 60px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-.dashboard>.top>.card>.bottom .right img {
+.dashboard > .top > .card > .bottom .right img {
   height: 70%;
   width: auto;
 }
@@ -91,7 +90,7 @@
 
 .dashboard .mid h4,
 .dashboard .table h4 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -112,7 +111,7 @@
 }
 
 .dashboard .table table th {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 15.7222px;
@@ -123,7 +122,7 @@
 
 .dashboard .table table tr,
 .dashboard .table td {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15.7222px;

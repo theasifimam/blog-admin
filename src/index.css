@@ -8,16 +8,26 @@
 
 body {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   font-family: "Inter", sans-serif;
+  /* background-image: url("https://images.unsplash.com/photo-1464618663641-bbdd760ae84a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"); */
 
+  background-image: url("https://images.unsplash.com/photo-1620207418302-439b387441b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1267&q=80");
+
+  /* background-image: url("https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"); */
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  overflow: auto;
 }
 
 #primary {
-  --primary-color: #202124;
+  /* --primary-color: #202124; */
+  --primary-color: #ffffff3b;
   --secondary-color: black;
   /* background: #202124; */
-  --shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  --shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 #root {

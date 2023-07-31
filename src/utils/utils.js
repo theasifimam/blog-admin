@@ -95,10 +95,9 @@ export const productTableData = (amount) => {
 
 export function getFormattedDate(dateString) {
   const options = {
-    weekday: "long",
     day: "numeric",
-    month: "long",
-    year: "numeric",
+    month: "short",
+    year: "2-digit",
   };
   const date = new Date(dateString);
   const formattedDate = date.toLocaleDateString("en-US", options);
@@ -106,18 +105,16 @@ export function getFormattedDate(dateString) {
   const dayNumber = date.getDate();
   const suffix = getNumberSuffix(dayNumber);
 
-  const [dayName, month, , year] = formattedDate.split(" ");
+  const [monthName, day, year] = formattedDate.split(" ");
 
-  return `${dayName} ${dayNumber}${suffix} ${month}, ${year}`;
+  return `${dayNumber}${suffix} ${monthName}, ${year}`;
 }
 
 function getNumberSuffix(day) {
   if (day >= 11 && day <= 13) {
     return "th";
   }
-
-  const lastDigit = day % 10;
-  switch (lastDigit) {
+  switch (day % 10) {
     case 1:
       return "st";
     case 2:

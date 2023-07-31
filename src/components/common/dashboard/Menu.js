@@ -13,18 +13,17 @@ const Menu = ({ menu, submenu, menuIcon, menuLink }) => {
         onClick={() => setShowSubmenu((value) => !value)}
       >
         <div className="menuIcon">
-          <img src={menuIcon} alt="dashboard icon" />
+          <i className={menuIcon}></i>
         </div>
         <span>{menu}</span>
-        <img
-          src={
+
+        <i
+          className={
             !showSubmenu
-              ? "/icons-images/dashboard/whiteRight.svg"
-              : "/icons-images/dashboard/whiteDown.svg"
+              ? "fa-solid fa-angle-right"
+              : "fa-solid fa-chevron-down"
           }
-          className="arrow"
-          alt="downward arrow"
-        />
+        ></i>
       </NavLink>
       {showSubmenu ? (
         <div className="subMenu">
@@ -36,7 +35,7 @@ const Menu = ({ menu, submenu, menuIcon, menuLink }) => {
                 className={pathname === menuLink && index === 0 ? "active" : ""}
               >
                 <div className="menuIcon">
-                  <img src={menu.img} alt="dashboard icon" width="20" />
+                  <i className={menu.img}></i>
                 </div>
                 <span>{menu.title}</span>
               </NavLink>

@@ -62,43 +62,43 @@ const Dashboard = () => {
       <div className="top">
         {/* Card */}
         <div className="card red">
-          <span>New User</span>
           <div className="bottom">
             <span className="left">04</span>
             <div className="right">
-              <img src="/icons-images/dashboard/whiteMenu.svg" alt="menu" />
+              <i class="fa-solid fa-ellipsis-vertical"></i>
             </div>
           </div>
+          <span>New User</span>
         </div>
         {/* Card */}
         <div className="card green">
-          <span>Active Today</span>
           <div className="bottom">
             <span className="left">1,309</span>
             <div className="right">
-              <img src="/icons-images/dashboard/whiteMenu.svg" alt="menu" />
+              <i class="fa-solid fa-ellipsis-vertical"></i>
             </div>
           </div>
+          <span>Active Today</span>
         </div>
         {/* Card */}
         <div className="card yellow">
-          <span>Deleted Accounts</span>
           <div className="bottom">
             <span className="left">80</span>
             <div className="right">
-              <img src="/icons-images/dashboard/whiteMenu.svg" alt="menu" />
+              <i class="fa-solid fa-ellipsis-vertical"></i>
             </div>
           </div>
+          <span>Deleted Accounts</span>
         </div>
         {/* Card */}
         <div className="card purple">
-          <span>Engagements</span>
           <div className="bottom">
             <span className="left">103</span>
             <div className="right">
-              <img src="/icons-images/dashboard/whiteMenu.svg" alt="menu" />
+              <i class="fa-solid fa-ellipsis-vertical"></i>
             </div>
           </div>
+          <span>Engagements</span>
         </div>
       </div>
       <div className="mid card">

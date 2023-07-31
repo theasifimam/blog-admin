@@ -15,127 +15,117 @@ const SideBar = ({ setMenuHover }) => {
     >
       <NavLink to="/" className="menu">
         <div className="menuIcon">
-          <img
-            src="/icons-images/dashboard/dashboardGrey.svg"
-            alt="dashboard icon"
-            className="menuIcon"
-          />
+          <i class="fa-solid fa-tower-observation"></i>
         </div>
         <span>Dashboard</span>
       </NavLink>
 
       <NavLink to="/monthly-sale" className="menu">
         <div className="menuIcon">
-          <img
-            src="/icons-images/dashboard/calendarGrey.svg"
-            alt="Calendar"
-            className="menuIcon"
-          />
+          <i class="fa-regular fa-calendar-days"></i>
         </div>
-        <span>Monthly Sale</span>
+        <span>Graph</span>
       </NavLink>
 
       <Menu
-        menu="Users List"
+        menu="Appointments"
         menuLink="/users"
-        menuIcon="/icons-images/dashboard/usersGrey.svg"
+        menuIcon="fa-solid fa-users"
         submenu={[
           {
             title: "Users",
             link: "/users/admin",
-            img: "/icons-images/sidebar/userlist.svg",
+            img: "fa-solid fa-users",
             alt: "Admin icon",
           },
           {
             title: "Add ",
             link: "/users/add-user",
-            img: "/icons-images/sidebar/adduser.svg",
+            img: "fa-solid fa-user-plus",
             alt: "support icon",
-          },
-
-          {
-            title: "KYC",
-            link: "/users/kyc",
-            img: "/icons-images/sidebar/kyc.svg",
-            alt: "support icon",
-          },
-          {
-            title: "Add KYC",
-            link: "/users/add-kyc",
-            img: "/icons-images/sidebar/addkyc.svg",
-            alt: "buyer icon",
-          },
-          // {
-          //   title: "Seller",
-          //   link: "/users/seller",
-          //   img: "/icons-images/dashboard/sellerGrey.svg",
-          //   alt: "seller icon",
-          // },
-        ]}
-      />
-      <Menu
-        menu="Products"
-        menuLink="/products"
-        menuIcon="/icons-images/dashboard/productsGrey.svg"
-        submenu={[
-          {
-            title: "View Products",
-            link: "/products/view",
-            img: "/icons-images/dashboard/viewProducts.svg",
-            alt: "support icon",
-          },
-          {
-            title: "Add",
-            link: "/products/add-product",
-            img: "/icons-images/dashboard/addProduct.svg",
-            alt: "Admin icon",
-          },
-        ]}
-      />
-      <Menu
-        menu="Coupons"
-        menuLink="/coupons"
-        menuIcon="/icons-images/dashboard/couponGrey.svg"
-        submenu={[
-          {
-            title: "View Coupon",
-            link: "/coupons/view",
-            img: "/icons-images/dashboard/viewCoupon.svg",
-            alt: "support icon",
-          },
-          {
-            title: "Add Coupon",
-            link: "/coupons/add-coupon",
-            img: "/icons-images/dashboard/addCoupon.svg",
-            alt: "Admin icon",
           },
         ]}
       />
 
       <Menu
-        menu="Orders"
-        menuLink="/orders"
-        menuIcon="/icons-images/dashboard/ordersGrey.svg"
+        menu="Status"
+        menuLink="/users"
+        menuIcon="fa-solid fa-users"
         submenu={[
           {
-            title: "View All",
-            link: "/orders/view",
-            img: "/icons-images/dashboard/viewAllOrders.svg",
+            title: "Users",
+            link: "/users/admin",
+            img: "fa-solid fa-users",
             alt: "Admin icon",
+          },
+          {
+            title: "Add ",
+            link: "/users/add-user",
+            img: "fa-solid fa-user-plus",
+            alt: "support icon",
           },
         ]}
       />
 
-      {/* <NavLink to="/settings" className="menu">
-    <div className="menuIcon">
-      <img
-        src="/icons-images/dashboard/settingsGrey.svg"
-        alt="dashboard icon"
-        className="menuIcon"
+      <Menu
+        menu="To do"
+        menuLink="/users"
+        menuIcon="fa-solid fa-users"
+        submenu={[
+          {
+            title: "Users",
+            link: "/users/admin",
+            img: "fa-solid fa-users",
+            alt: "Admin icon",
+          },
+          {
+            title: "Add ",
+            link: "/users/add-user",
+            img: "fa-solid fa-user-plus",
+            alt: "support icon",
+          },
+        ]}
       />
-    </div>
-    <span>Settings</span>
-  </NavLink> */}
+
+      <Menu
+        menu="Complains"
+        menuLink="/users"
+        menuIcon="fa-solid fa-users"
+        submenu={[
+          {
+            title: "Users",
+            link: "/users/admin",
+            img: "fa-solid fa-users",
+            alt: "Admin icon",
+          },
+          {
+            title: "Add ",
+            link: "/users/add-user",
+            img: "fa-solid fa-user-plus",
+            alt: "support icon",
+          },
+        ]}
+      />
+
+      <Menu
+        menu="Controls"
+        menuLink="/users"
+        menuIcon="fa-solid fa-users"
+        submenu={[
+          {
+            title: "Users",
+            link: "/users/admin",
+            img: "fa-solid fa-users",
+            alt: "Admin icon",
+          },
+          {
+            title: "Add ",
+            link: "/users/add-user",
+            img: "fa-solid fa-user-plus",
+            alt: "support icon",
+          },
+        ]}
+      />
 
       <Menu
         menu="Settings"
