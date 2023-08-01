@@ -8,6 +8,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "dotenv": "^16.1.4",
+    "echarts": "^5.4.3",
     "echarts-for-react": "^3.0.2",
     "formik": "^2.4.0",
     "jodit": "^4.0.0-beta.50",
