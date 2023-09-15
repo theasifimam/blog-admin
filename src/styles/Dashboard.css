@@ -20,13 +20,12 @@
   max-width: 600px;
   height: 200px;
   border-radius: 30px;
-  background-color: var(--primary-color);
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
-  backdrop-filter: blur(10px);
+  background: var(--primaryColor);
 }
 
 .dashboard > .top > .card span {
@@ -46,11 +45,9 @@
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.3px;
-  padding: 18px;
   border-radius: 40px;
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.16);
-  color: #252525;
+  background: var(--background);
+  color: var(--secondaryBG);
 }
 
 .dashboard > .top > .card > .bottom {
@@ -66,7 +63,7 @@
   font-size: 50px;
   line-height: 61px;
   letter-spacing: 0.4px;
-  color: rgb(244, 244, 244);
+  color: var(--white);
 }
 
 .dashboard > .top > .card > .bottom .right {
@@ -83,7 +80,7 @@
 
 .dashboard .mid {
   width: 100%;
-  background: #ffff;
+  background: var(--white);
   padding: 2rem;
   border-radius: 30px;
 }
@@ -95,7 +92,7 @@
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
-  color: #000000;
+  color: var(--heading);
 }
 
 .dashboard .mid .echarts-for-react {

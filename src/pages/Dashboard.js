@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Dashboard.css";
 import EChartsReact from "echarts-for-react";
-import Map from "../components/common/UI/graph/Map";
+// import Map from "../components/common/UI/graph/Map";
 
 const Dashboard = () => {
   const option = {
@@ -58,80 +58,96 @@ const Dashboard = () => {
     return dummyArray;
   };
 
-  const [countryData, setCountryData] = useState([]);
+  // const [countryData, setCountryData] = useState([]);
 
-  useEffect(() => {
-    // Dummy data for illustration purposes
-    const dummyData = [
-      { name: "China", value: Math.floor(Math.random() * 100) },
-      { name: "India", value: Math.floor(Math.random() * 100) },
-      { name: "United States", value: Math.floor(Math.random() * 100) },
-      // Add more countries with their respective values here
-    ];
+  // useEffect(() => {
+  //   // Dummy data for illustration purposes
+  //   const dummyData = [
+  //     { name: "China", value: Math.floor(Math.random() * 100) },
+  //     { name: "India", value: Math.floor(Math.random() * 100) },
+  //     { name: "United States", value: Math.floor(Math.random() * 100) },
+  //     // Add more countries with their respective values here
+  //   ];
 
-    setCountryData(dummyData);
-  }, []);
+  //   setCountryData(dummyData);
+  // }, []);
 
-  const dummyData = [
-    { name: "China", value: Math.floor(Math.random() * 100) },
-    { name: "India", value: Math.floor(Math.random() * 100) },
-    { name: "United States", value: Math.floor(Math.random() * 100) },
-    // Add more countries with their respective values here
-  ];
+  // const dummyData = [
+  //   { name: "China", value: Math.floor(Math.random() * 100) },
+  //   { name: "India", value: Math.floor(Math.random() * 100) },
+  //   { name: "United States", value: Math.floor(Math.random() * 100) },
+  //   // Add more countries with their respective values here
+  // ];
 
+  // const option = {
+  //   xAxis: {
+  //     type: "category",
+  //     data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+  //   },
+  //   yAxis: {
+  //     type: "value",
+  //   },
+  //   series: [
+  //     {
+  //       data: [820, 932, 901, 934, 1290, 1330, 1320],
+  //       type: "line",
+  //       smooth: true,
+  //     },
+  //   ],
+  // };
   return (
     <>
       <div className="container">
         <div className="row">
           <div className="dashboard col">
             <div className="globe-graph">
-              <Map countryData={countryData} />
+              {/* <Map countryData={countryData} /> */}
             </div>
             <div className="top">
               {/* Card */}
               <div className="card red">
                 <div className="bottom">
-                  <span className="left">04</span>
+                  <span className="left">2.23B</span>
                   <div className="right">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                   </div>
                 </div>
-                <span>New User</span>
+                <span>Total Users</span>
               </div>
               {/* Card */}
               <div className="card green">
                 <div className="bottom">
-                  <span className="left">1,309</span>
+                  <span className="left">89.3M</span>
                   <div className="right">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                   </div>
                 </div>
-                <span>Active Today</span>
+                <span>Users Active </span>
               </div>
               {/* Card */}
               <div className="card yellow">
                 <div className="bottom">
-                  <span className="left">80</span>
+                  <span className="left">3.78M</span>
                   <div className="right">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                   </div>
                 </div>
-                <span>Deleted Accounts</span>
+                <span>Total Groups</span>
               </div>
               {/* Card */}
               <div className="card purple">
                 <div className="bottom">
-                  <span className="left">103</span>
+                  <span className="left">93.3M</span>
                   <div className="right">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                   </div>
                 </div>
-                <span>Engagements</span>
+                <span>Total Posts</span>
               </div>
             </div>
             <div className="mid card">
               <h4>Monthly Sales</h4>
-              <EChartsReact option={dummyData} />
+              <EChartsReact option={option} />
             </div>
             <div className="card">
               <div className="table  responsiveTable">

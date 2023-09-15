@@ -1,6 +1,6 @@
 import React from "react";
 import ReactECharts from "echarts-for-react";
-import "echarts/map/js/world";
+// import "echarts/map/js/world";
 // import "echarts/map/json/world.json";
 
 const Map = ({ countryData }) => {

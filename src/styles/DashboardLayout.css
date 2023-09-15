@@ -21,7 +21,7 @@
   top: 0;
   left: 0;
   z-index: 2;
-  background: var(--primary-color);
+  background: var(--white);
   height: 99vh;
   overflow: auto;
   padding-top: 101px;
@@ -85,7 +85,7 @@
 }
 
 .closeSideBarBtn:hover {
-  background: rgba(0, 0, 0, 1);
+  background: var(--primaryColor);
   color: white;
   transition: 200ms ease-in-out;
 }
@@ -119,11 +119,18 @@
   justify-content: flex-start;
   padding: 0 1rem;
   margin-top: 1px;
+  color: var(--text);
+}
+
+.dashboardContainer .leftSide .navMenu > a.menu span {
+  color: var(--text);
+  font-weight: 500;
 }
 
 .dashboardContainer .leftSide .navMenu > a.menu:hover {
-  background: whitesmoke;
+  background: var(--primaryColor);
   transition: 200ms ease-in;
+  color: white;
   border-radius: 0 50px 50px 0;
 }
 
@@ -134,11 +141,15 @@
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.2px;
-  color: #1c1c1c;
+  color: white;
+}
+.dashboardContainer .leftSide .navMenu > a.menu.active .menuIcon {
+  color: var(--primaryColor);
 }
 
-.dashboardContainer .leftSide .navMenu > a.menu:hover .menuIcon {
-  filter: brightness(0);
+.dashboardContainer .leftSide .navMenu > a.menu:hover .menuIcon > i,
+.dashboardContainer .leftSide .navMenu > a.menu.active .menuIcon > i {
+  color: white !important;
 }
 
 .dashboardContainer .leftSide .navMenu a.menu .menuIcon {
@@ -154,10 +165,11 @@
   background: #5cc1483b;
 } */
 
-.dashboardContainer .leftSide .navMenu > a.active {
-  background: whitesmoke;
+.dashboardContainer .leftSide .navMenu > a.active,
+.dashboardContainer .leftSide .navMenu > a:hover {
+  background: var(--primaryColor);
   border-radius: 0 50px 50px 0;
-  color: #101010;
+  color: white;
 }
 
 .dashboardContainer .leftSide .navMenu > a.active span {
@@ -167,7 +179,7 @@
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.2px;
-  color: #1c1c1c;
+  color: white;
 }
 
 .dashboardContainer .leftSide .navMenu a .menuIcon {
@@ -192,7 +204,7 @@
 .dashboardContainer .leftSide .navMenu a svg,
 .dashboardContainer .leftSide .navMenu a i {
   /* fill: rgb(0, 0, 0); */
-  color: #fbfbfb;
+  color: var(--text);
 }
 
 .dashboardContainer .leftSide .navMenu .subMenu {
@@ -200,9 +212,9 @@
   height: auto;
   flex-direction: column;
   width: 100%;
-  background: #5858588c;
-  box-shadow: rgb(11, 11, 11) 3px 3px 6px 0px inset,
-    rgba(53, 53, 53, 0.5) -3px -3px 6px 1px inset;
+  background: var(--background);
+  /* box-shadow: rgb(11, 11, 11) 3px 3px 6px 0px inset,
+    rgba(53, 53, 53, 0.5) -3px -3px 6px 1px inset; */
 }
 
 .dashboardContainer .leftSide .navMenu .multi-menu img.arrow {
@@ -235,7 +247,7 @@
 
 .dashboardContainer .leftSide .navMenu .subMenu a:hover,
 .dashboardContainer .leftSide .navMenu .subMenu a.active {
-  background: rgb(81 81 81);
+  background: var(--secondaryBG);
   cursor: pointer;
   transition: 200ms ease-in;
   border-radius: 0 50px 50px 0;
@@ -310,10 +322,10 @@
 .dashHeader > .left > .left > span {
   font-family: "Poppins", sans-serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 900;
   font-size: 27px;
   line-height: 33px;
-  color: #f1f1f1;
+  color: var(--primaryColor);
 }
 
 .dashHeader > .left > .left > .icon,
@@ -321,11 +333,15 @@
   height: 35px;
   width: 35px;
   cursor: pointer;
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 10px;
+}
+
+.dashHeader > .left > .left > .icon,
+.dashHeader > .left > .right > .icon i {
+  color: var(--primaryColor);
 }
 
 .dashHeader > .left > .right > .icon img {
@@ -334,17 +350,17 @@
 }
 
 .dashHeader > .left > .left > .icon i {
-  color: white;
+  color: var(--primaryColor);
   font-size: 2rem;
 }
 
 .dashHeader > .left > .right > span {
   font-family: "Poppins", sans-serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 24px;
   line-height: 29px;
-  color: #f8f8f8;
+  color: var(--primaryColor);
   margin-right: 20px;
 }
 
