@@ -62,10 +62,9 @@
 .adminUserPage>.top>a>span {
   width: 38px;
   height: 38px;
-  background: #f39220;
-  border: 1px solid #f39220;
-  border: 1px solid #ffffff;
+  background: var(--primaryColor);
   border-radius: 50%;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,7 +72,9 @@
 
 .adminUserPage>.top>a>span:hover {
   transition: 200ms ease-in-out;
-  background: #ffb45f;
+  background: var(--secondaryBG);
+  color: var(--primaryColor);
+  border: 2px solid var(--primaryColor);
 }
 
 .adminUserPage>.top>a>span>img {

@@ -57,7 +57,7 @@ const MonthlySale = () => {
                 id="search"
                 placeholder="Search"
                 style={{
-                  background: "#4FB23A",
+                  background: "var(--primaryColor)",
                   color: "white",
                   fontWeight: 700,
                   width: "auto",

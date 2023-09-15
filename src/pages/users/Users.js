@@ -1,9 +1,9 @@
 import React from "react";
-import Pagination from "../../components/common/UI/Pagination";
 import { Link } from "react-router-dom";
 import Switch from "../../components/common/UI/Switch";
+import Pagination from "../../components/common/UI/Pagination";
 
-const ViewAllOrders = () => {
+const Users = () => {
   const names = [
     "asif",
     "imam",
@@ -31,12 +31,11 @@ const ViewAllOrders = () => {
         fullName: `${names[Math.floor(Math.random() * 16)]} ${
           names[Math.floor(Math.random() * 16)]
         }`,
-        email:
-          `${names[Math.floor(Math.random() * 11)]}${
-            names[Math.floor(Math.random() * 11)]
-          }` + "@gmail.com",
-        mNumber: Math.floor(Math.random() * 10000000000),
-        role: Math.floor(Math.random() * 10) % 2 == 0 ? "Seller" : "Buyer",
+        email: `${names[Math.floor(Math.random() * 11)]}${
+          names[Math.floor(Math.random() * 11)]
+        }@gmail.com`,
+        mNumber: "+91" + (1000000000 + Math.floor(Math.random() * 10000000000)),
+        role: Math.floor(Math.random() * 10) % 2 === 0 ? "Seller" : "Buyer",
       });
     }
     return dummyArray;
@@ -44,26 +43,47 @@ const ViewAllOrders = () => {
   return (
     <div className="adminUserPage">
       <div className="top">
-        <Link to="/products/add-product">
-          All Orders{" "}
+        <Link to="/users/add-user">
+          All Users
           <span>
-            <img src="/icons-images/users/Addadminicon.svg" alt="plus icon" />
+            <i className="fa-solid fa-plus"></i>
           </span>
         </Link>
+
+        <div className="filter">
+          <label htmlFor="users">Filter Users</label>
+          <select name="users" id="users">
+            <option>Select User Type</option>
+            <option value="all">All User</option>
+            <option value="admin">Admin</option>
+            <option value="seller">Seller</option>
+            <option value="support">Support</option>
+          </select>
+        </div>
       </div>
 
       <div className="table responsiveTable">
         <table className="table ">
           <thead>
-            <tr className="align-middle">
-              <th scope="col">Sr. No.</th>
-              <th scope="col">Order ID</th>
-              <th scope="col">Order Date</th>
-              <th scope="col">Total Paid Amount</th>
-              <th scope="col">Shipping Address</th>
-              <th scope="col">Order Status</th>
-              <th scope="col">Status</th>
-              <th scope="col">Action</th>
+            <tr>
+              <th scope="col" className="align-middle">
+                Sr. No.
+              </th>
+              <th scope="col" className="align-middle">
+                Full Name
+              </th>
+              <th scope="col" className="align-middle">
+                Email
+              </th>
+              <th scope="col" className="align-middle">
+                Mobile No.
+              </th>
+              <th scope="col" className="align-middle">
+                Status
+              </th>
+              <th scope="col" className="align-middle">
+                Action
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -76,9 +96,6 @@ const ViewAllOrders = () => {
                   <td className="align-middle">{data.fullName}</td>
                   <td className="align-middle">{data.email}</td>
                   <td className="align-middle">{data.mNumber}</td>
-                  <td className="align-middle">{data.mNumber}</td>
-                  <td className="align-middle">{data.mNumber}</td>
-
                   <td className="align-middle">
                     <Switch />
                   </td>
@@ -88,24 +105,27 @@ const ViewAllOrders = () => {
                         to={`/users/view/${data.srNo} `}
                         className="center add"
                       >
-                        <img src="/icons-images/users/view.svg" alt="plus" />
+                        {/* <img src="/icons-images/users/view.svg" alt="plus" /> */}
+                        <i className="fa-regular fa-eye"></i>
                       </Link>
 
                       <Link
                         to={`/users/update-user/${data.srNo}`}
                         className="center edit"
                       >
-                        <img
+                        {/* <img
                           src="/icons-images/users/editicon.svg"
                           alt="edit"
-                        />
+                        /> */}
+                        <i class="fa-regular fa-pen-to-square"></i>
                       </Link>
 
                       <Link className="center delete">
-                        <img
+                        {/* <img
                           src="/icons-images/users/delete.svg"
                           alt="delete"
-                        />
+                        /> */}
+                        <i class="fa-regular fa-trash-can"></i>
                       </Link>
                     </div>
                   </td>
@@ -119,4 +139,5 @@ const ViewAllOrders = () => {
     </div>
   );
 };
-export default ViewAllOrders;
+
+export default Users;

@@ -7,20 +7,10 @@ import ForgotPassword from "./pages/authentication/ForgotPassword";
 import Dashboard from "./pages/Dashboard";
 import AuthLayout from "./components/Layouts/AuthLayout";
 import DashboardLayout from "./components/Layouts/DashboardLayout";
-import AdminUsers from "./pages/users/AdminUsers";
 import MonthlySale from "./pages/MonthlySale";
-import AddProduct from "./pages/products/AddProduct";
-import ViewAllProducts from "./pages/products/ViewAllProducts";
-import AddCoupon from "./pages/coupons/AddCoupon";
-import ViewCoupon from "./pages/coupons/ViewCoupon";
-import ViewAllOrders from "./pages/orders/ViewAllOrders";
 import AddUser from "./pages/users/AddUser";
 import UpdateUser from "./pages/users/UpdateUser";
 import UserDetail from "./pages/users/UserDetail";
-import ViewProductDetail from "./pages/products/ViewProductDetail";
-import UpdateProduct from "./pages/products/UpdateProduct";
-import ViewCouponDetail from "./pages/coupons/ViewCouponDetail";
-import UpdateCoupon from "./pages/coupons/UpdateCoupon";
 import SMTP from "./pages/settings/SMTP";
 import ViewPage from "./pages/settings/ViewPage";
 import AddPage from "./pages/settings/AddPage";
@@ -32,6 +22,7 @@ import KYC from "./pages/users/KYC";
 import AllKYCs from "./pages/users/AllKYCs";
 import UpdateKYC from "./pages/users/UpdateKYC";
 import ViewKYC from "./pages/users/ViewKYC";
+import Users from "./pages/users/Users";
 
 function App() {
   return (
@@ -47,8 +38,8 @@ function App() {
 
           {/* Users */}
           <Route path="/users">
-            <Route index element={<AdminUsers />} />
-            <Route path="/users/admin" element={<AdminUsers />} />
+            <Route index element={<Users />} />
+            <Route path="/users/admin" element={<Users />} />
             <Route path="/users/add-user" element={<AddUser />} />
             <Route path="/users/view/:id" element={<UserDetail />} />
             <Route path="/users/update-user/:id" element={<UpdateUser />} />
@@ -56,36 +47,6 @@ function App() {
             <Route path="/users/add-kyc" element={<KYC />} />
             <Route path="/users/update-kyc/:id" element={<UpdateKYC />} />
             <Route path="/users/view-kyc/:id" element={<ViewKYC />} />
-          </Route>
-
-          {/* Products */}
-          <Route path="/products">
-            <Route index element={<ViewAllProducts />} />
-            <Route path="/products/add-product" element={<AddProduct />} />
-            <Route path="/products/view" element={<ViewAllProducts />} />
-            <Route path="/products/view/:id" element={<ViewProductDetail />} />
-            <Route
-              path="/products/update-product/:id"
-              element={<UpdateProduct />}
-            />
-          </Route>
-
-          {/* Coupons */}
-          <Route path="/coupons">
-            <Route index element={<ViewCoupon />} />
-            <Route path="/coupons/add-coupon" element={<AddCoupon />} />
-            <Route path="/coupons/view" element={<ViewCoupon />} />
-            <Route path="/coupons/view/:id" element={<ViewCouponDetail />} />
-            <Route
-              path="/coupons/update-coupon/:id"
-              element={<UpdateCoupon />}
-            />
-          </Route>
-
-          {/* Orders */}
-          <Route path="/orders">
-            <Route index element={<ViewAllOrders />} />
-            <Route path="/orders/view" element={<ViewAllOrders />} />
           </Route>
 
           <Route path="/monthly-sale" element={<MonthlySale />} />

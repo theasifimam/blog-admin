@@ -2,10 +2,8 @@
   /* transform: scale(1.5); */
   width: 60px;
   height: 25px;
-  background: rgb(88, 190, 88);
-  border: 2.5px solid rgb(87, 182, 87);
-
-  border-radius: 22.1731px;
+  background: var(--primaryColor);
+  border-radius: 22px;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -17,16 +15,17 @@
 
 .checkbox--on {
   flex-direction: row;
-  background: linear-gradient(180deg, #df4c4c 0%, #d12f2f 100%);
-  border: 1.23184px solid #861212;
+  background: var(--background);
+  /* border: 1px solid var(--primaryColor); */
   color: white;
   transition: 300ms ease-in-out;
+
 }
 
 .checkbox--on .checkbox__ball {
-  width: 21.97px;
-  height: 22.15px;
-  background: #ffffff;
+  width: 25px;
+  height: 25px;
+  background: var(--primaryColor);
   box-shadow: 0px 2.86105px 2.86105px rgba(0, 0, 0, 0.1);
   transition: 300ms ease-in-out;
 }
@@ -34,8 +33,8 @@
 .checkbox__ball {
   background: whitesmoke;
   box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.72);
-  width: 20px;
-  height: 100%;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   transition: 300ms ease-in-out;
 }

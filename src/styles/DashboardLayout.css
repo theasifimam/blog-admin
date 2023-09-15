@@ -90,7 +90,7 @@
   transition: 200ms ease-in-out;
 }
 
-.collapsed > .closeSideBarBtn {
+.collapsed>.closeSideBarBtn {
   display: none !important;
 }
 
@@ -110,7 +110,7 @@
   color: white;
 }
 
-.dashboardContainer .leftSide .navMenu > a.menu {
+.dashboardContainer .leftSide .navMenu>a.menu {
   width: 100%;
   height: 64px;
   text-decoration: none;
@@ -122,19 +122,19 @@
   color: var(--text);
 }
 
-.dashboardContainer .leftSide .navMenu > a.menu span {
+.dashboardContainer .leftSide .navMenu>a.menu span {
   color: var(--text);
   font-weight: 500;
 }
 
-.dashboardContainer .leftSide .navMenu > a.menu:hover {
+.dashboardContainer .leftSide .navMenu>a.menu:hover {
   background: var(--primaryColor);
   transition: 200ms ease-in;
   color: white;
   border-radius: 0 50px 50px 0;
 }
 
-.dashboardContainer .leftSide .navMenu > a.menu:hover span {
+.dashboardContainer .leftSide .navMenu>a.menu:hover span {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -143,12 +143,13 @@
   letter-spacing: 0.2px;
   color: white;
 }
-.dashboardContainer .leftSide .navMenu > a.menu.active .menuIcon {
+
+.dashboardContainer .leftSide .navMenu>a.menu.active .menuIcon {
   color: var(--primaryColor);
 }
 
-.dashboardContainer .leftSide .navMenu > a.menu:hover .menuIcon > i,
-.dashboardContainer .leftSide .navMenu > a.menu.active .menuIcon > i {
+.dashboardContainer .leftSide .navMenu>a.menu:hover .menuIcon>i,
+.dashboardContainer .leftSide .navMenu>a.menu.active .menuIcon>i {
   color: white !important;
 }
 
@@ -157,7 +158,7 @@
   margin-right: 1.5rem;
 }
 
-.dashboardContainer .leftSide .navMenu > a.menu > .menuIcon img {
+.dashboardContainer .leftSide .navMenu>a.menu>.menuIcon img {
   width: 100%;
 }
 
@@ -165,14 +166,14 @@
   background: #5cc1483b;
 } */
 
-.dashboardContainer .leftSide .navMenu > a.active,
-.dashboardContainer .leftSide .navMenu > a:hover {
+.dashboardContainer .leftSide .navMenu>a.active,
+.dashboardContainer .leftSide .navMenu>a:hover {
   background: var(--primaryColor);
   border-radius: 0 50px 50px 0;
   color: white;
 }
 
-.dashboardContainer .leftSide .navMenu > a.active span {
+.dashboardContainer .leftSide .navMenu>a.active span {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -198,7 +199,7 @@
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.2px;
-  color: #fbfbfb;
+  color: var(--lightest);
 }
 
 .dashboardContainer .leftSide .navMenu a svg,
@@ -264,18 +265,18 @@
   color: #a1a1a1;
 }
 
-.dashboardContainer .leftSide .navMenu .subMenu a:hover img,
-.dashboardContainer .leftSide .navMenu .subMenu a.active img {
-  filter: invert(1) sepia(100) saturate(80) hue-rotate(125deg);
-  opacity: 0.5;
+.dashboardContainer .leftSide .navMenu .subMenu a:hover i,
+.dashboardContainer .leftSide .navMenu .subMenu a.active i {
+  color: var(--primaryColor);
 }
 
 .dashboardContainer .leftSide .navMenu .subMenu a .menuIcon {
   width: 20%;
 }
 
-.dashboardContainer .leftSide .navMenu .subMenu a .menuIcon img {
+.dashboardContainer .leftSide .navMenu .subMenu a .menuIcon i {
   width: 50%;
+  color: var(--lightest);
 }
 
 /* DashHeader */
@@ -303,7 +304,7 @@
   backdrop-filter: blur(8px);
 }
 
-.dashHeader > .left {
+.dashHeader>.left {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -313,13 +314,13 @@
   padding: 0 20px;
 }
 
-.dashHeader > .left > .left {
+.dashHeader>.left>.left {
   display: flex;
   align-items: center;
   height: 100%;
 }
 
-.dashHeader > .left > .left > span {
+.dashHeader>.left>.left>span {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 900;
@@ -328,8 +329,8 @@
   color: var(--primaryColor);
 }
 
-.dashHeader > .left > .left > .icon,
-.dashHeader > .left > .right > .icon {
+.dashHeader>.left>.left>.icon,
+.dashHeader>.left>.right>.icon {
   height: 35px;
   width: 35px;
   cursor: pointer;
@@ -339,22 +340,22 @@
   margin-right: 10px;
 }
 
-.dashHeader > .left > .left > .icon,
-.dashHeader > .left > .right > .icon i {
+.dashHeader>.left>.left>.icon,
+.dashHeader>.left>.right>.icon i {
   color: var(--primaryColor);
 }
 
-.dashHeader > .left > .right > .icon img {
+.dashHeader>.left>.right>.icon img {
   width: 100%;
   height: 100%;
 }
 
-.dashHeader > .left > .left > .icon i {
+.dashHeader>.left>.left>.icon i {
   color: var(--primaryColor);
   font-size: 2rem;
 }
 
-.dashHeader > .left > .right > span {
+.dashHeader>.left>.right>span {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -364,7 +365,7 @@
   margin-right: 20px;
 }
 
-.dashHeader > .left > .right {
+.dashHeader>.left>.right {
   display: flex;
   height: 100%;
   align-items: center;
@@ -376,7 +377,7 @@
   cursor: pointer;
 }
 
-.dashHeader > .right {
+.dashHeader>.right {
   display: flex;
   width: 15%;
   padding: 0 20px;
@@ -385,13 +386,13 @@
   height: 100%;
 }
 
-.dashHeader > .right .icon {
+.dashHeader>.right .icon {
   width: 40px;
   height: 40px;
   cursor: pointer;
 }
 
-.dashHeader > .right .icon i {
+.dashHeader>.right .icon i {
   width: 100%;
   height: 100%;
 }

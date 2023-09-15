@@ -28,7 +28,7 @@ const SideBar = ({ setMenuHover }) => {
       </NavLink>
 
       <Menu
-        menu="Appointments"
+        menu="Users"
         menuLink="/users"
         menuIcon="fa-solid fa-users"
         submenu={[
@@ -48,8 +48,8 @@ const SideBar = ({ setMenuHover }) => {
       />
 
       <Menu
-        menu="Status"
-        menuLink="/users"
+        menu="Posts"
+        menuLink="/posts"
         menuIcon="fa-solid fa-users"
         submenu={[
           {
@@ -68,8 +68,8 @@ const SideBar = ({ setMenuHover }) => {
       />
 
       <Menu
-        menu="To do"
-        menuLink="/users"
+        menu="Groups"
+        menuLink="/groups"
         menuIcon="fa-solid fa-users"
         submenu={[
           {
@@ -88,28 +88,8 @@ const SideBar = ({ setMenuHover }) => {
       />
 
       <Menu
-        menu="Complains"
-        menuLink="/users"
-        menuIcon="fa-solid fa-users"
-        submenu={[
-          {
-            title: "Users",
-            link: "/users/admin",
-            img: "fa-solid fa-users",
-            alt: "Admin icon",
-          },
-          {
-            title: "Add ",
-            link: "/users/add-user",
-            img: "fa-solid fa-user-plus",
-            alt: "support icon",
-          },
-        ]}
-      />
-
-      <Menu
-        menu="Controls"
-        menuLink="/users"
+        menu="Feedback"
+        menuLink="/posts"
         menuIcon="fa-solid fa-users"
         submenu={[
           {
@@ -130,36 +110,36 @@ const SideBar = ({ setMenuHover }) => {
       <Menu
         menu="Settings"
         menuLink="/settings"
-        menuIcon="/icons-images/sidebar/settingpages.svg"
+        menuIcon="fa-solid fa-gears"
         submenu={[
           {
             title: "SMTP",
             link: "/settings/smtp",
-            img: "/icons-images/sidebar/smtp.svg",
+            img: "fa-solid fa-gears",
             alt: "Admin icon",
           },
           {
             title: "CMS",
             link: "/settings/pages",
-            img: "/icons-images/sidebar/CMS.svg",
+            img: "fa-solid fa-gears",
             alt: "Admin icon",
           },
           {
             title: "Add Page",
             link: "/settings/add-page",
-            img: "/icons-images/sidebar/addcms.svg",
+            img: "fa-solid fa-gears",
             alt: "Admin icon",
           },
           {
             title: "Bulk Users",
             link: "/settings/bulk-users",
-            img: "/icons-images/sidebar/Bulkusers.svg",
+            img: "fa-solid fa-gears",
             alt: "Admin icon",
           },
           {
             title: "Bulk Products",
             link: "/settings/bulk-products",
-            img: "/icons-images/sidebar/bulkprodutcs.svg",
+            img: "fa-solid fa-gears",
             alt: "Admin icon",
           },
         ]}

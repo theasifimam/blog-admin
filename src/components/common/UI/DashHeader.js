@@ -36,7 +36,7 @@ const DashHeader = ({
             <img src="/images/user.png" alt="user" width="100" />
           </div>
           <div className="icon" onClick={() => setShowModal(true)}>
-            <img src="/icons-images/dashboard/menu.svg" alt="bell" />
+            <i className="fa-solid fa-bars"></i>
           </div>
           {showModal && (
             <MenuControls
