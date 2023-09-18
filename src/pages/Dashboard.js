@@ -95,6 +95,20 @@ const Dashboard = () => {
   //     },
   //   ],
   // };
+
+  const iconStyle = {
+    textAlign: "right",
+    width: "100%",
+    fontSize: "4rem",
+    color: "var(--glassBG)",
+    padding: "1rem",
+  };
+
+  const countTitle = {
+    color: "white",
+    fontSize: "1rem",
+    fontWeight: 400,
+  };
   return (
     <>
       <div className="container">
@@ -106,43 +120,55 @@ const Dashboard = () => {
             <div className="top">
               {/* Card */}
               <div className="card red">
+                <div className="icon">
+                  <span style={countTitle}>Total Users</span>
+                  <i style={iconStyle} class="fa-solid fa-users"></i>
+                </div>
                 <div className="bottom">
                   <span className="left">2.23B</span>
                   <div className="right">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                   </div>
                 </div>
-                <span>Total Users</span>
               </div>
               {/* Card */}
               <div className="card green">
+                <div className="icon">
+                  <span style={countTitle}>Users Active </span>
+                  <i style={iconStyle} class="fa-solid fa-earth-europe"></i>
+                </div>
                 <div className="bottom">
                   <span className="left">89.3M</span>
                   <div className="right">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                   </div>
                 </div>
-                <span>Users Active </span>
               </div>
               {/* Card */}
               <div className="card yellow">
+                <div className="icon">
+                  <span style={countTitle}>Total Groups</span>
+                  <i style={iconStyle} class="fa-solid fa-users-viewfinder"></i>
+                </div>
                 <div className="bottom">
                   <span className="left">3.78M</span>
                   <div className="right">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                   </div>
                 </div>
-                <span>Total Groups</span>
               </div>
               {/* Card */}
               <div className="card purple">
+                <div className="icon">
+                  <span style={countTitle}>Total Posts</span>
+                  <i style={iconStyle} class="fa-solid fa-envelopes-bulk"></i>
+                </div>
                 <div className="bottom">
                   <span className="left">93.3M</span>
                   <div className="right">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                   </div>
                 </div>
-                <span>Total Posts</span>
               </div>
             </div>
             <div className="mid card">

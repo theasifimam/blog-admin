@@ -5,7 +5,7 @@
   flex-direction: column;
 }
 
-.dashboard > .top {
+.dashboard>.top {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -14,7 +14,7 @@
   row-gap: 1rem;
 }
 
-.dashboard > .top > .card {
+.dashboard>.top>.card {
   width: 24%;
   min-width: 250px;
   max-width: 600px;
@@ -28,17 +28,17 @@
   background: var(--primaryColor);
 }
 
-.dashboard > .top > .card span {
+.dashboard>.top>.card span {
   color: var(--primary-color);
 }
 
-.dashboard > .top > .card:hover {
+.dashboard>.top>.card:hover {
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transition: 200ms ease-in-out;
 }
 
-.dashboard > .top > .card > span {
+.dashboard>.top>.card>span {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   width: 100%;
@@ -50,30 +50,30 @@
   color: var(--secondaryBG);
 }
 
-.dashboard > .top > .card > .bottom {
+.dashboard>.top>.card>.bottom {
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
 }
 
-.dashboard > .top > .card > .bottom span.left {
+.dashboard>.top>.card>.bottom span.left {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 50px;
+  font-size: 70px;
   line-height: 61px;
   letter-spacing: 0.4px;
   color: var(--white);
 }
 
-.dashboard > .top > .card > .bottom .right {
+.dashboard>.top>.card>.bottom .right {
   height: 60px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-.dashboard > .top > .card > .bottom .right img {
+.dashboard>.top>.card>.bottom .right img {
   height: 70%;
   width: auto;
 }
