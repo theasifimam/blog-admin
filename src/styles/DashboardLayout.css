@@ -121,6 +121,7 @@
   padding: 0 1rem;
   margin-top: 1px;
   color: var(--text);
+  border-radius: 50px;
 }
 
 .dashboardContainer .leftSide .navMenu > a.menu span {
@@ -132,7 +133,7 @@
   background: var(--primaryColor);
   transition: 200ms ease-in;
   color: white;
-  border-radius: 0 50px 50px 0;
+  border-radius: 50px;
 }
 
 .dashboardContainer .leftSide .navMenu > a.menu:hover span {
@@ -170,7 +171,7 @@
 .dashboardContainer .leftSide .navMenu > a.active,
 .dashboardContainer .leftSide .navMenu > a:hover {
   background: var(--primaryColor);
-  border-radius: 0 50px 50px 0;
+  border-radius: 50px;
   color: white;
 }
 
@@ -223,10 +224,10 @@
   filter: brightness(50%);
 }
 
-.dashboardContainer .leftSide .navMenu .active.multi-menu img.arrow,
+/* .dashboardContainer .leftSide .navMenu .active.multi-menu img.arrow,
 .dashboardContainer .leftSide .navMenu .multi-menu:hover img.arrow {
   filter: brightness(0%) invert(80%);
-}
+} */
 
 .dashboardContainer .leftSide .navMenu .subMenu a {
   display: flex;
@@ -239,7 +240,7 @@
   display: flex;
   align-items: center;
   padding-left: 2.5rem;
-  border-radius: 0 50px 50px 0;
+  border-radius: 50px;
 }
 
 .dashboardContainer .leftSide.collapsed .navMenu .subMenu a {
@@ -252,7 +253,7 @@
   background: var(--secondaryBG);
   cursor: pointer;
   transition: 200ms ease-in;
-  border-radius: 0 50px 50px 0;
+  border-radius: 50px;
 }
 
 .dashboardContainer .leftSide .navMenu .subMenu a:hover span,

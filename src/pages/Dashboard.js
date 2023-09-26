@@ -113,6 +113,17 @@ const Dashboard = () => {
     <>
       <div className="container">
         <div className="row">
+          <h1
+            style={{
+              fontWeight: 900,
+              color: "var(--primaryColor)",
+              fontSize: "3rem",
+              marginBottom: "-1.5rem",
+            }}
+          >
+            Current Status
+          </h1>
+          <br />
           <div className="dashboard col">
             <div className="globe-graph">
               {/* <Map countryData={countryData} /> */}
