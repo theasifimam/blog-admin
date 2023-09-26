@@ -5,16 +5,20 @@
   flex-direction: column;
 }
 
-.dashboard>.top {
+.dashboard > .top {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   row-gap: 1rem;
+  padding: 1rem;
+  background: var(--white);
+  border-radius: 30px;
+  box-shadow: var(--shadow);
 }
 
-.dashboard>.top>.card {
+.dashboard > .top > .card {
   width: 24%;
   min-width: 250px;
   max-width: 600px;
@@ -25,20 +29,20 @@
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
-  background: var(--primaryColor);
+  background: var(--background);
 }
 
-.dashboard>.top>.card span {
+.dashboard > .top > .card span {
   color: var(--primary-color);
 }
 
-.dashboard>.top>.card:hover {
+.dashboard > .top > .card:hover {
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transition: 200ms ease-in-out;
 }
 
-.dashboard>.top>.card>span {
+.dashboard > .top > .card > span {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   width: 100%;
@@ -50,30 +54,30 @@
   color: var(--secondaryBG);
 }
 
-.dashboard>.top>.card>.bottom {
+.dashboard > .top > .card > .bottom {
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
 }
 
-.dashboard>.top>.card>.bottom span.left {
+.dashboard > .top > .card > .bottom span.left {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 70px;
+  font-size: 40px;
   line-height: 61px;
   letter-spacing: 0.4px;
-  color: var(--white);
+  color: var(--primaryColor);
 }
 
-.dashboard>.top>.card>.bottom .right {
+.dashboard > .top > .card > .bottom .right {
   height: 60px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-.dashboard>.top>.card>.bottom .right img {
+.dashboard > .top > .card > .bottom .right img {
   height: 70%;
   width: auto;
 }
@@ -83,6 +87,7 @@
   background: var(--white);
   padding: 2rem;
   border-radius: 30px;
+  box-shadow: var(--shadow);
 }
 
 .dashboard .mid h4,
@@ -105,6 +110,10 @@
 
 .dashboard .table table tr {
   height: 60px;
+}
+
+.dashboard > .bottom {
+  box-shadow: var(--shadow);
 }
 
 .dashboard .table table th {

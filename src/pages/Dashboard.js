@@ -105,7 +105,7 @@ const Dashboard = () => {
   };
 
   const countTitle = {
-    color: "white",
+    color: "var(--text)",
     fontSize: "1rem",
     fontWeight: 400,
   };
@@ -175,7 +175,7 @@ const Dashboard = () => {
               <h4>Monthly Sales</h4>
               <EChartsReact option={option} />
             </div>
-            <div className="card">
+            <div className="card bottom">
               <div className="table  responsiveTable">
                 <h4>User Listing</h4>
                 <table className="table table-borderless mb-0">
