@@ -1,60 +1,56 @@
-import React from "react";
-import ReactECharts from "echarts-for-react";
-// import "echarts/map/js/world";
-// import "echarts/map/json/world.json";
+import React, { useEffect, useState } from "react";
+import { csv } from "d3-fetch";
+import { scaleLinear } from "d3-scale";
+import {
+  ComposableMap,
+  Geographies,
+  Geography,
+  Sphere,
+  Graticule,
+} from "react-simple-maps";
 
-const Map = ({ countryData }) => {
-  // If 'countryData' is not provided, create some dummy data for demonstration
-  if (!countryData) {
-    // Create an array of random country names
-    const countries = [
-      "USA",
-      "Canada",
-      "China",
-      "India",
-      "Germany",
-      "Brazil",
-      "Australia",
-    ];
+const geoUrl = "/features.json";
 
-    // Generate random data for each country
-    countryData = countries.map((country) => ({
-      name: country,
-      value: Math.floor(Math.random() * 100), // Random value between 0 and 100
-    }));
-  }
-  const option = {
-    title: {
-      text: "Global Map Graph",
-      left: "center",
-    },
-    tooltip: {
-      trigger: "item",
-      formatter: "{b}: {c}",
-    },
-    visualMap: {
-      min: 0,
-      max: 100, // Adjust the max value as per your data
-      left: "left",
-      top: "bottom",
-      text: ["High", "Low"],
-      calculable: true,
-    },
-    series: [
-      {
-        name: "Data",
-        type: "map",
-        mapType: "world",
-        roam: true,
-        label: {
-          show: true,
-        },
-        data: countryData,
-      },
-    ],
-  };
+const colorScale = scaleLinear()
+  .domain([0.29, 0.68])
+  .range(["#ffedea", "#ff5233"]);
 
-  return <ReactECharts option={option} style={{ height: "500px" }} />;
+const Map = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    csv(`/vulnerability.csv`).then((data) => {
+      setData(data);
+    });
+  }, []);
+
+  return (
+    <ComposableMap
+      projectionConfig={{
+        rotate: [-10, 0, 0],
+        scale: 147,
+      }}
+    >
+      <Sphere stroke="#E4E5E6" strokeWidth={0.5} />
+      <Graticule stroke="#E4E5E6" strokeWidth={0.5} />
+      {data.length > 0 && (
+        <Geographies geography={geoUrl}>
+          {({ geographies }) =>
+            geographies.map((geo) => {
+              const d = data.find((s) => s.ISO3 === geo.id);
+              return (
+                <Geography
+                  key={geo.rsmKey}
+                  geography={geo}
+                  fill={d ? colorScale(d["2017"]) : "#F5F4F6"}
+                />
+              );
+            })
+          }
+        </Geographies>
+      )}
+    </ComposableMap>
+  );
 };
 
 export default Map;

@@ -5,89 +5,17 @@
   flex-direction: column;
 }
 
-.dashboard > .top {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  row-gap: 1rem;
-  padding: 1rem;
-  background: var(--white);
-  border-radius: 30px;
-  box-shadow: var(--shadow);
+.dashboard .globe-graph {
+  background: var(--primaryColor);
+  border-radius: 50px;
+  width: 50%;
+  min-height: 250px;
 }
 
-.dashboard > .top > .card {
-  width: 24%;
-  min-width: 250px;
-  max-width: 600px;
-  height: 200px;
-  border-radius: 30px;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: column;
-  background: var(--background);
-}
-
-.dashboard > .top > .card span {
-  color: var(--primary-color);
-}
-
-.dashboard > .top > .card:hover {
-  cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  transition: 200ms ease-in-out;
-}
-
-.dashboard > .top > .card > span {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  width: 100%;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0.3px;
-  border-radius: 40px;
-  background: var(--background);
-  color: var(--secondaryBG);
-}
-
-.dashboard > .top > .card > .bottom {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.dashboard > .top > .card > .bottom span.left {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 61px;
-  letter-spacing: 0.4px;
-  color: var(--primaryColor);
-}
-
-.dashboard > .top > .card > .bottom .right {
-  height: 60px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.dashboard > .top > .card > .bottom .right img {
-  height: 70%;
-  width: auto;
-}
-
-.dashboard .mid {
-  width: 100%;
-  background: var(--white);
-  padding: 2rem;
-  border-radius: 30px;
-  box-shadow: var(--shadow);
+.dashboard .globe-graph svg {
+  max-height: 400px;
+  margin-top: -30px;
+  margin-bottom: -30px;
 }
 
 .dashboard .mid h4,
@@ -100,6 +28,11 @@
   color: var(--heading);
 }
 
+.dashboard .mid h4 {
+  margin-bottom: -2rem;
+  padding-left: 2rem;
+  padding-top: 1.5rem;
+}
 .dashboard .mid .echarts-for-react {
   width: 100%;
 }
