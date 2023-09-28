@@ -5,6 +5,7 @@
 .card {
   border-radius: 50px;
   border: none;
+  box-shadow: var(--shadow);
 }
 
 .black {

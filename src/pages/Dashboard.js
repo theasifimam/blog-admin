@@ -112,15 +112,21 @@ const Dashboard = () => {
           </h1>
           <br />
           <div className="dashboard col">
-            <div
-              className="globe-graph"
-              style={{
-                maxHeight: "500px",
-                marginBottom: "2rem",
-                marginTop: "-6rem",
-              }}
-            >
-              <Map />
+            <div className="top">
+              <div
+                className="globe-graph center"
+                style={{
+                  maxHeight: "500px",
+                }}
+              >
+                <Map />
+              </div>
+              <div className="cards right">
+                <div className="sm-card">sm-card1</div>
+                <div className="sm-card">sm-card2</div>
+                <div className="sm-card">sm-card3</div>
+                <div className="sm-card">sm-card4</div>
+              </div>
             </div>
             <div className="mid card">
               <h4>Monthly Sales</h4>
