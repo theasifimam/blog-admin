@@ -20,8 +20,8 @@ const Menu = ({ menu, submenu, menuIcon, menuLink }) => {
         <i
           className={
             !showSubmenu
-              ? "fa-solid fa-angle-right"
-              : "fa-solid fa-chevron-down"
+              ? "fa-solid fa-angle-right arrow"
+              : "fa-solid fa-chevron-down arrow"
           }
         ></i>
       </NavLink>

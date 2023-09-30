@@ -11,15 +11,16 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  border: 2px solid red;
   height: 100%;
 }
 
 .dashboard .globe-graph {
-  background: var(--primaryColor);
+  background: #edd9ff;
+  box-shadow: var(--shadow);
   border-radius: 50px;
   width: 49%;
-  min-height: 250px;
+  height: 300px;
+
 }
 
 .dashboard .cards {
@@ -29,15 +30,56 @@
   align-items: start;
   flex-wrap: wrap;
   gap: 1rem;
-  height: 100%;
+  height: 300px;
 }
 
 .dashboard .cards .sm-card {
   width: calc(49% - 0.5rem);
-  min-height: 150px;
   box-shadow: var(--shadow);
   border-radius: 30px;
   background: white;
+  height: 45%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: rgb(91, 91, 91);
+}
+
+.dashboard .cards .cardColor1 {
+  background: #fff4cf96;
+}
+
+.dashboard .cards .cardColor2 {
+  background: #ffc0c087;
+}
+
+.dashboard .cards .cardColor3 {
+  background: #d9c7ff;
+}
+
+.dashboard .cards .cardColor4 {
+  background: #ffcaff85;
+}
+
+.dashboard .cards .sm-card h3 {
+  color: rgba(0, 0, 0, 0.735);
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+
+.dashboard .cards .sm-card h6 {
+  width: 100%;
+  text-align: right;
+}
+
+.dashboard .cards .sm-card h6 span.plus {
+  color: rgb(19, 255, 19);
+}
+
+.dashboard .cards .sm-card h6 span.minus {
+  color: red;
 }
 
 .dashboard .globe-graph svg {
@@ -59,6 +101,7 @@
   padding-left: 2rem;
   padding-top: 1.5rem;
 }
+
 .dashboard .mid .echarts-for-react {
   width: 100%;
 }
@@ -71,7 +114,7 @@
   height: 60px;
 }
 
-.dashboard > .bottom {
+.dashboard>.bottom {
   box-shadow: var(--shadow);
 }
 
@@ -94,4 +137,24 @@
   line-height: 19px;
   text-transform: capitalize;
   color: #000000;
+}
+
+
+@media screen and (max-width:1024px) {
+  .dashboard .top {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dashboard .cards {
+    width: 100%;
+  }
+
+  .dashboard .globe-graph {
+    width: 100%;
+  }
+
+  .container {
+    max-width: 750px;
+  }
 }

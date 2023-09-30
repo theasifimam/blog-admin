@@ -11,10 +11,10 @@ import MonthlySale from "./pages/MonthlySale";
 import AddUser from "./pages/users/AddUser";
 import UpdateUser from "./pages/users/UpdateUser";
 import UserDetail from "./pages/users/UserDetail";
-import SMTP from "./pages/settings/SMTP";
 import AddPage from "./pages/settings/AddPage";
-import BulkProducts from "./pages/settings/BulkProducts";
 import Users from "./pages/users/Users";
+import Reports from "./pages/submitted/Reports";
+import Feedback from "./pages/submitted/Feedback";
 
 function App() {
   return (
@@ -37,13 +37,15 @@ function App() {
             <Route path="/users/update-user/:id" element={<UpdateUser />} />
           </Route>
 
+          <Route path="/submitted">
+            <Route index element={<Reports />} />
+            <Route path="/submitted/reports" element={<Reports />} />
+            <Route path="/submitted/feedback" element={<Feedback />} />
+          </Route>
+
           <Route path="/monthly-sale" element={<MonthlySale />} />
           <Route path="/settings">
-            <Route index element={<SMTP />} />
-            <Route path="/settings/smtp" element={<SMTP />} />
-
             <Route path="/settings/add-page" element={<AddPage />} />
-            <Route path="/settings/bulk-products" element={<BulkProducts />} />
           </Route>
         </Route>
       </Routes>

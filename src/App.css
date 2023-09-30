@@ -30,7 +30,7 @@
   border-radius: 30px;
 }
 
-.table > table {
+.table>table {
   background-color: #ffff;
   border-radius: 6px;
   overflow: hidden;
@@ -38,11 +38,11 @@
   width: 100%;
 }
 
-.table > table th {
+.table>table th {
   border: none !important;
 }
 
-.table > table input {
+.table>table input {
   height: 25px;
   border-radius: 20px;
   width: 25px;
@@ -66,4 +66,136 @@
   100% {
     transform: translateY(0);
   }
+}
+
+.primary-btn {
+  background-color: var(--primaryColor);
+  color: white;
+  padding: 10px 30px;
+  border-radius: var(--borderRadius);
+  display: inline-block;
+  font-weight: 700;
+  border: 2px solid var(--primaryColor);
+  margin: auto;
+}
+
+.primary-btn:hover {
+  background: transparent;
+  cursor: pointer;
+  color: var(--primaryColor);
+  transition: 200ms ease-in-out;
+}
+
+.secondary-btn {
+  color: var(--primaryColor);
+  padding: 10px 10px;
+  display: inline-block;
+  font-weight: 700;
+  border-radius: var(--borderRadius);
+  border: 2px solid var(--primaryColor);
+  background-color: transparent;
+}
+
+.open-btn {
+  padding: 10px 10px;
+  display: inline-block;
+  font-weight: 700;
+  border-radius: 50px;
+  border: none;
+  background: transparent;
+  min-height: 50px;
+  min-width: 50px;
+  color: var(--heading);
+}
+
+.open-btn:hover,
+.open-btn.active {
+  background: var(--primaryColor);
+  color: #ffffff;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+
+.secondary-btn:hover {
+  background: var(--primaryColor);
+  color: #ffffff;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+
+.error-msg {
+  font-size: 14px;
+  color: red;
+  margin-left: 1.5rem;
+  margin-top: 2px;
+}
+
+.Toastify {
+  border-radius: var(--borderRadius);
+}
+
+.dp {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.dp .green-dot {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.dp img {
+  min-width: 100%;
+  min-height: 100%;
+  border-radius: 50%;
+  max-width: 50px;
+  max-height: 50px;
+}
+
+/* 404 no page found */
+.no-page-found {
+  text-align: center;
+  border: 2px solid black;
+  border-radius: var(--borderRadius);
+  width: 97%;
+  background: white;
+  padding: 2rem;
+  min-height: 500px;
+}
+
+.no-page-found h1 {
+  font-weight: 700;
+  font-size: 7rem;
+  color: rgb(25, 25, 25);
+  line-height: 10rem;
+}
+
+.no-page-found span {
+  font-weight: 500;
+  font-size: 2rem;
+  color: rgb(90, 90, 90);
+  line-height: 5rem;
+  margin-top: 2rem;
+}
+
+.no-page-found .btn-group a {
+  text-decoration: none;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

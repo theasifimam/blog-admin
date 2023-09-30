@@ -3,33 +3,36 @@ import { Link } from "react-router-dom";
 
 const ForgotPassword = () => {
   return (
-    <Fragment>
-      <div className="logo">
-        <img src="/icons-images/logo.png" alt="logo" />
+    <div className="signup">
+      <div className="welcomeText">
+        <h1>Welcome Back</h1>
+        <p>Log in to Your World!</p>
       </div>
-      <Link to="/signin" className="backBtn">
-        <img src="/icons-images/back.svg" alt="back icon" />
-      </Link>
-      <h4>Forgot Your Password?</h4>
-      <span className="heading-desc">
-        Enter your email address to <br /> retrieve your password
-      </span>
+      <form>
+        <h1>Log in now</h1>
+        {/* username */}
+        <div className="input-field full">
+          <label htmlFor="username">
+            Email<span>*</span>
+          </label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Email or Username"
+            tabIndex="1"
+          />
+        </div>
 
-      <div className="inputField">
-        <label htmlFor="email">Enter Your Email</label>
-        <input
-          autoComplete="true"
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Email"
-        />
-      </div>
-
-      <div className="inputField">
-        <input autoComplete="true" type="submit" value="Reset Password" />
-      </div>
-    </Fragment>
+        <button type="submit" className="primary-btn">
+          Reset Password
+        </button>
+        <span className="bottom-text">
+          Do you want to login?
+          <Link to="/signin">Login</Link>
+        </span>
+      </form>
+    </div>
   );
 };
 

@@ -58,44 +58,6 @@ const Dashboard = () => {
     return dummyArray;
   };
 
-  // const [countryData, setCountryData] = useState([]);
-
-  // useEffect(() => {
-  //   // Dummy data for illustration purposes
-  //   const dummyData = [
-  //     { name: "China", value: Math.floor(Math.random() * 100) },
-  //     { name: "India", value: Math.floor(Math.random() * 100) },
-  //     { name: "United States", value: Math.floor(Math.random() * 100) },
-  //     // Add more countries with their respective values here
-  //   ];
-
-  //   setCountryData(dummyData);
-  // }, []);
-
-  // const dummyData = [
-  //   { name: "China", value: Math.floor(Math.random() * 100) },
-  //   { name: "India", value: Math.floor(Math.random() * 100) },
-  //   { name: "United States", value: Math.floor(Math.random() * 100) },
-  //   // Add more countries with their respective values here
-  // ];
-
-  // const option = {
-  //   xAxis: {
-  //     type: "category",
-  //     data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-  //   },
-  //   yAxis: {
-  //     type: "value",
-  //   },
-  //   series: [
-  //     {
-  //       data: [820, 932, 901, 934, 1290, 1330, 1320],
-  //       type: "line",
-  //       smooth: true,
-  //     },
-  //   ],
-  // };
-
   return (
     <>
       <div className="container">
@@ -105,7 +67,6 @@ const Dashboard = () => {
               fontWeight: 900,
               color: "var(--primaryColor)",
               fontSize: "3rem",
-              marginBottom: "-0.5rem",
             }}
           >
             Current Status
@@ -113,20 +74,41 @@ const Dashboard = () => {
           <br />
           <div className="dashboard col">
             <div className="top">
-              <div
-                className="globe-graph center"
-                style={{
-                  maxHeight: "500px",
-                }}
-              >
-                <Map />
-              </div>
               <div className="cards right">
-                <div className="sm-card">sm-card1</div>
-                <div className="sm-card">sm-card2</div>
-                <div className="sm-card">sm-card3</div>
-                <div className="sm-card">sm-card4</div>
+                <div className="sm-card cardColor1">
+                  <p>Active Users</p>
+                  <h3>356.04K</h3>
+                  <h6>
+                    {" "}
+                    <span className="plus">+23%</span> - change
+                  </h6>
+                </div>
+                <div className="sm-card cardColor2">
+                  <p>Active Users</p>
+                  <h3>356.04K</h3>
+                  <h6>
+                    {" "}
+                    <span className="minus">+23%</span> - change
+                  </h6>
+                </div>
+                <div className="sm-card cardColor3">
+                  <p>Active Users</p>
+                  <h3>43.04K</h3>
+                  <h6>
+                    {" "}
+                    <span className="plus">+23%</span> - change
+                  </h6>
+                </div>
+                <div className="sm-card cardColor4">
+                  <p>Active Users</p>
+                  <h3>26.04K</h3>
+                  <h6>
+                    {" "}
+                    <span className="plus">+23%</span>- change
+                  </h6>
+                </div>
               </div>
+              <div className="globe-graph center">{/* <Map /> */}</div>
             </div>
             <div className="mid card">
               <h4>Monthly Sales</h4>

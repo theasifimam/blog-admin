@@ -56,8 +56,8 @@ const Users = () => {
             <option>Select User Type</option>
             <option value="all">All User</option>
             <option value="admin">Admin</option>
-            <option value="seller">Seller</option>
-            <option value="support">Support</option>
+            <option value="moderator">Moderator</option>
+            <option value="user">User</option>
           </select>
         </div>
       </div>
