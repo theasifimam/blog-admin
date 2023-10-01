@@ -258,8 +258,7 @@
   width: 100%;
   background: var(--background);
   border-radius: 30px;
-  /* box-shadow: rgb(11, 11, 11) 3px 3px 6px 0px inset,
-    rgba(53, 53, 53, 0.5) -3px -3px 6px 1px inset; */
+  /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.45) inset; */
 }
 
 .dashboardContainer .leftSide .navMenu .multi-menu img.arrow {

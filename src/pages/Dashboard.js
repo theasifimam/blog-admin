@@ -4,21 +4,70 @@ import EChartsReact from "echarts-for-react";
 import Map from "../components/common/UI/graph/Map";
 
 const Dashboard = () => {
+  var xAxisData = [];
+  var data1 = [];
+  var data2 = [];
+  for (var i = 0; i < 100; i++) {
+    xAxisData.push("A" + i);
+    data1.push((Math.sin(i / 5) * (i / 5 - 10) + i / 6) * 5);
+    data2.push((Math.cos(i / 5) * (i / 5 - 10) + i / 6) * 5);
+  }
+
   const option = {
-    width: "cover",
+    title: {
+      text: "Bar Animation Delay",
+    },
+    legend: {
+      data: ["bar", "bar2"],
+    },
+    toolbox: {
+      // y: 'bottom',
+      feature: {
+        magicType: {
+          type: ["stack"],
+        },
+        dataView: {},
+        saveAsImage: {
+          pixelRatio: 2,
+        },
+      },
+    },
+    tooltip: {},
     xAxis: {
-      type: "category",
-      data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+      data: xAxisData,
+      splitLine: {
+        show: false,
+      },
     },
-    yAxis: {
-      type: "value",
-    },
+    yAxis: {},
     series: [
       {
-        data: [150, 230, 224, 218, 135, 147, 260],
-        type: "line",
+        name: "bar",
+        type: "bar",
+        data: data1,
+        emphasis: {
+          focus: "series",
+        },
+        animationDelay: function (idx) {
+          return idx * 10;
+        },
+      },
+      {
+        name: "bar2",
+        type: "bar",
+        data: data2,
+        emphasis: {
+          focus: "series",
+        },
+        animationDelay: function (idx) {
+          return idx * 10 + 100;
+        },
       },
     ],
+    animationEasing: "elasticOut",
+    animationDelayUpdate: function (idx) {
+      return idx * 5;
+    },
   };
 
   const tableData = (amount) => {
@@ -76,8 +125,8 @@ const Dashboard = () => {
             <div className="top">
               <div className="cards right">
                 <div className="sm-card cardColor1">
-                  <p>Active Users</p>
-                  <h3>356.04K</h3>
+                  <p>Total Users</p>
+                  <h3>658.04M</h3>
                   <h6>
                     {" "}
                     <span className="plus">+23%</span> - change
@@ -85,22 +134,22 @@ const Dashboard = () => {
                 </div>
                 <div className="sm-card cardColor2">
                   <p>Active Users</p>
-                  <h3>356.04K</h3>
+                  <h3>256.04K</h3>
                   <h6>
                     {" "}
                     <span className="minus">+23%</span> - change
                   </h6>
                 </div>
                 <div className="sm-card cardColor3">
-                  <p>Active Users</p>
-                  <h3>43.04K</h3>
+                  <p>Active Posts</p>
+                  <h3>438.04K</h3>
                   <h6>
                     {" "}
                     <span className="plus">+23%</span> - change
                   </h6>
                 </div>
                 <div className="sm-card cardColor4">
-                  <p>Active Users</p>
+                  <p>Active Hashtags</p>
                   <h3>26.04K</h3>
                   <h6>
                     {" "}
@@ -111,7 +160,7 @@ const Dashboard = () => {
               <div className="globe-graph center">{/* <Map /> */}</div>
             </div>
             <div className="mid card">
-              <h4>Monthly Sales</h4>
+              {/* <h4>Monthly Sales</h4> */}
               <EChartsReact option={option} />
             </div>
             <div className="card bottom">

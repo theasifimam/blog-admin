@@ -86,6 +86,12 @@
   max-height: 400px;
 }
 
+.dashboard .mid {
+  padding: 1.5rem;
+  background: var(--white);
+  width: 100%;
+}
+
 .dashboard .mid h4,
 .dashboard .table h4 {
   font-family: "Poppins", sans-serif;
