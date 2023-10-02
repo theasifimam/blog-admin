@@ -64,8 +64,8 @@
 }
 
 .dashboard .cards .sm-card h3 {
-  color: rgba(0, 0, 0, 0.735);
-  font-weight: 800;
+  color: #000000ab;
+  font-weight: 900;
   font-size: 2.5rem;
 }
 

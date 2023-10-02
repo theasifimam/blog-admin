@@ -110,109 +110,103 @@ const Dashboard = () => {
   return (
     <>
       <div className="container">
-        <div className="row">
-          <h1
-            style={{
-              fontWeight: 900,
-              color: "var(--primaryColor)",
-              fontSize: "3rem",
-            }}
-          >
-            Current Status
-          </h1>
-          <br />
-          <div className="dashboard col">
-            <div className="top">
-              <div className="cards right">
-                <div className="sm-card cardColor1">
-                  <p>Total Users</p>
-                  <h3>658.04M</h3>
-                  <h6>
-                    {" "}
-                    <span className="plus">+23%</span> - change
-                  </h6>
-                </div>
-                <div className="sm-card cardColor2">
-                  <p>Active Users</p>
-                  <h3>256.04K</h3>
-                  <h6>
-                    {" "}
-                    <span className="minus">+23%</span> - change
-                  </h6>
-                </div>
-                <div className="sm-card cardColor3">
-                  <p>Active Posts</p>
-                  <h3>438.04K</h3>
-                  <h6>
-                    {" "}
-                    <span className="plus">+23%</span> - change
-                  </h6>
-                </div>
-                <div className="sm-card cardColor4">
-                  <p>Active Hashtags</p>
-                  <h3>26.04K</h3>
-                  <h6>
-                    {" "}
-                    <span className="plus">+23%</span>- change
-                  </h6>
-                </div>
+        <h1
+          style={{
+            fontWeight: 900,
+            color: "var(--primaryColor)",
+            fontSize: "3rem",
+          }}
+        >
+          Current Status
+        </h1>
+        <br />
+        <div className="dashboard col">
+          <div className="top">
+            <div className="cards right">
+              <div className="sm-card cardColor1">
+                <p>Total Users</p>
+                <h3>658.04M</h3>
+                <h6>
+                  {" "}
+                  <span className="plus">+23%</span> - change
+                </h6>
               </div>
-              <div className="globe-graph center">{/* <Map /> */}</div>
-            </div>
-            <div className="mid card">
-              {/* <h4>Monthly Sales</h4> */}
-              <EChartsReact option={option} />
-            </div>
-            <div className="card bottom">
-              <div className="table  responsiveTable">
-                <h4>User Listing</h4>
-                <table className="table table-borderless mb-0">
-                  <thead className="rowHeight3">
-                    <tr>
-                      <th scope="col" className="align-middle">
-                        <input type="checkbox" name="all" id="all" />
-                      </th>
-                      <th scope="col" className="align-middle">
-                        Sr. No.
-                      </th>
-                      <th scope="col" className="align-middle">
-                        Full Name
-                      </th>
-                      <th scope="col" className="align-middle">
-                        Email
-                      </th>
-                      <th scope="col" className="align-middle">
-                        Mobile No.
-                      </th>
-                      <th scope="col" className="align-middle">
-                        User Type
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {tableData(10).map((data, index) => {
-                      return (
-                        <tr className="rowHeight3" key={index}>
-                          <td scope="col" className="align-middle">
-                            <input
-                              type="checkbox"
-                              name={data.ic}
-                              id={data.id}
-                            />
-                          </td>
-                          <th scope="row" className="align-middle">
-                            {data.srNo}
-                          </th>
-                          <td className="align-middle">{data.fullName}</td>
-                          <td className="align-middle">{data.email}</td>
-                          <td className="align-middle">{data.mNumber}</td>
-                          <td className="align-middle">{data.role}</td>
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
+              <div className="sm-card cardColor2">
+                <p>Active Users</p>
+                <h3>256.04K</h3>
+                <h6>
+                  {" "}
+                  <span className="minus">+23%</span> - change
+                </h6>
               </div>
+              <div className="sm-card cardColor3">
+                <p>Active Posts</p>
+                <h3>438.04K</h3>
+                <h6>
+                  {" "}
+                  <span className="plus">+23%</span> - change
+                </h6>
+              </div>
+              <div className="sm-card cardColor4">
+                <p>Active Hashtags</p>
+                <h3>26.04K</h3>
+                <h6>
+                  {" "}
+                  <span className="plus">+23%</span>- change
+                </h6>
+              </div>
+            </div>
+            <div className="globe-graph center">{/* <Map /> */}</div>
+          </div>
+          <div className="mid card">
+            {/* <h4>Monthly Sales</h4> */}
+            <EChartsReact option={option} />
+          </div>
+          <div className="card bottom">
+            <div className="table  responsiveTable">
+              <h4>User Listing</h4>
+              <table className="table table-borderless mb-0">
+                <thead className="rowHeight3">
+                  <tr>
+                    <th scope="col" className="align-middle">
+                      <input type="checkbox" name="all" id="all" />
+                    </th>
+                    <th scope="col" className="align-middle">
+                      Sr. No.
+                    </th>
+                    <th scope="col" className="align-middle">
+                      Full Name
+                    </th>
+                    <th scope="col" className="align-middle">
+                      Email
+                    </th>
+                    <th scope="col" className="align-middle">
+                      Mobile No.
+                    </th>
+                    <th scope="col" className="align-middle">
+                      User Type
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {tableData(10).map((data, index) => {
+                    return (
+                      <tr className="rowHeight3" key={index}>
+                        <td scope="col" className="align-middle">
+                          <input type="checkbox" name={data.ic} id={data.id} />
+                        </td>
+                        <th scope="row" className="align-middle">
+                          {data.srNo}
+                        </th>
+                        <td className="align-middle">{data.fullName}</td>
+                        <td className="align-middle">{data.email}</td>
+                        <td className="align-middle">{data.mNumber}</td>
+                        <td className="align-middle">{data.role}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
