@@ -1,0 +1,65 @@
+.calendar {
+  width: 100%;
+  background: var(--white);
+  padding: 2rem;
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow);
+}
+
+.rbc-btn-group {
+  margin-bottom: 1rem;
+}
+
+.rbc-btn-group > button {
+  padding: 10px 20px;
+  border-radius: var(--borderRadius);
+  border: 1px solid var(--primaryColor);
+}
+
+.rbc-toolbar button.rbc-active,
+.rbc-toolbar button.rbc-active:hover,
+.rbc-active,
+.rbc-toolbar button:hover {
+  cursor: pointer;
+  background-color: var(--primaryColor);
+  background: var(--primaryColor);
+  color: white;
+  border: 1px solid var(--primaryColor);
+}
+
+.rbc-month-view {
+  /* border: 1px solid var(--primaryColor); */
+  border: none;
+  border-radius: var(--borderRadius);
+  overflow: hidden;
+  gap: 10px;
+}
+
+.rbc-row-bg {
+  gap: 10px;
+}
+
+.rbc-day-bg {
+  border: 1px solid var(--background);
+  border-radius: var(--borderRadius);
+  /* background: var(--background); */
+}
+
+.rbc-month-row + .rbc-month-row {
+  border: none;
+}
+
+.rbc-date-cell {
+  padding: 1rem;
+}
+
+.rbc-row-segment {
+  padding: 0 1px 1px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.rbc-event {
+  width: 90%;
+}

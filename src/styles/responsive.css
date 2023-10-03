@@ -48,7 +48,8 @@
 
 @media screen and (max-width: 768px) {
   .leftSide.collapsed {
-    width: 0 !important;
+    width: 0px;
+    overflow: hidden;
   }
 
   .dbClose {

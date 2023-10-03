@@ -14,13 +14,18 @@
   height: 100%;
 }
 
+.main-heading {
+  font-weight: 900;
+  color: var(--primaryColor);
+  font-size: "3rem";
+}
+
 .dashboard .globe-graph {
   background: #edd9ff;
   box-shadow: var(--shadow);
-  border-radius: 50px;
+  border-radius: var(--borderRadius);
   width: 49%;
   height: 300px;
-
 }
 
 .dashboard .cards {
@@ -36,9 +41,9 @@
 .dashboard .cards .sm-card {
   width: calc(49% - 0.5rem);
   box-shadow: var(--shadow);
-  border-radius: 30px;
+  border-radius: var(--borderRadius);
   background: white;
-  height: 45%;
+  height: 48%;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -120,8 +125,10 @@
   height: 60px;
 }
 
-.dashboard>.bottom {
+.dashboard > .bottom {
   box-shadow: var(--shadow);
+  max-width: 100%;
+  border-radius: var(--borderRadius);
 }
 
 .dashboard .table table th {
@@ -145,8 +152,7 @@
   color: #000000;
 }
 
-
-@media screen and (max-width:1024px) {
+@media screen and (max-width: 1024px) {
   .dashboard .top {
     flex-direction: column;
     gap: 10px;
@@ -162,5 +168,20 @@
 
   .container {
     max-width: 750px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard .cards {
+    height: auto;
+  }
+  .dashboard .cards .sm-card {
+    width: 100%;
+    min-height: 150px;
+  }
+  .dashboard .cards .sm-card h3 {
+    color: #000000ab;
+    font-weight: 900;
+    font-size: 2.5rem;
   }
 }

@@ -45,15 +45,7 @@ const DashboardLayout = () => {
         >
           X
         </button>
-        <div className="logo" style={{ display: toggleMenu ? "none" : "flex" }}>
-          <Link to="/">
-            <img
-              src="/icons-images/logo.png"
-              alt="logo-sabkimandi"
-              width="150"
-            />
-          </Link>
-        </div>
+
         <SideBar setMenuHover={setMenuHover} />
       </div>
       <div className="rightSide">
@@ -69,8 +61,12 @@ const DashboardLayout = () => {
         <footer>
           <p>
             Copyright &#169; 2023-2027 |{" "}
-            <a href="https://asifimam.com/" target="_blank" rel="noreferrer">
-              asifimam.com
+            <a
+              href="https://admin.gladify.me/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              admin.gladify.me
             </a>
             | All rights reserved.
           </p>

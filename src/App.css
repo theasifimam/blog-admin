@@ -3,7 +3,7 @@
 }
 
 .card {
-  border-radius: 50px;
+  border-radius: var(--borderRadius);
   border: none;
   box-shadow: var(--shadow);
 }
@@ -30,7 +30,7 @@
   border-radius: 30px;
 }
 
-.table>table {
+.table > table {
   background-color: #ffff;
   border-radius: 6px;
   overflow: hidden;
@@ -38,11 +38,11 @@
   width: 100%;
 }
 
-.table>table th {
+.table > table th {
   border: none !important;
 }
 
-.table>table input {
+.table > table input {
   height: 25px;
   border-radius: 20px;
   width: 25px;

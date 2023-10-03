@@ -13,6 +13,10 @@ const SideBar = ({ setMenuHover }) => {
         setMenuHover(true);
       }}
     >
+      <div className="logo-box">
+        <p className="logo">G</p>
+        <h1 className="main-heading">Gladify</h1>
+      </div>
       <NavLink to="/" className="menu">
         <div className="menuIcon">
           <i class="fa-solid fa-tower-observation"></i>

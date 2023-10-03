@@ -13,9 +13,19 @@ const MenuControls = ({ backdrop, modal, onClose, style }) => {
   return (
     <Modal backdrop={backdrop} modal={modal} onClose={onClose} style={style}>
       <ul className="menuControls">
-        <li>My Profile</li>
-        <li>Change Password</li>
-        <li onClick={handleLogout}>Log Out</li>
+        <li>
+          <i class="fa-solid fa-lock"></i> Profile
+        </li>
+        <li>
+          <i class="fa-solid fa-lock"></i> Theme
+        </li>
+        <li>
+          <i class="fa-solid fa-lock"></i> Password
+        </li>
+        <li onClick={handleLogout}>
+          {" "}
+          <i class="fa-solid fa-right-from-bracket"></i> Log Out
+        </li>
       </ul>
     </Modal>
   );

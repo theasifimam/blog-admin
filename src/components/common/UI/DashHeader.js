@@ -43,7 +43,11 @@ const DashHeader = ({
               backdrop={classes.backdrop}
               modal={classes.modal}
               onClose={hideModal}
-              style={{ right: "10px", top: "90px" }}
+              style={{
+                right: "50px",
+                top: "70px",
+                borderRadius: "20px",
+              }}
             />
           )}
         </div>
