@@ -12,7 +12,7 @@ const Dashboard = () => {
     data2.push((Math.cos(i / 5) * (i / 5 - 10) + i / 6) * 5);
   }
 
-  const colors = ["blueviolet", "purple"];
+  const colors = ["#016bb9", "grey"];
 
   const option = {
     color: colors,

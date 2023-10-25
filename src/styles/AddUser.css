@@ -10,7 +10,7 @@
   animation: rollout 0.4s;
 }
 
-.addUserPage>.card {
+.addUserPage > .card {
   width: 100%;
   border: 1px solid #cdcfd2;
   border-radius: 30px;
@@ -22,7 +22,7 @@
   border-radius: 50px 50px 0px 0px;
 } */
 
-.addUserPage>.card>.bottom>form {
+.addUserPage > .card > .bottom > form {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,12 +31,12 @@
   row-gap: 1rem;
 }
 
-.addUserPage>.card>.bottom.monthlySale>form>.inputField {
+.addUserPage > .card > .bottom.monthlySale > form > .inputField {
   width: 30%;
   margin-bottom: 1rem;
 }
 
-.addUserPage>.card>.bottom>h3 {
+.addUserPage > .card > .bottom > h3 {
   margin-top: 2rem;
   margin-left: 3rem;
 
@@ -49,19 +49,19 @@
   color: #000000;
 }
 
-.addUserPage>.card>.bottom>form>.inputField {
+.addUserPage > .card > .bottom > form > .inputField {
   width: 48%;
   display: flex;
   flex-direction: column;
   min-width: 300px;
 }
 
-.addUserPage>.card>.bottom>form>.fullInputField {
+.addUserPage > .card > .bottom > form > .fullInputField {
   width: 100%;
   border-radius: 20px;
 }
 
-.addUserPage>.card>.bottom>form>.fullInputField>label {
+.addUserPage > .card > .bottom > form > .fullInputField > label {
   margin-bottom: 10px;
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -72,7 +72,7 @@
   color: #000000;
 }
 
-.addUserPage>.card>.bottom>form>.editorBorder {
+.addUserPage > .card > .bottom > form > .editorBorder {
   border: 1px solid #cdcfd2;
   background: #fafafa;
 }
@@ -94,7 +94,7 @@
   border-color: transparent;
 } */
 
-.addUserPage>.card>.bottom>form>.inputField>label {
+.addUserPage > .card > .bottom > form > .inputField > label {
   margin-bottom: 10px;
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -105,16 +105,16 @@
   color: #000000;
 }
 
-.addUserPage>.card>.bottom>form>.inputField>label>span,
-.addUserPage>.card>.bottom>form>.fullInputField>label>span {
+.addUserPage > .card > .bottom > form > .inputField > label > span,
+.addUserPage > .card > .bottom > form > .fullInputField > label > span {
   color: #ff0000;
 }
 
-.addUserPage>.card>.bottom>form>.inputField>input,
-.addUserPage>.card>.bottom>form>.fullInputField>input,
-.addUserPage>.card>.bottom>form>.fullInputField>textarea,
-.addUserPage>.card>.bottom>form>.inputField>select,
-.addUserPage>.card>.bottom>form>.inputField>textarea {
+.addUserPage > .card > .bottom > form > .inputField > input,
+.addUserPage > .card > .bottom > form > .fullInputField > input,
+.addUserPage > .card > .bottom > form > .fullInputField > textarea,
+.addUserPage > .card > .bottom > form > .inputField > select,
+.addUserPage > .card > .bottom > form > .inputField > textarea {
   width: 100%;
   padding: 0 10px;
   height: 45px;
@@ -126,30 +126,37 @@
   background: rgb(244, 244, 244);
 }
 
-.addUserPage>.card>.bottom>form>.inputField>textarea {
+.addUserPage > .card > .bottom > form > .inputField > textarea {
   height: auto;
   padding-top: 5px;
 }
 
-.addUserPage>.card>.bottom>form>.inputField>.img {
+.addUserPage > .card > .bottom > form > .inputField > .img {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.addUserPage>.card>.bottom>form>.inputField>.img .imgPreviewRect {
+.addUserPage > .card > .bottom > form > .inputField > .img .imgPreviewRect {
   min-height: 200px;
   max-height: 500px;
   max-width: 50%;
   border: none;
 }
 
-.addUserPage>.card>.bottom>form>.inputField>.img .imgPreviewRect>img {
+.addUserPage
+  > .card
+  > .bottom
+  > form
+  > .inputField
+  > .img
+  .imgPreviewRect
+  > img {
   height: 100%;
   width: 100%;
 }
 
-.addUserPage>.card>.bottom>form>.inputField>.img>.imgPreview {
+.addUserPage > .card > .bottom > form > .inputField > .img > .imgPreview {
   height: 122px;
   width: 122px;
   border-radius: 0px;
@@ -157,18 +164,29 @@
   overflow: hidden;
 }
 
-.addUserPage>.card>.bottom>form>.inputField .img input::file-seletor-button {
+.addUserPage
+  > .card
+  > .bottom
+  > form
+  > .inputField
+  .img
+  input::file-seletor-button {
   background: #ebecf0;
   border: 1px solid #dfdfdf;
   border-radius: 10px;
 }
 
-.addUserPage>.card>.bottom>form>.inputField>.img>.imgPreview>img {
+.addUserPage > .card > .bottom > form > .inputField > .img > .imgPreview > img {
   width: 100%;
   height: 100%;
 }
 
-.addUserPage>.card>.bottom>form>.inputField input[type="file"]::file-selector-button {
+.addUserPage
+  > .card
+  > .bottom
+  > form
+  > .inputField
+  input[type="file"]::file-selector-button {
   padding: 0 15px;
   height: 35px;
   width: 130px;
@@ -178,8 +196,8 @@
   cursor: pointer;
 }
 
-.addUserPage>.card>.bottom>form>.inputField>select,
-.addUserPage>.card>.bottom>form>.inputField option option {
+.addUserPage > .card > .bottom > form > .inputField > select,
+.addUserPage > .card > .bottom > form > .inputField option option {
   /* background: linear-gradient(180deg, #58bd43 0%, #3fa12a 100%); */
   background: var(--primaryColor);
   font-family: "Poppins", sans-serif;
@@ -192,13 +210,13 @@
   border-right: 8px solid transparent;
 }
 
-.addUserPage>.card>.bottom>form>.inputField>input:hover,
-.addUserPage>.card>.bottom>form>.inputField>select:hover {
-  outline: 1.3px solid #399b2670;
+.addUserPage > .card > .bottom > form > .inputField > input:hover,
+.addUserPage > .card > .bottom > form > .inputField > select:hover {
+  outline: 1.3px solid var(--primaryColor);
   /* transition: 200ms ease-in-out; */
 }
 
-.addUserPage>.card .bottom>form .btns {
+.addUserPage > .card .bottom > form .btns {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -206,17 +224,18 @@
   margin: 1.5rem 0;
 }
 
-.addUserPage>.card>.bottom>form>.btns button {
+.addUserPage > .card > .bottom > form > .btns button {
   padding: 10px 20px;
   border: none;
   background: transparent;
+  cursor: pointer;
 }
 
-.addUserPage>.card>.bottom>form>.btns a {
+.addUserPage > .card > .bottom > form > .btns a {
   text-decoration: none;
 }
 
-.addUserPage>.card>.bottom>form>.btns>button.submit {
+.addUserPage > .card > .bottom > form > .btns > button.submit {
   display: flex;
   align-items: center;
   padding: 10px 30px;
@@ -234,13 +253,13 @@
   color: #ffffff;
 }
 
-.addUserPage>.card>.bottom>form>.btns button.submit:hover {
+.addUserPage > .card > .bottom > form > .btns button.submit:hover {
   background: var(--white);
   color: var(--primaryColor);
   transition: 200ms ease-in-out;
 }
 
-.addUserPage>.card>.bottom>form>.btns button.back {
+.addUserPage > .card > .bottom > form > .btns button.back {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -258,6 +277,6 @@
   color: #5c5c5c;
 }
 
-.addUserPage>.card>.bottom>form>.btns>button.back:hover {
+.addUserPage > .card > .bottom > form > .btns > button.back:hover {
   background: linear-gradient(180deg, #ffffff 0%, #dfdfdf 100%);
 }

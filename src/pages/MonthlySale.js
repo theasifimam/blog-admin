@@ -21,7 +21,7 @@ const MonthlySale = () => {
   };
   return (
     <div className="addUserPage">
-      <div className="card">
+      <div className="card bgWhite">
         <div className="top"></div>
         <div className="bottom monthlySale">
           <h3>Monthly Sale</h3>

@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
-  --primaryColor: blueviolet;
+  /* --primaryColor: blueviolet;\ */
+  --primaryColor: #016bb9;
   --secondaryColor: rgb(44, 44, 44);
   --white: white;
   --heading: rgb(66, 66, 66);
@@ -9,7 +10,7 @@
   --lightest: rgba(128, 128, 128, 0.308);
 
   --text: grey;
-  --background: rgba(137, 43, 226, 0.105);
+  --background: #eef8ff;
   --secondaryBG: rgb(243, 243, 243);
   --color: rgb(48, 48, 48);
   --cardColor: rgb(252, 252, 252);
@@ -48,4 +49,8 @@ body {
 #root {
   width: 100%;
   height: 100vh;
+}
+
+.bgWhite {
+  background: white;
 }

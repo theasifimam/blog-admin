@@ -97,7 +97,9 @@ const Users = () => {
                   <td className="align-middle">{data.email}</td>
                   <td className="align-middle">{data.mNumber}</td>
                   <td className="align-middle">
-                    <Switch />
+                    <div className="controls">
+                      <Switch />
+                    </div>
                   </td>
                   <td className="align-middle">
                     <div className="controls">

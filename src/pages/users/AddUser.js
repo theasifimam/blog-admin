@@ -35,7 +35,7 @@ const AddUser = () => {
   });
   return (
     <div className="addUserPage">
-      <div className="card">
+      <div className="card bgWhite">
         <div className="top"></div>
         <div className="bottom">
           <h3>Add User</h3>
