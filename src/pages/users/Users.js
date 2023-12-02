@@ -12,7 +12,6 @@ const Users = () => {
     "parwez",
     "kundan",
     "prashu",
-    "ranjeet",
     "vipul",
     "mustakim",
     "amir",

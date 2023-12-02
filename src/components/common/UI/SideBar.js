@@ -14,8 +14,9 @@ const SideBar = ({ setMenuHover }) => {
       }}
     >
       <div className="logo-box">
-        <p className="logo">G</p>
-        <h1 className="main-heading">Gladify</h1>
+        {/* <p className="logo"></p> */}
+        <img className="logo" src="/circularlogo.svg" alt="logo" />
+        <h1 className="main-heading">{process.env.REACT_APP_SITE_NAME}</h1>
       </div>
       <NavLink to="/" className="menu">
         <div className="menuIcon">

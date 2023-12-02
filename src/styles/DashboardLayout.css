@@ -7,7 +7,7 @@
 }
 
 .dbOpen {
-  padding-left: 277px;
+  padding-left: 200px;
 }
 
 .dbClose {
@@ -15,7 +15,7 @@
 }
 
 .dashboardContainer .leftSide {
-  width: 277px;
+  width: 200px;
   position: fixed;
   margin-top: 3px;
   top: 0;
@@ -51,8 +51,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;
-  height: 60px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   background: var(--primaryColor);
   color: white;
@@ -65,7 +65,7 @@
 }
 
 .leftSide .main-heading {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .leftSide.collapsed .main-heading {
@@ -73,7 +73,7 @@
 }
 
 .leftSide.Uncollapsed {
-  width: 277px;
+  width: 200px;
   margin-left: 10px;
   border-radius: 30px;
   padding: 1rem;
@@ -91,7 +91,7 @@
 
 .closeSideBarBtn {
   position: absolute;
-  left: 231px;
+  left: 150px;
   z-index: 10;
   top: 13px;
   border: none;
@@ -138,7 +138,7 @@
 
 .dashboardContainer .leftSide .navMenu > a.menu {
   width: 100%;
-  height: 64px;
+  height: 45px;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -155,7 +155,7 @@
 
 .dashboardContainer .leftSide .navMenu > a.menu span {
   color: var(--text);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .dashboardContainer .leftSide .navMenu > a.menu:hover {
@@ -166,12 +166,6 @@
 }
 
 .dashboardContainer .leftSide .navMenu > a.menu:hover span {
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0.2px;
   color: white;
 }
 
@@ -185,8 +179,8 @@
 }
 
 .dashboardContainer .leftSide .navMenu a.menu .menuIcon {
-  width: 25px;
-  margin-right: 1.5rem;
+  width: 15px;
+  margin-right: 1rem;
 }
 
 .dashboardContainer .leftSide .navMenu > a.menu > .menuIcon img {
@@ -234,11 +228,6 @@
 
 .dashboardContainer .leftSide .navMenu > a.active span {
   font-family: "Poppins", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0.2px;
   color: white;
 }
 
@@ -255,7 +244,7 @@
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.2px;
   color: var(--lightest);
@@ -364,7 +353,7 @@
 
 .dashHeader {
   width: 100%;
-  /* padding-left: 277px; */
+  /* padding-left: 200px; */
   display: flex;
   justify-content: space-between;
   height: 101px;

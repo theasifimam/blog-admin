@@ -2,15 +2,16 @@
 
 :root {
   /* --primaryColor: blueviolet;\ */
-  --primaryColor: #016bb9;
+  /* --primaryColor: #016bb9; */
+  --primaryColor: #16a086;
   --secondaryColor: rgb(44, 44, 44);
   --white: white;
   --heading: rgb(66, 66, 66);
   --chatBG: rgba(193, 193, 193, 0.164);
   --lightest: rgba(128, 128, 128, 0.308);
 
-  --text: grey;
-  --background: #eef8ff;
+  --text: rgb(154, 154, 154);
+  --background: whitesmoke;
   --secondaryBG: rgb(243, 243, 243);
   --color: rgb(48, 48, 48);
   --cardColor: rgb(252, 252, 252);
