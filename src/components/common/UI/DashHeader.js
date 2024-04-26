@@ -23,7 +23,14 @@ const DashHeader = ({
               alt="dashboard icon"
               className="black"
             /> */}
-            <i class="fa-solid fa-grip"></i>
+            {}
+            <i
+              class={
+                toggleMenu
+                  ? "fa-solid fa-angles-right"
+                  : "fa-solid fa-angles-left"
+              }
+            ></i>
           </div>
           <span className="dNone">Dashboard</span>
         </div>

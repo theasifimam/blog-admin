@@ -119,91 +119,45 @@ const Dashboard = () => {
     tooltip: {
       trigger: "axis",
       axisPointer: {
-        type: "cross",
-        crossStyle: {
-          color: "#999",
-        },
+        type: "shadow",
       },
     },
-    toolbox: {
-      feature: {
-        dataView: { show: true, readOnly: false },
-        magicType: { show: true, type: ["line", "bar"] },
-        restore: { show: true },
-        saveAsImage: { show: true },
+    xAxis: {
+      type: "category",
+      data: [
+        "India",
+        "Pakistan",
+        "Bangladesh",
+        "Nepal",
+        "Afghanistan",
+        "USA",
+        "UK",
+      ],
+      axisLabel: {
+        color: "#F5F5F5",
+        fontSize: 14,
       },
     },
-    legend: {
-      data: ["Evaporation", "Precipitation", "Temperature"],
+    yAxis: {
+      type: "value",
+      axisLabel: {
+        color: "#F5F5F5",
+        fontSize: 14,
+      },
     },
-    xAxis: [
-      {
-        type: "category",
-        data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-        axisPointer: {
-          type: "shadow",
-        },
-      },
-    ],
-    yAxis: [
-      {
-        type: "value",
-        name: "Precipitation",
-        min: 0,
-        max: 250,
-        interval: 50,
-        axisLabel: {
-          formatter: "{value} ml",
-        },
-      },
-      {
-        type: "value",
-        name: "Temperature",
-        min: 0,
-        max: 25,
-        interval: 5,
-        axisLabel: {
-          formatter: "{value} °C",
-        },
-      },
-    ],
+
     series: [
       {
-        name: "Evaporation",
+        data: [973, 126, 245, 698, 847, 347, 128],
         type: "bar",
-        tooltip: {
-          valueFormatter: function (value) {
-            return value + " ml";
-          },
+        itemStyle: {
+          color: "#ffffffde", // Set the color of the bars
         },
-        data: [
-          2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3,
-        ],
-      },
-      {
-        name: "Precipitation",
-        type: "bar",
-        tooltip: {
-          valueFormatter: function (value) {
-            return value + " ml";
-          },
+        label: {
+          show: true,
+          position: "top",
+          color: "white", // Set the text color
         },
-        data: [
-          2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3,
-        ],
-      },
-      {
-        name: "Temperature",
-        type: "line",
-        yAxisIndex: 1,
-        tooltip: {
-          valueFormatter: function (value) {
-            return value + " °C";
-          },
-        },
-        data: [
-          2.0, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 23.4, 23.0, 16.5, 12.0, 6.2,
-        ],
       },
     ],
   };
@@ -247,54 +201,57 @@ const Dashboard = () => {
 
   return (
     <div className="container">
-      <h1 className="main-heading">Current Status</h1>
+      <h1 className="main-heading">Overview</h1>
       <br />
       <div className="dashboard col">
         <div className="top">
+          <div className="globe-graph">
+            <h4 className="h2">Country Wise Users</h4>
+            <EChartsReact option={smallerOption} />
+          </div>
           <div className="cards right">
             <div className="sm-card cardColor1">
               <p>Total Users</p>
-              <h3>658.04M</h3>
+              <h3>658.9M</h3>
               <h6>
                 {" "}
-                <span className="plus">+23%</span> - change
+                <span className="plus">+17%</span> - change
               </h6>
             </div>
             <div className="sm-card cardColor2">
               <p>Active Users</p>
-              <h3>256.04K</h3>
+              <h3>256.4K</h3>
               <h6>
                 {" "}
-                <span className="minus">+23%</span> - change
+                <span className="minus">-3%</span> - change
               </h6>
             </div>
             <div className="sm-card cardColor3">
               <p>Active Posts</p>
-              <h3>438.04K</h3>
+              <h3>438.1K</h3>
               <h6>
                 {" "}
-                <span className="plus">+23%</span> - change
+                <span className="plus">+29%</span> - change
               </h6>
             </div>
             <div className="sm-card cardColor4">
               <p>Active Hashtags</p>
-              <h3>26.04K</h3>
+              <h3>26.7K</h3>
               <h6>
                 {" "}
-                <span className="plus">+23%</span>- change
+                <span className="plus">+31%</span>- change
               </h6>
             </div>
           </div>
-          <div className="globe-graph center">
-            <EChartsReact option={smallerOption} />
-          </div>
         </div>
+        <h1 className="h2">Monthly Growth</h1>
         <div className="mid card">
           {/* <h4>Monthly Sales</h4> */}
           <EChartsReact option={option} />
         </div>
-        <div className="card bottom">
-          <div className="table  responsiveTable">
+        <h1 className="h2">Feedbacks & Complains</h1>
+        <div className=" bottom">
+          <div className="table  responsiveTable card p-2">
             <h4>User Listing</h4>
             <table className="table table-borderless mb-0">
               <thead className="rowHeight3">

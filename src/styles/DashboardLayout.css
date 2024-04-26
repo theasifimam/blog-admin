@@ -156,6 +156,7 @@
 .dashboardContainer .leftSide .navMenu > a.menu span {
   color: var(--text);
   font-weight: 400;
+  font-size: var(--paraSize);
 }
 
 .dashboardContainer .leftSide .navMenu > a.menu:hover {
@@ -196,6 +197,7 @@
   background: var(--primaryColor);
   border-radius: 50px;
   color: white;
+  margin-bottom: 3px;
 }
 
 .dashboardContainer .leftSide.collapsed .navMenu > a.active,
@@ -244,9 +246,7 @@
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.2px;
+  font-size: var(--paraSize);
   color: var(--lightest);
 }
 
@@ -254,6 +254,7 @@
 .dashboardContainer .leftSide .navMenu a i {
   /* fill: rgb(0, 0, 0); */
   color: var(--text);
+  font-size: var(--paraSize);
 }
 
 .dashboardContainer .leftSide .navMenu .subMenu {
@@ -262,7 +263,7 @@
   flex-direction: column;
   width: 100%;
   background: var(--background);
-  border-radius: 30px;
+  border-radius: 20px;
   /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.45) inset; */
 }
 
@@ -279,14 +280,14 @@
   display: flex;
   justify-content: flex-start;
   width: 100%;
-  height: 64px;
+  height: 40px;
   margin-bottom: 2px;
   transition: 600ms ease-in-out;
   text-decoration: none;
   display: flex;
   align-items: center;
-  padding-left: 2.5rem;
-  border-radius: 50px;
+  padding-left: 16px;
+  border-radius: 40px;
 }
 
 .dashboardContainer .leftSide.collapsed .navMenu .subMenu {
@@ -312,7 +313,7 @@
   background: var(--secondaryBG);
   cursor: pointer;
   transition: 200ms ease-in;
-  border-radius: 50px;
+  border-radius: 40px;
 }
 
 .dashboardContainer .leftSide .navMenu .subMenu a:hover span,
@@ -320,8 +321,7 @@
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: var(--paraSize);
   letter-spacing: 0.2px;
   color: #a1a1a1;
 }

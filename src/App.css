@@ -8,6 +8,10 @@
   box-shadow: var(--shadow);
 }
 
+.p-2 {
+  padding: 2rem;
+}
+
 .black {
   filter: invert(100%) brightness(0%);
 }
@@ -25,22 +29,20 @@
 
 .table {
   animation: 0.5s rollout;
-  padding: 2rem;
   background: #ffff;
-  border-radius: 30px;
+  /* border-radius: 20px; */
 }
 
 .table > table {
   background-color: #ffff;
-  border-radius: 6px;
   overflow: hidden;
   margin-bottom: 0;
   width: 100%;
 }
 
-.table > table th {
+/* .table > table th {
   border: none !important;
-}
+} */
 
 .table > table input {
   height: 25px;

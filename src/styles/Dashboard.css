@@ -11,14 +11,22 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 300px;
+  /* height: 300px; */
   gap: 1rem;
 }
 
 .main-heading {
   font-weight: 900;
   color: var(--primaryColor);
-  font-size: "3rem";
+  font-size: 8rem;
+  margin-bottom: -1rem;
+  margin-top: -3rem;
+}
+
+.h2 {
+  font-weight: 800;
+  color: var(--primaryColor);
+  font-size: 2rem;
 }
 
 .dashboard .globe-graph {
@@ -71,17 +79,19 @@
 
 .dashboard .cards .sm-card h3 {
   color: var(--primaryColor);
-  font-weight: 900;
+  font-weight: 500;
+  letter-spacing: -3px;
   font-size: 2.5rem;
 }
 
 .dashboard .cards .sm-card h6 {
   width: 100%;
   text-align: right;
+  font-weight: 400;
 }
 
 .dashboard .cards .sm-card h6 span.plus {
-  color: rgb(19, 255, 19);
+  color: rgb(0, 147, 0);
 }
 
 .dashboard .cards .sm-card h6 span.minus {
@@ -90,6 +100,15 @@
 
 .dashboard .globe-graph svg {
   max-height: 400px;
+}
+
+.dashboard .globe-graph h4 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: white;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-bottom: -2rem;
 }
 
 .dashboard .mid {
@@ -136,7 +155,7 @@
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 15.7222px;
+  font-size: var(--paraSize);
   line-height: 19px;
   text-transform: capitalize;
   color: #575757;
@@ -147,7 +166,7 @@
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 15.7222px;
+  font-size: var(--paraSize);
   line-height: 19px;
   text-transform: capitalize;
   color: #6d6d6d;

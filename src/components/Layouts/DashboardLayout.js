@@ -37,14 +37,14 @@ const DashboardLayout = () => {
             : "leftSide Uncollapsed"
         }
       >
-        <button
+        {/* <button
           className="closeSideBarBtn"
           onClick={() => {
             setToggleMenu(true);
           }}
         >
           X
-        </button>
+        </button> */}
 
         <SideBar setMenuHover={setMenuHover} />
       </div>
@@ -62,11 +62,11 @@ const DashboardLayout = () => {
           <p>
             Copyright &#169; 2023-2027 |{" "}
             <a
-              href="https://admin.gladify.me/"
+              href="https://admin.mazlis.com/"
               target="_blank"
               rel="noreferrer"
             >
-              admin.gladify.me
+              admin.mazlis.com
             </a>
             | All rights reserved.
           </p>

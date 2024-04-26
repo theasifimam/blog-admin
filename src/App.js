@@ -16,6 +16,7 @@ import Users from "./pages/users/Users";
 import Reports from "./pages/submitted/Reports";
 import Feedback from "./pages/submitted/Feedback";
 import FullCalendar from "./pages/calendar/FullCalendar";
+import Settings from "./pages/settings/Settings";
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
           <Route path="/monthly-sale" element={<MonthlySale />} />
           <Route path="/settings">
             <Route path="/settings/add-page" element={<AddPage />} />
+            <Route path="/settings/settings" element={<Settings />} />
           </Route>
         </Route>
       </Routes>

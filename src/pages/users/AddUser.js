@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Switch from "../../components/common/UI/Switch";
 import "../../styles/AddUser.css";
 import { useFormik } from "formik";
@@ -9,6 +9,7 @@ const AddUser = () => {
   const [imagePreview, setImagePreview] = useState(
     "/icons-images/users/profilepic.svg"
   );
+  const dpRef = useRef();
   const {
     values,
     handleBlur,
@@ -40,6 +41,47 @@ const AddUser = () => {
         <div className="bottom">
           <h3>Add User</h3>
           <form onSubmit={handleSubmit}>
+            <div
+              className="inputField"
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              {/* <label htmlFor="profilePic">Choose file</label> */}
+              <div className="img">
+                <input
+                  type="file"
+                  name="profilePic"
+                  id="profilePic"
+                  tabIndex="1"
+                  ref={dpRef}
+                  onChange={(e) => {
+                    setFieldValue("profilePic", e.currentTarget.files[0]);
+                    e.currentTarget.files[0] &&
+                      setImagePreview(
+                        URL.createObjectURL(e.currentTarget.files[0])
+                      );
+                  }}
+                  onBlur={handleBlur}
+                  style={{ display: "none" }}
+                />
+                <div className="imgPreview">
+                  <img
+                    src={imagePreview}
+                    alt="profile"
+                    width="100"
+                    onClick={() => dpRef.current.click()}
+                  />
+                </div>
+                {errors.profilePic && touched.profilePic ? (
+                  <div className="error-msg">{errors.profilePic}</div>
+                ) : null}
+              </div>
+            </div>
+
             {/* FullName */}
             <div className="inputField">
               <label htmlFor="fullName">
@@ -148,41 +190,15 @@ const AddUser = () => {
                 onBlur={handleBlur}
                 value={values.role}
               >
-                <option>Select Role</option>
-                <option value="admin">Admin</option>
-                <option value="seller">Seller</option>
+                <option value="">Select Role</option>
+                <option value="user">User</option>
                 <option value="support">Support</option>
-                <option value="buyer">Buyer</option>
+                <option value="moderator">Moderator</option>
+                <option value="admin">Admin</option>
               </select>{" "}
               {errors.role && touched.role ? (
                 <div className="error-msg">{errors.role}</div>
               ) : null}
-            </div>
-
-            <div className="inputField">
-              {/* <label htmlFor="profilePic">Choose file</label> */}
-              <div className="img">
-                <input
-                  type="file"
-                  name="profilePic"
-                  id="profilePic"
-                  tabIndex="1"
-                  onChange={(e) => {
-                    setFieldValue("profilePic", e.currentTarget.files[0]);
-                    e.currentTarget.files[0] &&
-                      setImagePreview(
-                        URL.createObjectURL(e.currentTarget.files[0])
-                      );
-                  }}
-                  onBlur={handleBlur}
-                />
-                <div className="imgPreview">
-                  <img src={imagePreview} alt="profile" width="100" />
-                </div>
-                {errors.profilePic && touched.profilePic ? (
-                  <div className="error-msg">{errors.profilePic}</div>
-                ) : null}
-              </div>
             </div>
 
             <div className="inputField switch">

@@ -83,6 +83,12 @@ const SideBar = ({ setMenuHover }) => {
             img: "fa-solid fa-gears",
             alt: "Admin icon",
           },
+          {
+            title: "Settings",
+            link: "/settings/settings",
+            img: "fa-solid fa-gears",
+            alt: "settings icon",
+          },
         ]}
       />
     </nav>
