@@ -1,5 +1,58 @@
 import { toast } from "react-toastify";
 
+// General Function for API Call
+export async function makeApiRequest({
+  method = "GET",
+  data = null,
+  token = null,
+  url = "",
+}) {
+  try {
+    const headers = {};
+
+    if (token) {
+      headers["token"] = getToken();
+    }
+
+    let newOptions = {
+      method,
+      headers,
+    };
+
+    if (data !== null) {
+      if (data instanceof FormData) {
+        newOptions.body = data;
+      } else {
+        headers["Content-Type"] = "application/json";
+        newOptions.body = JSON.stringify(data);
+      }
+    }
+
+    const response = await fetch(apiUrl() + url, newOptions);
+    const processedData = await response.json();
+
+    if (response.ok) {
+      return processedData;
+    } else {
+      if (response.status === 401) {
+        removeUserSession();
+        window.location.href = "/login";
+      }
+      throw new Error(processedData.message);
+    }
+  } catch (error) {
+    throw error;
+  }
+}
+
+export function apiUrl() {
+  const apiUrl =
+    process.env.NODE_ENV === "development"
+      ? process.env.REACT_APP_API_URL_DEV
+      : process.env.REACT_APP_API_URL_PROD;
+  return apiUrl;
+}
+
 // return the token from the Localstorage
 export const getToken = () => {
   return localStorage.getItem("accessToken") || null;
@@ -123,5 +176,60 @@ function getNumberSuffix(day) {
       return "rd";
     default:
       return "th";
+  }
+}
+
+export function toggleDarkmode(mode, newColor) {
+  const darkColors = {
+    "--secondaryBG": "rgb(0, 0, 0)",
+    "--background": "rgb(0, 0, 0)",
+    "--background": "rgb(0, 0, 0)",
+    "--white": "#1a1a1a",
+    "--text": "rgb(154, 154, 154)",
+    "--heading": "rgb(194, 194, 194)",
+    "--chatBG": "rgba(16, 0, 32, 0.119)",
+    "--lightest": "rgba(128, 128, 128, 0.308)",
+    "--secondaryColor": "rgb(132, 132, 132)",
+    "--glassBG": "rgba(0, 0, 0, 0.192)",
+    "--cardColor": "black",
+    "--shadow":
+      "rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px",
+    "--btnBG": "rgb(0, 0, 0)",
+    "--btnText": "grey",
+  };
+
+  const lightColors = {
+    "--secondaryBG": "rgb(243, 243, 243)",
+    "--background": "rgb(240, 240, 240)",
+    "--background": "whitesmoke",
+    "--white": "white",
+    "--text": "grey",
+    "--heading": "rgb(66, 66, 66)",
+    "--chatBG": "rgba(193, 193, 193, 0.164)",
+    "--lightest": "rgba(128, 128, 128, 0.308)",
+    "--secondaryColor": "rgb(44, 44, 44)",
+    "--glassBG": "rgba(255, 255, 255, 0.505)",
+    "--cardColor": "rgb(252, 252, 252)",
+    "--shadow":
+      "rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px",
+    "--btnBG": "blueviolet",
+    "--btnText": "grey",
+  };
+
+  let colors;
+  if (mode === "on") {
+    colors = darkColors;
+  } else if (mode === "off") {
+    colors = lightColors;
+  } else if (mode === "system") {
+    colors =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme:dark)").matches
+        ? darkColors
+        : lightColors;
+  }
+
+  for (const property in colors) {
+    document.documentElement.style.setProperty(property, colors[property]);
   }
 }

@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/Dashboard.css";
 import EChartsReact from "echarts-for-react";
 
 const Dashboard = () => {
+  const [counts, setCounts] = useState({
+    totalUsersCount: 0,
+    newUsersLast30DaysCount: 0,
+    totalPostsCount: 0,
+    postsLast30DaysCount: 0,
+  });
   var xAxisData = [];
   var data1 = [];
   var data2 = [];
@@ -199,6 +205,25 @@ const Dashboard = () => {
     return dummyArray;
   };
 
+  async function fetchCounts() {
+    try {
+      const response = await fetch(
+        "http://localhost:5000/api/dashboard-counts"
+      );
+      if (!response.ok) {
+        throw new Error("Network response was not ok " + response.statusText);
+      }
+      const result = await response.json(); // Correctly parsing JSON data
+      setCounts(result);
+    } catch (error) {
+      console.error("Failed to fetch data:", error); // Error handling
+    }
+  }
+
+  useEffect(() => {
+    fetchCounts();
+  }, []);
+
   return (
     <div className="container">
       <h1 className="main-heading">Overview</h1>
@@ -212,31 +237,30 @@ const Dashboard = () => {
           <div className="cards right">
             <div className="sm-card cardColor1">
               <p>Total Users</p>
-              <h3>658.9M</h3>
+              <h3>{counts.totalUsersCount}</h3>
               <h6>
-                {" "}
                 <span className="plus">+17%</span> - change
               </h6>
             </div>
             <div className="sm-card cardColor2">
-              <p>Active Users</p>
-              <h3>256.4K</h3>
+              <p>Recent Users</p>
+              <h3>{counts.newUsersLast30DaysCount}</h3>
               <h6>
                 {" "}
                 <span className="minus">-3%</span> - change
               </h6>
             </div>
             <div className="sm-card cardColor3">
-              <p>Active Posts</p>
-              <h3>438.1K</h3>
+              <p>Total Posts</p>
+              <h3>{counts.totalPostsCount}</h3>
               <h6>
                 {" "}
                 <span className="plus">+29%</span> - change
               </h6>
             </div>
             <div className="sm-card cardColor4">
-              <p>Active Hashtags</p>
-              <h3>26.7K</h3>
+              <p>Recent Posts</p>
+              <h3>{counts.postsLast30DaysCount}</h3>
               <h6>
                 {" "}
                 <span className="plus">+31%</span>- change

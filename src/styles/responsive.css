@@ -8,21 +8,6 @@
   min-width: 1150px;
 }
 
-@media screen and (min-width: 1200px) {
-  .dashHeader.collapsed {
-    padding-left: 65px !important;
-  }
-  .dashHeader.Uncollapsed {
-    padding-left: 210px !important;
-  }
-}
-
-@media screen and (max-width: 1200px) and (min-width: 768px) {
-  .dashHeader {
-    padding-left: 65px !important;
-  }
-}
-
 @media screen and (max-width: 1200px) {
   .dNone {
     display: none;

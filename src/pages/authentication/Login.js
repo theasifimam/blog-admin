@@ -3,6 +3,7 @@ import "../../styles/auth.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import { useDispatch, useSelector } from "react-redux";
+import { loginAction } from "../../redux/slice/auth/loginSlice";
 // import { loginAction } from "../../redux/slice/auth/loginSlice";
 
 const Login = () => {
@@ -10,17 +11,20 @@ const Login = () => {
   const login = useSelector((state) => state.login);
   const [redirectFlag, setRedirectFlag] = useState(false);
   const [showPasword, setShowPasword] = useState(false);
+
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   redirectFlag && login.success && navigate(`/${login.user?.username}`);
-  // }, [login.success]);
+  useEffect(() => {
+    if (redirectFlag && login.success && !login.user?.isEmailVerified) {
+      navigate(`/`);
+    }
+  }, [login.success]);
 
   const { handleChange, handleBlur, handleSubmit, errors, values } = useFormik({
     initialValues: { username: "", password: "" },
     onSubmit(values) {
-      // dispatch(loginAction(values));
-      // setRedirectFlag(true);
+      dispatch(loginAction(values));
+      setRedirectFlag(true);
     },
   });
 

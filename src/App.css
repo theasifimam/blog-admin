@@ -29,12 +29,12 @@
 
 .table {
   animation: 0.5s rollout;
-  background: #ffff;
+  background: var(--white);
   /* border-radius: 20px; */
 }
 
 .table > table {
-  background-color: #ffff;
+  background-color: var(--background);
   overflow: hidden;
   margin-bottom: 0;
   width: 100%;

@@ -10,7 +10,7 @@
   animation: rollout 0.4s;
 }
 
-.addUserPage > .card {
+.addUserPage {
   width: 100%;
   border: 1px solid #cdcfd2;
   border-radius: 30px;
@@ -21,25 +21,25 @@
   background: linear-gradient(180deg, #59be44 0%, #3a9b26 100%);
   border-radius: 50px 50px 0px 0px;
 } */
-
-.addUserPage > .card > .bottom > form {
+.addUserPage > .bottom {
+  padding: 25px;
+}
+.addUserPage > .bottom > form {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 0 3rem;
   row-gap: 1rem;
+  max-height: 400px;
+  overflow: auto;
 }
 
-.addUserPage > .card > .bottom.monthlySale > form > .inputField {
+.addUserPage > .bottom.monthlySale > form > .inputField {
   width: 30%;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 
-.addUserPage > .card > .bottom > h3 {
-  margin-top: 2rem;
-  margin-left: 3rem;
-
+.addUserPage > .bottom > h3 {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -47,21 +47,22 @@
   line-height: 29px;
   letter-spacing: 0.238926px;
   color: #000000;
+  margin-top: -10px;
 }
 
-.addUserPage > .card > .bottom > form > .inputField {
+.addUserPage > .bottom > form > .inputField {
   width: 48%;
   display: flex;
   flex-direction: column;
-  min-width: 300px;
+  min-width: 200px;
 }
 
-.addUserPage > .card > .bottom > form > .fullInputField {
+.addUserPage > .bottom > form > .fullInputField {
   width: 100%;
   border-radius: 20px;
 }
 
-.addUserPage > .card > .bottom > form > .fullInputField > label {
+.addUserPage > .bottom > form > .fullInputField > label {
   margin-bottom: 10px;
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -72,7 +73,7 @@
   color: #000000;
 }
 
-.addUserPage > .card > .bottom > form > .editorBorder {
+.addUserPage > .bottom > form > .editorBorder {
   border: 1px solid #cdcfd2;
   background: #fafafa;
 }
@@ -82,42 +83,41 @@
   height: 200px;
 }
 
-/* .addUserPage > .card > .bottom > form > .inputField > div > div {
+/* .addUserPage > .bottom > form > .inputField > div > div {
   border: 1px solid #cdcfd2;
 } */
 
-/* .addUserPage > .card > .bottom > form > .inputField > div > div:focus,
-.addUserPage > .card > .bottom > form > .inputField > div > div:active,
-.addUserPage > .card > .bottom > form > .inputField > div > div:hover {
+/* .addUserPage > .bottom > form > .inputField > div > div:focus,
+.addUserPage > .bottom > form > .inputField > div > div:active,
+.addUserPage > .bottom > form > .inputField > div > div:hover {
   outline: 2.3px solid #399b2670 !important;
   box-shadow: none !important;
   border-color: transparent;
 } */
 
-.addUserPage > .card > .bottom > form > .inputField > label {
-  margin-bottom: 10px;
+.addUserPage > .bottom > form > .inputField > label {
   font-family: "Poppins", sans-serif;
+  margin-left: 1rem;
   font-style: normal;
   font-weight: 400;
   font-size: 15.7222px;
   line-height: 19px;
   text-transform: capitalize;
-  color: #000000;
+  color: #4a4a4a;
 }
 
-.addUserPage > .card > .bottom > form > .inputField > label > span,
-.addUserPage > .card > .bottom > form > .fullInputField > label > span {
+.addUserPage > .bottom > form > .inputField > label > span,
+.addUserPage > .bottom > form > .fullInputField > label > span {
   color: #ff0000;
 }
 
-.addUserPage > .card > .bottom > form > .inputField > input,
-.addUserPage > .card > .bottom > form > .fullInputField > input,
-.addUserPage > .card > .bottom > form > .fullInputField > textarea,
-.addUserPage > .card > .bottom > form > .inputField > select,
-.addUserPage > .card > .bottom > form > .inputField > textarea {
+.addUserPage > .bottom > form > .inputField > input,
+.addUserPage > .bottom > form > .fullInputField > input,
+.addUserPage > .bottom > form > .fullInputField > textarea,
+.addUserPage > .bottom > form > .inputField > select,
+.addUserPage > .bottom > form > .inputField > textarea {
   width: 100%;
-  padding: 0 10px;
-  height: 45px;
+  height: 40px;
   border: 0 solid #cdcfd2;
   outline: none;
   cursor: pointer;
@@ -126,37 +126,30 @@
   background: rgb(244, 244, 244);
 }
 
-.addUserPage > .card > .bottom > form > .inputField > textarea {
+.addUserPage > .bottom > form > .inputField > textarea {
   height: auto;
   padding-top: 5px;
 }
 
-.addUserPage > .card > .bottom > form > .inputField > .img {
+.addUserPage > .bottom > form > .inputField > .img {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.addUserPage > .card > .bottom > form > .inputField > .img .imgPreviewRect {
+.addUserPage > .bottom > form > .inputField > .img .imgPreviewRect {
   min-height: 200px;
   max-height: 500px;
   max-width: 50%;
   border: none;
 }
 
-.addUserPage
-  > .card
-  > .bottom
-  > form
-  > .inputField
-  > .img
-  .imgPreviewRect
-  > img {
+.addUserPage > .bottom > form > .inputField > .img .imgPreviewRect > img {
   height: 100%;
   width: 100%;
 }
 
-.addUserPage > .card > .bottom > form > .inputField > .img > .imgPreview {
+.addUserPage > .bottom > form > .inputField > .img > .imgPreview {
   height: 122px;
   width: 122px;
   border-radius: 0px;
@@ -164,25 +157,18 @@
   overflow: hidden;
 }
 
-.addUserPage
-  > .card
-  > .bottom
-  > form
-  > .inputField
-  .img
-  input::file-seletor-button {
+.addUserPage > .bottom > form > .inputField .img input::file-seletor-button {
   background: #ebecf0;
   border: 1px solid #dfdfdf;
   border-radius: 10px;
 }
 
-.addUserPage > .card > .bottom > form > .inputField > .img > .imgPreview > img {
+.addUserPage > .bottom > form > .inputField > .img > .imgPreview > img {
   width: 100%;
   height: 100%;
 }
 
 .addUserPage
-  > .card
   > .bottom
   > form
   > .inputField
@@ -196,8 +182,8 @@
   cursor: pointer;
 }
 
-.addUserPage > .card > .bottom > form > .inputField > select,
-.addUserPage > .card > .bottom > form > .inputField option option {
+.addUserPage > .bottom > form > .inputField > select,
+.addUserPage > .bottom > form > .inputField option option {
   /* background: linear-gradient(180deg, #58bd43 0%, #3fa12a 100%); */
   background: var(--primaryColor);
   font-family: "Poppins", sans-serif;
@@ -210,36 +196,36 @@
   border-right: 8px solid transparent;
 }
 
-.addUserPage > .card > .bottom > form > .inputField > input:hover,
-.addUserPage > .card > .bottom > form > .inputField > select:hover {
+.addUserPage > .bottom > form > .inputField > input:hover,
+.addUserPage > .bottom > form > .inputField > select:hover {
   outline: 1.3px solid var(--primaryColor);
   /* transition: 200ms ease-in-out; */
 }
 
-.addUserPage > .card .bottom > form .btns {
+.addUserPage .bottom > form .btns {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  margin: 1.5rem 0;
+  gap: 10px;
 }
 
-.addUserPage > .card > .bottom > form > .btns button {
-  padding: 10px 20px;
+.addUserPage > .bottom > form > .btns button {
   border: none;
   background: transparent;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  min-width: 100px;
 }
 
-.addUserPage > .card > .bottom > form > .btns a {
+.addUserPage > .bottom > form > .btns a {
   text-decoration: none;
 }
 
-.addUserPage > .card > .bottom > form > .btns > button.submit {
-  display: flex;
-  align-items: center;
-  padding: 10px 30px;
-  height: 39px;
+.addUserPage > .bottom > form > .btns > button.submit {
   background: var(--primaryColor);
   border: 2px solid var(--primaryColor);
   border-radius: 20px;
@@ -253,21 +239,16 @@
   color: #ffffff;
 }
 
-.addUserPage > .card > .bottom > form > .btns button.submit:hover {
+.addUserPage > .bottom > form > .btns button.submit:hover {
   background: var(--white);
   color: var(--primaryColor);
   transition: 200ms ease-in-out;
 }
 
-.addUserPage > .card > .bottom > form > .btns button.back {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 45px;
+.addUserPage > .bottom > form > .btns button.back {
   background: linear-gradient(180deg, #f4f5f7 0%, #ecedf1 100%);
   border: 2px solid #dfdfdf;
   border-radius: 25px;
-  min-width: 150px;
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -277,6 +258,6 @@
   color: #5c5c5c;
 }
 
-.addUserPage > .card > .bottom > form > .btns > button.back:hover {
+.addUserPage > .bottom > form > .btns > button.back:hover {
   background: linear-gradient(180deg, #ffffff 0%, #dfdfdf 100%);
 }

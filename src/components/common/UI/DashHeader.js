@@ -1,5 +1,5 @@
 import React from "react";
-import { getFormattedDate } from "../../../utils/utils";
+import { getCurrentUserLT, getFormattedDate } from "../../../utils/utils";
 import classes from "../../../styles/styleModules/Modal.module.css";
 import MenuControls from "./MenuControls";
 
@@ -10,6 +10,7 @@ const DashHeader = ({
   toggleMenu,
   hideModal,
 }) => {
+  const myself = getCurrentUserLT();
   return (
     <div
       className={toggleMenu ? "dashHeader collapsed" : "dashHeader Uncollapsed"}
@@ -17,13 +18,6 @@ const DashHeader = ({
       <div className="left">
         <div className="left">
           <div className="icon" onClick={() => setToggleMenu(!toggleMenu)}>
-            {/* <img
-
-              src="/icons-images/dashboard/dashboardGreen.svg"
-              alt="dashboard icon"
-              className="black"
-            /> */}
-            {}
             <i
               class={
                 toggleMenu
@@ -32,18 +26,22 @@ const DashHeader = ({
               }
             ></i>
           </div>
-          <span className="dNone">Dashboard</span>
+          <span className="dNone">Mazlis</span>
         </div>
         <div className="right">
           <div className="icon dNone">
             <i class="fa-solid fa-calendar-days"></i>
           </div>
           <span className="date dNone">{getFormattedDate(new Date())}</span>
-          <div className="icon user">
-            <img src="/images/user.png" alt="user" width="100" />
-          </div>
-          <div className="icon" onClick={() => setShowModal(true)}>
+          {/* <div className="icon">
             <i className="fa-solid fa-bars"></i>
+          </div> */}
+          <div className="icon user" onClick={() => setShowModal(true)}>
+            <img
+              src={myself?.profilePicture || "/images/user.png"}
+              alt="user"
+              width="100"
+            />
           </div>
           {showModal && (
             <MenuControls

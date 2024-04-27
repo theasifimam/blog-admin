@@ -21,54 +21,54 @@ const MonthlySale = () => {
   };
   return (
     <div className="addUserPage">
-      <div className="card bgWhite">
-        <div className="top"></div>
-        <div className="bottom monthlySale">
-          <h3>Monthly Sale</h3>
+      <div
+        className="bottom monthlySale bgWhite"
+        style={{ width: "100%", borderRadius: "30px" }}
+      >
+        <h3>Monthly Sale</h3>
 
-          <form>
-            <div className="inputField">
-              <label htmlFor="startDate">Start Date</label>
-              <input
-                autoComplete="true"
-                type="date"
-                name="startDate"
-                id="startDate"
-              />
-            </div>
-            <div className="inputField">
-              <label htmlFor="endDate">End Date</label>
-              <input
-                autoComplete="true"
-                type="date"
-                name="endDate"
-                id="endDate"
-              />
-            </div>
-
-            <div
-              className="inputField"
-              style={{ width: "15% ", minWidth: "10%" }}
-            >
-              <label htmlFor="search">Search </label>
-              <input
-                type="submit"
-                name="search"
-                id="search"
-                placeholder="Search"
-                style={{
-                  background: "var(--primaryColor)",
-                  color: "white",
-                  fontWeight: 700,
-                  width: "auto",
-                }}
-              />
-            </div>
-          </form>
-
-          <div className="graph">
-            <EChartsReact option={option} />
+        <form>
+          <div className="inputField">
+            <label htmlFor="startDate">Start Date</label>
+            <input
+              autoComplete="true"
+              type="date"
+              name="startDate"
+              id="startDate"
+            />
           </div>
+          <div className="inputField">
+            <label htmlFor="endDate">End Date</label>
+            <input
+              autoComplete="true"
+              type="date"
+              name="endDate"
+              id="endDate"
+            />
+          </div>
+
+          <div
+            className="inputField"
+            style={{ width: "15% ", minWidth: "10%" }}
+          >
+            <label htmlFor="search">Search </label>
+            <input
+              type="submit"
+              name="search"
+              id="search"
+              placeholder="Search"
+              style={{
+                background: "var(--primaryColor)",
+                color: "white",
+                fontWeight: 700,
+                width: "auto",
+              }}
+            />
+          </div>
+        </form>
+
+        <div className="graph">
+          <EChartsReact option={option} />
         </div>
       </div>
     </div>

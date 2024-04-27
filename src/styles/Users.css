@@ -47,7 +47,8 @@
   margin-bottom: 1rem;
 }
 
-.adminUserPage > .top > a {
+.adminUserPage > .top > button {
+  all: unset;
   display: flex;
   align-items: center;
   column-gap: 10px;
@@ -61,7 +62,7 @@
   width: 40%;
 }
 
-.adminUserPage > .top > a > span {
+.adminUserPage > .top > button > span {
   width: 38px;
   height: 38px;
   background: var(--primaryColor);
@@ -72,14 +73,15 @@
   align-items: center;
 }
 
-.adminUserPage > .top > a > span:hover {
+.adminUserPage > .top > button > span:hover {
   transition: 200ms ease-in-out;
   background: var(--secondaryBG);
   color: var(--primaryColor);
+  cursor: pointer;
   border: 2px solid var(--primaryColor);
 }
 
-.adminUserPage > .top > a > span > img {
+.adminUserPage > .top > button > span > img {
   height: 19px;
   width: 19px;
   border-radius: 0px;
@@ -91,16 +93,19 @@
 
 .adminUserPage table th {
   border-bottom: 0px solid transparent;
+  color: var(--text);
 }
 
 .adminUserPage table thead {
-  background: #ececf0;
+  background: var(--white);
+  color: var(--text);
   height: 3.5rem;
 }
 
 .adminUserPage table td {
   border-left: 1px solid transparent !important;
   padding-left: 10px;
+  color: var(--text);
   font-size: var(--paraSize);
 }
 
@@ -109,7 +114,7 @@
 }
 
 .adminUserPage table tr:nth-of-type(even) {
-  background: #ececf0;
+  background: var(--white);
 }
 
 .adminUserPage .controls {
@@ -118,7 +123,8 @@
   justify-content: center;
 }
 
-.adminUserPage .controls a {
+.adminUserPage .controls button {
+  all: unset;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -129,21 +135,21 @@
   align-items: center;
 }
 
-.adminUserPage .controls a > img,
-.adminUserPage .controls a > i {
+.adminUserPage .controls button > img,
+.adminUserPage .controls button > i {
   /* height: 20px;
   width: 20px; */
   border-radius: 0px;
   color: grey;
 }
 
-.adminUserPage .controls a:hover {
+.adminUserPage .controls button:hover {
   background: var(--primaryColor);
   border: var(--primaryColor);
   transition: 200ms ease-in-out;
 }
 
-.adminUserPage .controls a:hover i {
+.adminUserPage .controls button:hover i {
   color: white;
 }
 

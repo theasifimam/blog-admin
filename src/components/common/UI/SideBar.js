@@ -53,7 +53,27 @@ const SideBar = ({ setMenuHover }) => {
       />
 
       <Menu
-        menu="Submitted"
+        menu="Support"
+        menuLink="/support"
+        menuIcon="fa-solid fa-users"
+        submenu={[
+          {
+            title: "Complains",
+            link: "/submitted/reports",
+            img: "fa-solid fa-users",
+            alt: "Admin icon",
+          },
+          {
+            title: "Feedbacks",
+            link: "/submitted/feedback",
+            img: "fa-solid fa-user-plus",
+            alt: "support icon",
+          },
+        ]}
+      />
+
+      <Menu
+        menu="Review"
         menuLink="/submitted"
         menuIcon="fa-solid fa-users"
         submenu={[
@@ -88,6 +108,12 @@ const SideBar = ({ setMenuHover }) => {
             link: "/settings/settings",
             img: "fa-solid fa-gears",
             alt: "settings icon",
+          },
+          {
+            title: "UAC",
+            link: "/settings/uac",
+            img: "fa-solid fa-gears",
+            alt: "uac",
           },
         ]}
       />

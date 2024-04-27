@@ -356,7 +356,7 @@
   /* padding-left: 200px; */
   display: flex;
   justify-content: space-between;
-  height: 101px;
+  height: 80px;
   align-items: center;
   /* border-bottom: 2px solid #f1f1f1; */
   position: fixed;
@@ -379,6 +379,15 @@
   padding: 0 35px;
 }
 
+.dashHeader.collapsed > .left {
+  padding-left: 100px;
+  transition: 300ms ease-in-out;
+}
+
+.dashHeader.Uncollapsed > .left {
+  padding-left: 230px;
+  transition: 300ms ease-in-out;
+}
 .dashHeader > .left > .left {
   display: flex;
   align-items: center;
@@ -396,8 +405,8 @@
 
 .dashHeader > .left > .left > .icon,
 .dashHeader > .left > .right > .icon {
-  height: 35px;
-  width: 35px;
+  height: 50px;
+  width: 50px;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -413,6 +422,8 @@
 .dashHeader > .left > .right > .icon img {
   width: 100%;
   height: 100%;
+  border-radius: 25px;
+  border: 4px solid var(--primaryColor);
 }
 
 .dashHeader > .left > .left > .icon i {
@@ -501,5 +512,23 @@ footer p a {
 @media screen and (max-width: 768px) {
   .leftSide.collapsed {
     width: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 768px) {
+  .dashHeader.collapsed {
+    padding-left: 65px;
+  }
+  .dashHeader.Uncollapsed {
+    padding-left: 210px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dashHeader {
+    padding: 0;
+  }
+  .dashHeader .left {
+    padding: 0;
   }
 }

@@ -1,37 +1,42 @@
-import React from "react";
-import "../../../styles/UI.css";
-import { Fragment } from "react";
+import React, { useRef, useEffect } from "react";
 import ReactDOM from "react-dom";
 
-const Backdrop = ({ backdrop, onClose }) => {
-  return <div className={backdrop} onClick={onClose} />;
-};
+const Modal = ({ children, isOpen, setIsOpen, style }) => {
+  const overlayRef = useRef(null);
 
-const ModalOverlay = ({ modal, style, children }) => {
-  return (
-    <div style={style} className={modal}>
-      {children}
-    </div>
-  );
-};
+  const handleCloseOverlay = () => {
+    setIsOpen(false);
+  };
 
-const portalElement = document.getElementById("overlays");
+  // Attach mousedown event listener to the document to check for clicks outside the overlay
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (overlayRef.current && !overlayRef.current.contains(event.target)) {
+        handleCloseOverlay();
+      }
+    };
 
-const Modal = ({ onClose, backdrop, modal, content, children, style }) => {
-  return (
-    <Fragment>
-      {ReactDOM.createPortal(
-        <Backdrop onClose={onClose} backdrop={backdrop} />,
-        portalElement
-      )}
-      {ReactDOM.createPortal(
-        <ModalOverlay style={style} modal={modal} content={content}>
-          {children}
-        </ModalOverlay>,
-        portalElement
-      )}
-    </Fragment>
-  );
+    document.addEventListener("mousedown", handleOutsideClick);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, []);
+
+  return isOpen
+    ? ReactDOM.createPortal(
+        <div className="overlayBG">
+          <div className="overlay" ref={overlayRef} style={style}>
+            <button className="close" onClick={handleCloseOverlay}>
+              <i className="fa-solid fa-xmark"></i>
+            </button>
+            <div className="modalInner">{children}</div>
+          </div>
+        </div>,
+        document.getElementById("overlays")
+      )
+    : null;
 };
 
 export default Modal;
