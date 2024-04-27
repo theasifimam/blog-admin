@@ -57,16 +57,18 @@
 .pagination > button {
   border: none;
   background: transparent;
-  height: 45px;
+  height: 40px;
+  margin-top: 5px;
+  cursor: pointer;
 }
 
 .pagination > button.pageBtn {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   padding: 12px 20px;
-  background: #ffffff;
-  border: 1px solid #dfdfdf;
+  background: var(--background);
+  border: 1px solid var(--white);
   border-radius: 0px;
 
   font-family: "Poppins", sans-serif;
@@ -74,16 +76,17 @@
   font-weight: 400;
   font-size: 15.7222px;
   line-height: 19px;
-  color: var(--primary-color);
+  color: var(--primaryColor);
+  color: var(--text);
 }
 
 .pagination > button.pageBtn:hover,
 .pagination > button.prev:hover,
 .pagination > button.next:hover {
-  background: var(--primary-color);
-  border: 1px solid #dfdfdf;
+  background: var(--primaryColor);
+  border: 1px solid var(--white);
   transition: 200ms ease-in-out;
-  color: #ffffff;
+  color: white;
 }
 
 .pagination > button.activeBtn {
@@ -91,8 +94,8 @@
   flex-direction: row;
   align-items: flex-start;
   padding: 12px 20px;
-  background: var(--primary-color);
-  border: 1px solid #dfdfdf;
+  background: var(--primaryColor);
+  border: 1px solid var(--white);
   border-radius: 0px;
 
   font-family: "Poppins", sans-serif;
@@ -108,10 +111,10 @@
   flex-direction: row;
   align-items: flex-start;
   padding: 12px 30px;
-  background: whitesmoke;
-  border: 1px solid #dfdfdf;
+  background: var(--background);
+  border: 1px solid var(--white);
   border-radius: 30px 0px 0px 30px;
-  height: 45px;
+  color: var(--text);
 }
 
 .pagination > button.next {
@@ -119,10 +122,10 @@
   align-items: center;
   padding: 12px 30px;
   gap: 10px;
+  color: var(--text);
 
-  height: 45px;
-  background: whitesmoke;
-  border: 1px solid #dfdfdf;
+  background: var(--background);
+  border: 1px solid var(--white);
   border-radius: 0px 30px 30px 0px;
 }
 

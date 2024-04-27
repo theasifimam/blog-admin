@@ -1,28 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { apiUrl, getToken, removeUserSession } from "../../../utils/utils";
+import { makeApiRequest } from "../../../utils/utils";
+import { api } from "../../../utils/api";
 
 export const getUsersAction = createAsyncThunk("getUsers", async () => {
-  try {
-    const response = await fetch(`${apiUrl()}/users`, {
-      headers: {
-        "Content-Type": "application/json",
-        token: `${getToken()}`,
-      },
-    });
-
-    const processedData = await response.json();
-
-    if (response.status === 401) {
-      removeUserSession();
-      throw new Error(processedData.message);
-    } else if (response.status !== 200) {
-      throw new Error(processedData.message);
-    }
-
-    return processedData;
-  } catch (error) {
-    throw error;
-  }
+  return makeApiRequest({ url: api.users, token: true, method: "GET" });
 });
 
 const getUsersSlice = createSlice({

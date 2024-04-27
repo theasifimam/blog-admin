@@ -5,11 +5,16 @@ import { useFormik } from "formik";
 import { userSchema } from "../../utils/schema";
 import { Link } from "react-router-dom";
 import Modal from "../../components/common/UI/Modal";
+import { useDispatch } from "react-redux";
+import { signupAction } from "../../redux/slice/auth/signupSlice";
 
 const UserForm = ({ onClose, setIsOpen, isOpen, type, title }) => {
   const [imagePreview, setImagePreview] = useState(
-    "/icons-images/users/profilepic.svg"
+    "/icons-images/users/profilePicture.svg"
   );
+
+  const dispatch = useDispatch();
+
   const dpRef = useRef();
   const {
     values,
@@ -21,18 +26,18 @@ const UserForm = ({ onClose, setIsOpen, isOpen, type, title }) => {
     errors,
   } = useFormik({
     initialValues: {
-      fullName: "",
+      fname: "",
+      lname: "",
+      username: "",
       email: "",
       mnumber: "",
-      password: "",
-      cPassword: "",
       role: "",
-      profilePic: "",
+      profilePicture: "",
       status: "0",
     },
-    validationSchema: userSchema,
+    // validationSchema: userSchema,
     onSubmit: (values, action) => {
-      console.log(values);
+      dispatch(signupAction(values));
     },
   });
   return (
@@ -61,16 +66,16 @@ const UserForm = ({ onClose, setIsOpen, isOpen, type, title }) => {
                 alignItems: "center",
               }}
             >
-              {/* <label htmlFor="profilePic">Choose file</label> */}
+              {/* <label htmlFor="profilePicture">Choose file</label> */}
               <div className="img">
                 <input
                   type="file"
-                  name="profilePic"
-                  id="profilePic"
+                  name="profilePicture"
+                  id="profilePicture"
                   tabIndex="1"
                   ref={dpRef}
                   onChange={(e) => {
-                    setFieldValue("profilePic", e.currentTarget.files[0]);
+                    setFieldValue("profilePicture", e.currentTarget.files[0]);
                     e.currentTarget.files[0] &&
                       setImagePreview(
                         URL.createObjectURL(e.currentTarget.files[0])
@@ -87,31 +92,72 @@ const UserForm = ({ onClose, setIsOpen, isOpen, type, title }) => {
                     onClick={() => dpRef.current.click()}
                   />
                 </div>
-                {errors.profilePic && touched.profilePic ? (
-                  <div className="error-msg">{errors.profilePic}</div>
+                {errors.profilePicture && touched.profilePicture ? (
+                  <div className="error-msg">{errors.profilePicture}</div>
                 ) : null}
               </div>
             </div>
 
-            {/* FullName */}
+            {/* fname */}
             <div className="inputField">
-              <label htmlFor="fullName">
-                Full Name<span>*</span>
+              <label htmlFor="fname">
+                First name<span>*</span>
               </label>
               <input
                 type="text"
-                name="fullName"
-                id="fullName"
+                name="fname"
+                id="fname"
                 tabIndex="1"
-                placeholder="Full Name"
+                placeholder="First name"
                 onChange={handleChange}
                 onBlur={handleBlur}
-                value={values.fullName}
+                value={values.fname}
               />
-              {errors.fullName && touched.fullName ? (
-                <div className="error-msg">{errors.fullName}</div>
+              {errors.fname && touched.fname ? (
+                <div className="error-msg">{errors.fname}</div>
               ) : null}
             </div>
+
+            {/* lname */}
+            <div className="inputField">
+              <label htmlFor="lname">
+                Last name<span>*</span>
+              </label>
+              <input
+                type="text"
+                name="lname"
+                id="lname"
+                tabIndex="1"
+                placeholder="Last name"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.lname}
+              />
+              {errors.lname && touched.lname ? (
+                <div className="error-msg">{errors.lname}</div>
+              ) : null}
+            </div>
+
+            {/* username */}
+            <div className="inputField">
+              <label htmlFor="username">
+                Username<span>*</span>
+              </label>
+              <input
+                type="text"
+                name="username"
+                id="username"
+                tabIndex="1"
+                placeholder="Username"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.username}
+              />
+              {errors.username && touched.username ? (
+                <div className="error-msg">{errors.username}</div>
+              ) : null}
+            </div>
+
             {/* Email */}
             <div className="inputField">
               <label htmlFor="email">
@@ -148,42 +194,6 @@ const UserForm = ({ onClose, setIsOpen, isOpen, type, title }) => {
               />{" "}
               {errors.mnumber && touched.mnumber ? (
                 <div className="error-msg">{errors.mnumber}</div>
-              ) : null}
-            </div>
-            {/* Password */}
-            <div className="inputField">
-              <label htmlFor="password">
-                Password<span>*</span>
-              </label>
-              <input
-                type="text"
-                name="password"
-                id="password"
-                tabIndex="1"
-                placeholder="Password"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.password}
-              />{" "}
-              {errors.password && touched.password ? (
-                <div className="error-msg">{errors.password}</div>
-              ) : null}
-            </div>
-            {/* ConfirmPassword */}
-            <div className="inputField">
-              <label htmlFor="cPassword">Confirm Password</label>
-              <input
-                type="text"
-                name="cPassword"
-                id="cPassword"
-                tabIndex="1"
-                placeholder="Confirm Password"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.cPassword}
-              />{" "}
-              {errors.cPassword && touched.cPassword ? (
-                <div className="error-msg">{errors.cPassword}</div>
               ) : null}
             </div>
 

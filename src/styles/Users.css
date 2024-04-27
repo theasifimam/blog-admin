@@ -30,7 +30,7 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 29px;
-  color: #000000;
+  color: var(--text);
 }
 
 .adminUserPage > .top > .filter > select {
@@ -58,7 +58,7 @@
   font-weight: 600;
   font-size: 23px;
   line-height: 29px;
-  color: #000000;
+  color: var(--text);
   width: 40%;
 }
 

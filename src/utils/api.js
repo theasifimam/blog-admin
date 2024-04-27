@@ -2,14 +2,12 @@ export const api = {
   login: "/api/login",
   logout: "/api/logout",
   signup: "/api/users/create-user",
-  verifyOtp: "/api/users/verify-otp",
-  resentOtp: "/api/resend-otp/",
 
   // users
-  searchUsers: "/api/users/search/",
-  peopleToKnow: "/api/people-to-know",
+  users: "/api/users",
+  addUser: "/api/users/add-user",
 
-  //   chat
+  // chat
   createGroup: "/api/chats/group",
   deleteChat: "/api/chats/delete/",
   chatById: "/api/chats/get-chat-by-id/",

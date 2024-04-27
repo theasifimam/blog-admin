@@ -1,13 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Switch from "../../components/common/UI/Switch";
 import Pagination from "../../components/common/UI/Pagination";
 import UserForm from "./UserForm";
+import { useDispatch, useSelector } from "react-redux";
+import { getUsersAction } from "../../redux/slice/user/getUsersSlice";
 
 const Users = () => {
   const [showAddForm, setshowAddForm] = useState(false);
   const [showUpdateForm, setShowUpdateForm] = useState(false);
   const [showForm, setShowForm] = useState(false);
+  const allUsers = useSelector((state) => state.allUsers);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getUsersAction());
+  }, []);
   const names = [
     "asif",
     "imam",
@@ -119,18 +127,20 @@ const Users = () => {
             </tr>
           </thead>
           <tbody>
-            {tableData(10).map((data, index) => {
+            {allUsers.users?.map((data, index) => {
               return (
                 <tr className="rowHeight3" key={index}>
                   <th scope="row" className="align-middle">
-                    {data.srNo}
+                    {index + 1}
                   </th>
-                  <td className="align-middle">{data.fullName}</td>
+                  <td className="align-middle">
+                    {data.fname + " " + data.lname}
+                  </td>
                   <td className="align-middle">{data.email}</td>
-                  <td className="align-middle">{data.mNumber}</td>
+                  <td className="align-middle">{data.mnumber}</td>
                   <td className="align-middle">
                     <div className="controls">
-                      <Switch />
+                      <Switch status={data.status} />
                     </div>
                   </td>
                   <td className="align-middle">

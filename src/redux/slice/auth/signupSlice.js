@@ -1,31 +1,15 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { apiUrl, notify } from "../../../utils/utils";
+import { makeApiRequest, notify } from "../../../utils/utils";
 import { api } from "../../../utils/api";
 
-export const signupAction = createAsyncThunk(
-  "signup",
-  async (data, { fulfillWithValue, rejectWithValue }) => {
-    try {
-      const response = await fetch(apiUrl() + api.signup, {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-
-      const processedData = await response.json();
-
-      if (response.status === (201 || 200)) {
-        return fulfillWithValue(processedData);
-      } else {
-        return rejectWithValue(processedData);
-      }
-    } catch (error) {
-      return rejectWithValue(error);
-    }
-  }
-);
+export const signupAction = createAsyncThunk("signup", async (data) => {
+  return makeApiRequest({
+    url: api.addUser,
+    method: "POST",
+    data,
+    token: true,
+  });
+});
 
 const signupSlice = createSlice({
   name: "signup",
@@ -61,7 +45,7 @@ const signupSlice = createSlice({
       state.loading = false;
       state.error = true;
       state.user = payload;
-      state.message = payload.message;
+      // state.message = payload.message;
       state.success = false;
       notify(payload.message, "error");
       console.log("Error : ", payload);
