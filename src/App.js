@@ -8,9 +8,6 @@ import Dashboard from "./pages/Dashboard";
 import AuthLayout from "./components/Layouts/AuthLayout";
 import DashboardLayout from "./components/Layouts/DashboardLayout";
 import MonthlySale from "./pages/MonthlySale";
-import AddUser from "./pages/users/AddUser";
-import UpdateUser from "./pages/users/UpdateUser";
-import UserDetail from "./pages/users/UserDetail";
 import AddPage from "./pages/settings/AddPage";
 import Users from "./pages/users/Users";
 import Reports from "./pages/submitted/Reports";
@@ -42,9 +39,6 @@ function App() {
             <Route path="/users">
               <Route index element={<Users />} />
               <Route path="/users/admin" element={<Users />} />
-              <Route path="/users/add-user" element={<AddUser />} />
-              <Route path="/users/view/:id" element={<UserDetail />} />
-              <Route path="/users/update-user/:id" element={<UpdateUser />} />
             </Route>
 
             <Route path="/submitted">

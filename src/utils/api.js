@@ -5,7 +5,11 @@ export const api = {
 
   // users
   users: "/api/users",
+  viewUser: "/api/users/view/",
   addUser: "/api/users/add-user",
+  updateUser: "/api/users/update-user/",
+  deleteUser: "/api/users/delete/",
+  updateStatus: "/api/users/status/",
 
   // chat
   createGroup: "/api/chats/group",

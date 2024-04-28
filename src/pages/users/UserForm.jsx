@@ -1,19 +1,45 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Switch from "../../components/common/UI/Switch";
 import "../../styles/AddUser.css";
 import { useFormik } from "formik";
 import { userSchema } from "../../utils/schema";
 import { Link } from "react-router-dom";
 import Modal from "../../components/common/UI/Modal";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { signupAction } from "../../redux/slice/auth/signupSlice";
 
 const UserForm = ({ onClose, setIsOpen, isOpen, type, title }) => {
   const [imagePreview, setImagePreview] = useState(
-    "/icons-images/users/profilePicture.svg"
+    "/icons-images/users/profilepic.svg"
   );
+  const [routeFlag, setRouteFlag] = useState(false);
+  const addUser = useSelector((state) => state.signup);
+  const viewUser = useSelector((state) => state.viewUser);
+  const [initialValues, setInitialValues] = useState({
+    fname: "",
+    lname: "",
+    username: "",
+    email: "",
+    mnumber: "",
+    role: "",
+    profilePicture: "",
+    status: "0",
+  });
 
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (addUser.success && routeFlag) {
+      onClose();
+    }
+  }, [addUser.success, routeFlag]);
+
+  useEffect(() => {
+    if (viewUser.success && (type === "view" || type === "update")) {
+      setInitialValues(viewUser.user);
+      setImagePreview(viewUser.user?.profilePicture);
+    }
+  }, [viewUser.success]);
 
   const dpRef = useRef();
   const {
@@ -25,19 +51,20 @@ const UserForm = ({ onClose, setIsOpen, isOpen, type, title }) => {
     handleSubmit,
     errors,
   } = useFormik({
-    initialValues: {
-      fname: "",
-      lname: "",
-      username: "",
-      email: "",
-      mnumber: "",
-      role: "",
-      profilePicture: "",
-      status: "0",
-    },
+    initialValues,
+    enableReinitialize: true,
     // validationSchema: userSchema,
     onSubmit: (values, action) => {
-      dispatch(signupAction(values));
+      const formData = new FormData();
+      Object.entries(values).forEach(([key, value]) => {
+        formData.append(key, value);
+      });
+      if (type === "add") {
+        dispatch(signupAction(formData));
+      } else if (type === "update") {
+        // dispatch(updateUserAction())
+      }
+      setRouteFlag(true);
     },
   });
   return (
@@ -83,6 +110,7 @@ const UserForm = ({ onClose, setIsOpen, isOpen, type, title }) => {
                   }}
                   onBlur={handleBlur}
                   style={{ display: "none" }}
+                  disabled={type === "view"}
                 />
                 <div className="imgPreview">
                   <img
@@ -111,6 +139,7 @@ const UserForm = ({ onClose, setIsOpen, isOpen, type, title }) => {
                 placeholder="First name"
                 onChange={handleChange}
                 onBlur={handleBlur}
+                disabled={type === "view"}
                 value={values.fname}
               />
               {errors.fname && touched.fname ? (
@@ -127,7 +156,8 @@ const UserForm = ({ onClose, setIsOpen, isOpen, type, title }) => {
                 type="text"
                 name="lname"
                 id="lname"
-                tabIndex="1"
+                disabled={type === "view"}
+                tabIndex="2"
                 placeholder="Last name"
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -147,7 +177,8 @@ const UserForm = ({ onClose, setIsOpen, isOpen, type, title }) => {
                 type="text"
                 name="username"
                 id="username"
-                tabIndex="1"
+                tabIndex="3"
+                disabled={type === "view"}
                 placeholder="Username"
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -166,8 +197,9 @@ const UserForm = ({ onClose, setIsOpen, isOpen, type, title }) => {
               <input
                 type="text"
                 name="email"
+                disabled={type === "view"}
                 id="email"
-                tabIndex="2"
+                tabIndex="4"
                 placeholder="Email Address"
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -186,7 +218,8 @@ const UserForm = ({ onClose, setIsOpen, isOpen, type, title }) => {
                 type="text"
                 name="mnumber"
                 id="mnumber"
-                tabIndex="1"
+                disabled={type === "view"}
+                tabIndex="5"
                 placeholder="Phone Number"
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -205,7 +238,8 @@ const UserForm = ({ onClose, setIsOpen, isOpen, type, title }) => {
               <select
                 name="role"
                 id="role"
-                tabIndex="7"
+                disabled={type === "view"}
+                tabIndex="6"
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.role}
@@ -232,14 +266,16 @@ const UserForm = ({ onClose, setIsOpen, isOpen, type, title }) => {
             </div>
 
             <div className="btns">
-              <button type="submit" className="submit">
-                Submit
-              </button>
-              <Link to="/users">
-                <button type="button" className="back" onClick={onClose}>
-                  Back
+              {(type === "add" || type === "update") && (
+                <button type="submit" className="submit">
+                  {type === "update" ? "Update" : "Submit"}
                 </button>
-              </Link>
+              )}
+              <button type="button">
+                <button type="button" className="back" onClick={onClose}>
+                  Close
+                </button>
+              </button>
             </div>
           </form>
         </div>

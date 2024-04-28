@@ -20,7 +20,6 @@
   color: var(--primaryColor);
   font-size: 8rem;
   margin-bottom: -1rem;
-  margin-top: -3rem;
 }
 
 .h2 {
@@ -33,12 +32,13 @@
   background: var(--primaryColor);
   box-shadow: var(--shadow);
   border-radius: var(--borderRadius);
-  width: 49%;
+  width: 50%;
   height: 100%;
+  padding-left: 1rem;
 }
 
 .dashboard .cards {
-  width: 50%;
+  width: 48%;
   display: flex;
   justify-content: space-between;
   align-items: start;
@@ -171,6 +171,8 @@
   line-height: 19px;
   text-transform: capitalize;
   color: #6d6d6d;
+  padding-left: 1rem;
+  height: 40px;
 }
 
 @media screen and (max-width: 1024px) {

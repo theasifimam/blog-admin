@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { makeApiRequest, notify } from "../../../utils/utils";
 import { api } from "../../../utils/api";
 
-export const signupAction = createAsyncThunk("signup", async (data) => {
+export const signupAction = createAsyncThunk("signup", (data) => {
   return makeApiRequest({
     url: api.addUser,
     method: "POST",
@@ -37,9 +37,7 @@ const signupSlice = createSlice({
       state.loading = false;
       state.success = true;
       state.error = false;
-      notify(payload.message);
-      localStorage.setItem("user", JSON.stringify(payload.user));
-      console.log(payload);
+      notify("User added successfully!");
     },
     [signupAction.rejected]: (state, { payload }) => {
       state.loading = false;

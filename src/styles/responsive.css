@@ -5,7 +5,7 @@
 
 .responsiveTable .table {
   overflow: auto !important;
-  min-width: 1150px;
+  /* min-width: 1150px; */
 }
 
 @media screen and (max-width: 1200px) {

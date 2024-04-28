@@ -5,6 +5,7 @@ import Pagination from "../../components/common/UI/Pagination";
 import UserForm from "./UserForm";
 import { useDispatch, useSelector } from "react-redux";
 import { getUsersAction } from "../../redux/slice/user/getUsersSlice";
+import { viewUserAction } from "../../redux/slice/user/viewUserSlice";
 
 const Users = () => {
   const [showAddForm, setshowAddForm] = useState(false);
@@ -12,45 +13,12 @@ const Users = () => {
   const [showForm, setShowForm] = useState(false);
   const allUsers = useSelector((state) => state.allUsers);
   const dispatch = useDispatch();
+  const addUser = useSelector((state) => state.signup);
 
   useEffect(() => {
     dispatch(getUsersAction());
-  }, []);
-  const names = [
-    "asif",
-    "imam",
-    "adil",
-    "pankaj",
-    "parwez",
-    "kundan",
-    "prashu",
-    "vipul",
-    "mustakim",
-    "amir",
-    "rahul",
-    "raghib",
-    "raju",
-    "rabri",
-    "golu",
-  ];
+  }, [addUser.success]);
 
-  const tableData = (amount) => {
-    let dummyArray = [];
-    for (let i = 0; i < amount; i++) {
-      dummyArray.push({
-        srNo: i < 9 ? "0" + (i + 1) : `${i + 1}`,
-        fullName: `${names[Math.floor(Math.random() * 16)]} ${
-          names[Math.floor(Math.random() * 16)]
-        }`,
-        email: `${names[Math.floor(Math.random() * 11)]}${
-          names[Math.floor(Math.random() * 11)]
-        }@gmail.com`,
-        mNumber: "+91" + (1000000000 + Math.floor(Math.random() * 10000000000)),
-        role: Math.floor(Math.random() * 10) % 2 === 0 ? "Seller" : "Buyer",
-      });
-    }
-    return dummyArray;
-  };
   return (
     <div className="adminUserPage">
       {showAddForm && (
@@ -106,47 +74,34 @@ const Users = () => {
         <table className="table ">
           <thead>
             <tr>
-              <th scope="col" className="align-middle">
-                Sr. No.
-              </th>
-              <th scope="col" className="align-middle">
-                Full Name
-              </th>
-              <th scope="col" className="align-middle">
-                Email
-              </th>
-              <th scope="col" className="align-middle">
-                Mobile No.
-              </th>
-              <th scope="col" className="align-middle">
-                Status
-              </th>
-              <th scope="col" className="align-middle">
-                Action
-              </th>
+              <th scope="col">Sr. No.</th>
+              <th scope="col">Full Name</th>
+              <th scope="col">Username</th>
+              <th scope="col">Role</th>
+              <th scope="col">Status</th>
+              <th scope="col">Action</th>
             </tr>
           </thead>
           <tbody>
             {allUsers.users?.map((data, index) => {
               return (
                 <tr className="rowHeight3" key={index}>
-                  <th scope="row" className="align-middle">
-                    {index + 1}
-                  </th>
-                  <td className="align-middle">
-                    {data.fname + " " + data.lname}
-                  </td>
-                  <td className="align-middle">{data.email}</td>
-                  <td className="align-middle">{data.mnumber}</td>
-                  <td className="align-middle">
+                  <th scope="row">{index + 1}</th>
+                  <td>{data.fname + " " + data.lname}</td>
+                  <td>{data.username}</td>
+                  <td>{data.role}</td>
+                  <td>
                     <div className="controls">
                       <Switch status={data.status} />
                     </div>
                   </td>
-                  <td className="align-middle">
+                  <td>
                     <div className="controls">
                       <button
-                        onClick={() => setShowForm(true)}
+                        onClick={() => {
+                          setShowForm(true);
+                          dispatch(viewUserAction(data._id));
+                        }}
                         className="center add"
                       >
                         {/* <img src="/icons-images/users/view.svg" alt="plus" /> */}
@@ -155,7 +110,10 @@ const Users = () => {
 
                       <button
                         className="center edit"
-                        onClick={() => setShowUpdateForm(true)}
+                        onClick={() => {
+                          setShowUpdateForm(true);
+                          dispatch(viewUserAction(data._id));
+                        }}
                       >
                         {/* <img
                           src="/icons-images/users/editicon.svg"

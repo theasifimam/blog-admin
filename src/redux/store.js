@@ -4,7 +4,6 @@ import logoutSlice from "./slice/auth/logoutSlice";
 import signupSlice from "./slice/auth/signupSlice";
 import verifyOTPSlice from "./slice/auth/verifyOTPSlice";
 import getUsersSlice from "./slice/user/getUsersSlice";
-import getUserByIdSlice from "./slice/user/getUserByIdSlice";
 import addPostSlice from "./slice/post/addPostSlice";
 import getPostsSlice from "./slice/post/getPostsSlice";
 import getChatsSlice from "./slice/chat/getChatsSlice";
@@ -20,6 +19,7 @@ import resendOTPSlice from "./slice/auth/resendOTPSlice";
 import privateAccountStatusSlice from "./slice/user/privateAccountStatusSlice";
 import onlineUsersSlice from "./slice/chat/onlineUsersSlice";
 import themeSlice from "./slice/theme/changeThemeSlice";
+import viewUserSlice from "./slice/user/viewUserSlice";
 
 // Define which state slices you want to persist
 const selectStateToPersist = (state) => {
@@ -42,7 +42,7 @@ const rootReducer = combineReducers({
 
   // User
   allUsers: getUsersSlice,
-  userById: getUserByIdSlice,
+  viewUser: viewUserSlice,
   privateAccountStatus: privateAccountStatusSlice,
 
   // Post
