@@ -33,6 +33,13 @@
   overflow: auto;
 }
 
+.addUserPage > .bottom > form::-webkit-scrollbar {
+  width: 0px;
+}
+.addUserPage > .bottom > form:hover::-webkit-scrollbar {
+  width: 10px;
+}
+
 .addUserPage > .bottom.monthlySale > form > .inputField {
   width: 30%;
   margin-bottom: 10px;

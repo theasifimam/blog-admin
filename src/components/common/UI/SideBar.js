@@ -16,7 +16,9 @@ const SideBar = ({ setMenuHover }) => {
       <div className="logo-box">
         {/* <p className="logo"></p> */}
         <img className="logo" src="/circularlogo.svg" alt="logo" />
-        <h1 className="main-heading">{process.env.REACT_APP_SITE_NAME}</h1>
+        <h1 className="main-heading" style={{ marginBottom: 0 }}>
+          {process.env.REACT_APP_SITE_NAME}
+        </h1>
       </div>
       <NavLink to="/" className="menu">
         <div className="menuIcon">
@@ -32,25 +34,12 @@ const SideBar = ({ setMenuHover }) => {
         <span>Graph</span>
       </NavLink>
 
-      <Menu
-        menu="Users"
-        menuLink="/users"
-        menuIcon="fa-solid fa-users"
-        submenu={[
-          {
-            title: "Users",
-            link: "/users/admin",
-            img: "fa-solid fa-users",
-            alt: "Admin icon",
-          },
-          {
-            title: "Add ",
-            link: "/users/add-user",
-            img: "fa-solid fa-user-plus",
-            alt: "support icon",
-          },
-        ]}
-      />
+      <NavLink to="/users" className="menu">
+        <div className="menuIcon">
+          <i class="fa-solid fa-users"></i>
+        </div>
+        <span>Users</span>
+      </NavLink>
 
       <Menu
         menu="Support"
@@ -59,26 +48,6 @@ const SideBar = ({ setMenuHover }) => {
         submenu={[
           {
             title: "Complains",
-            link: "/submitted/reports",
-            img: "fa-solid fa-users",
-            alt: "Admin icon",
-          },
-          {
-            title: "Feedbacks",
-            link: "/submitted/feedback",
-            img: "fa-solid fa-user-plus",
-            alt: "support icon",
-          },
-        ]}
-      />
-
-      <Menu
-        menu="Review"
-        menuLink="/submitted"
-        menuIcon="fa-solid fa-users"
-        submenu={[
-          {
-            title: "Reports",
             link: "/submitted/reports",
             img: "fa-solid fa-users",
             alt: "Admin icon",
@@ -108,12 +77,6 @@ const SideBar = ({ setMenuHover }) => {
             link: "/settings/settings",
             img: "fa-solid fa-gears",
             alt: "settings icon",
-          },
-          {
-            title: "UAC",
-            link: "/settings/uac",
-            img: "fa-solid fa-gears",
-            alt: "uac",
           },
         ]}
       />

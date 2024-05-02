@@ -10,7 +10,7 @@ export default function Switch({ setFieldValue, name, switchValue }) {
         className={`checkbox ${!value && "checkbox--on"}`}
         onClick={() => {
           setValue(!value);
-          setFieldValue && setFieldValue(name || "status", value ? "1" : "0");
+          setFieldValue && setFieldValue(name || "status", value);
         }}
       >
         <div className="checkbox__ball"></div>

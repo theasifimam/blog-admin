@@ -71,14 +71,14 @@ export const setUserSession = (token, user) => {
 };
 
 // Return the user data from the LocalStorage storage
-export const getCurrentUserLT = () => {
+export const getMyself = () => {
   const userStr = localStorage.getItem("user");
   if (userStr) return JSON.parse(userStr);
   else return null;
 };
 
 export const userRole = () => {
-  const user = getCurrentUserLT();
+  const user = getMyself();
   if (user) {
     if (user.roles[0] === "ROLE_TEACHER") {
       return "ROLE_TEACHER";
@@ -181,8 +181,8 @@ function getNumberSuffix(day) {
 
 export function toggleDarkmode(mode, newColor) {
   const darkColors = {
+    "--primaryColor": "#16a086",
     "--secondaryBG": "rgb(0, 0, 0)",
-    "--background": "rgb(0, 0, 0)",
     "--background": "rgb(0, 0, 0)",
     "--white": "#1a1a1a",
     "--text": "rgb(154, 154, 154)",
@@ -196,24 +196,53 @@ export function toggleDarkmode(mode, newColor) {
       "rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px",
     "--btnBG": "rgb(0, 0, 0)",
     "--btnText": "grey",
-  };
 
-  const lightColors = {
-    "--secondaryBG": "rgb(243, 243, 243)",
-    "--background": "rgb(240, 240, 240)",
-    "--background": "whitesmoke",
-    "--white": "white",
-    "--text": "grey",
+    "--secondaryColor": "rgb(44, 44, 44)",
     "--heading": "rgb(66, 66, 66)",
     "--chatBG": "rgba(193, 193, 193, 0.164)",
     "--lightest": "rgba(128, 128, 128, 0.308)",
-    "--secondaryColor": "rgb(44, 44, 44)",
+
+    "--text": "rgb(154, 154, 154)",
+    "--secondaryBG": "rgb(243, 243, 243)",
+    "--color": "rgb(48, 48, 48)",
+    // "--cardColor": "rgb(252, 252, 252)",
     "--glassBG": "rgba(255, 255, 255, 0.505)",
-    "--cardColor": "rgb(252, 252, 252)",
     "--shadow":
-      "rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px",
+      "rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px",
+    "--hoverShadow":
+      "rgba(0, 0, 0, 0.12) 0px 1px 3px , rgba(0, 0, 0, 0.24) 0px 1px 2px",
+    "--borderRadius": "1.2em",
+
     "--btnBG": "blueviolet",
     "--btnText": "grey",
+
+    "--paraSize": "14px",
+  };
+
+  const lightColors = {
+    "--primaryColor": "#16a086 ",
+    "--secondaryColor": "rgb(44, 44, 44)",
+    "--white": "white",
+    "--heading": "rgb(66, 66, 66)",
+    "--chatBG": "rgba(193, 193, 193, 0.164)",
+    "--lightest": "rgba(128, 128, 128, 0.308)",
+
+    "--text": "rgb(154, 154, 154)",
+    "--background": "whitesmoke",
+    "--secondaryBG": "rgb(243, 243, 243)",
+    "--color": "rgb(48, 48, 48)",
+    "--cardColor": "rgb(252, 252, 252)",
+    "--glassBG": "rgba(255, 255, 255, 0.505)",
+    "--shadow":
+      "rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px",
+    "--hoverShadow":
+      "rgba(0, 0, 0, 0.12) 0px 1px 3px , rgba(0, 0, 0, 0.24) 0px 1px 2px",
+    "--borderRadius": "1.2em",
+
+    "--btnBG": "blueviolet",
+    "--btnText": "grey",
+
+    "--paraSize": "14px",
   };
 
   let colors;

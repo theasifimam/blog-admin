@@ -92,7 +92,7 @@ const Users = () => {
                   <td>{data.role}</td>
                   <td>
                     <div className="controls">
-                      <Switch status={data.status} />
+                      <Switch switchValue={data.status} />
                     </div>
                   </td>
                   <td>

@@ -208,7 +208,7 @@ const Dashboard = () => {
   async function fetchCounts() {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/dashboard-counts"
+        "http://localhost:3010/api/dashboard-counts"
       );
       if (!response.ok) {
         throw new Error("Network response was not ok " + response.statusText);

@@ -1,5 +1,9 @@
 import React from "react";
-import { getCurrentUserLT, getFormattedDate } from "../../../utils/utils";
+import {
+  getCurrentUserLT,
+  getFormattedDate,
+  getMyself,
+} from "../../../utils/utils";
 import classes from "../../../styles/styleModules/Modal.module.css";
 import MenuControls from "./MenuControls";
 
@@ -10,7 +14,7 @@ const DashHeader = ({
   toggleMenu,
   hideModal,
 }) => {
-  const myself = getCurrentUserLT();
+  const myself = getMyself();
   return (
     <div
       className={toggleMenu ? "dashHeader collapsed" : "dashHeader Uncollapsed"}
